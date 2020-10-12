@@ -1,0 +1,269 @@
+@font-face {font-family: "Quicksand-Bold";
+  src: url("../css/fonts/Quicksand-Bold.otf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/Quicksand-Bold.otf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+
+@font-face {font-family: "Quicksand-Regular";
+  src: url("../css/fonts/Quicksand-Regular.otf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/Quicksand-Regular.otf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+
+@font-face {font-family: "MYRIADPRO-BOLD";
+	src: url("../css/fonts/MYRIADPRO-BOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-BOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+  @font-face {font-family: "MYRIADPRO-REGULAR";
+	src: url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+  @font-face {font-family: "MYRIADPRO-SEMIBOLD";
+	src: url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+body{
+	background-color: #eee;
+}
+
+
+#noPadd{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+
+
+.logo{
+	width: 290px;
+	position: relative;
+	top: -8px;
+}
+
+.navbar {
+    min-height: 140px;
+    margin-bottom:0px;
+	border: 0px solid #000;
+	border-radius: 0px;
+
+
+}
+
+
+.navbar-right li{
+	
+	position: relative;
+	top: 34px;
+	/* width: 240px; */
+	width: 150px;
+}
+
+.navbar-right li:hover{
+	/* background-color: #dd3333; */
+	border: 1px solid #002b3c;
+}
+
+
+#Info{
+	background-color: #002b3c;
+	width: 100%;	
+}
+
+#Info p{
+	color: #fff;
+	font-family: "MYRIADPRO-REGULAR";
+	font-size: 20px;
+	padding-left: 15px;
+	padding-top: 15px;
+
+}
+
+
+.navbar-right li a {
+	position: relative;
+	top: 0px;
+	font-family: "MYRIADPRO-SEMIBOLD";
+	color: #000 !important;
+	font-size: 21px;
+	text-align: center;
+	
+	
+
+}
+
+
+@media screen and (max-width: 1536px){
+
+	.navbar-right li{
+	
+		position: relative;
+		top: 34px;
+		width: 150px;
+	}
+
+
+	
+}
+
+@media screen and (max-width: 1337px){
+
+	.navbar-right li{
+	
+		position: relative;
+		top: 34px;
+		width: 150px;
+	}
+
+
+	
+}
+
+@media screen and (max-width: 1199px){
+
+	.navbar-right li{
+	
+		position: relative;
+		top: 34px;
+		width: 125px;
+	}
+
+
+	
+}
+
+
+@media screen and (max-width: 1087px){
+
+	.navbar-right li{
+	
+		position: relative;
+		top: 34px;
+		width: 120px;
+	}
+
+
+	
+}
+
+@media screen and (max-width: 991px){
+
+	.navbar-right li{
+	
+		position: relative;
+		top: 34px;
+		width: 100px;
+	}
+
+	.logo {
+		width: 211px;
+		position: relative;
+		top: 5px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 797px){
+
+	.navbar-right li{
+	
+		position: relative;
+		top: 34px;
+		width: 90px;
+	}
+
+	.logo {
+		width: 250px;
+		position: relative;
+		top: -3px;
+	}
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px){
+
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #002b3c;
+	}
+
+	.navbar-default .navbar-toggle {
+		border-color: #002b3c;
+	}
+
+
+	.navbar {
+	    min-height: auto;
+	    margin-bottom: 0px;
+	    border-bottom:1px solid #002b3c;
+	    background-image: none;
+	    background-repeat: no-repeat;
+	    background-size: 100% 100%;
+	    background: #fff;
+	}
+	.navbar-header{height: 90px;}
+	.logo {
+	    width: 180px;
+	    position: relative;
+	    top: -12px;
+	}
+	.navbar-right li{	
+		position: relative;
+		top: 0px;
+		width: 100%;
+		border-bottom: 1px solid #002b3c;
+	}
+
+	.navbar-right li a{	
+		color: #002b3c !important;
+	}
+
+
+
+	.text1 {
+	    font-family: "Quicksand-Regular";
+	    color: #000;
+	    font-size: 18px;
+	    padding-top: 30px;
+	    text-align: justify;
+	    padding: 20px;
+	}
+	.tx{text-align: center !important;}
+	
+}
+
+
+
+
+@media screen and (max-width: 360px){
+	#Info p {
+		color: #fff;
+		font-family: "MYRIADPRO-REGULAR";
+		font-size: 17px;
+		padding-left: 15px;
+		padding-top: 15px;
+	}
+}
+
+
+@media screen and (max-width: 570px){
+
+	
+
+}
+
+
+@media screen and (max-width: 440px){
+
+	
+}

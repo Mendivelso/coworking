@@ -1,0 +1,98 @@
+@font-face {font-family: "MYRIADPRO-BOLD";
+	src: url("../css/fonts/MYRIADPRO-BOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-BOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+  @font-face {font-family: "MYRIADPRO-REGULAR";
+	src: url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+  @font-face {font-family: "MYRIADPRO-SEMIBOLD";
+	src: url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+
+  .logo-footer{
+      width: 100%;
+  }
+
+  footer{
+      padding-top: 50px;
+      padding-bottom: 30px;
+  }
+
+  footer h3{
+    font-family: "MYRIADPRO-SEMIBOLD";
+    color: #002b3c;
+  }
+
+
+  .footer-li{
+      padding: 0px;
+      margin: 0px;
+
+  }
+
+  .footer-li li {
+      list-style: none;
+      color: #002b3c;
+      padding-top: 20px;
+  }
+
+
+  .footer-li li a{
+    font-family: "MYRIADPRO-REGULAR";
+    color: #002b3c;
+    font-size: 19px;
+}
+
+footer p {
+    font-family: "MYRIADPRO-REGULAR";
+    color: #002b3c;
+    font-size: 17px;
+
+}
+
+.checkbox label{
+    font-family: "MYRIADPRO-REGULAR";
+    color: #002b3c;
+    font-size: 17px;
+}
+
+footer button {
+    background-color: #002b3c !important;
+    color: #fff !important;
+    font-family: "MYRIADPRO-REGULAR";
+    width: 100%;
+    font-size: 17px 
+    !important;
+
+}
+
+select {
+    color: #002b3c;
+    font-weight: bold;
+}
+
+input, select{
+    color: #002b3c;
+    font-family: "MYRIADPRO-REGULAR";
+}
+
+input::placeholder { color: red; font-weight: bold; }
+textarea::placeholder { color: red; font-weight: bold; }
+select::placeholder { color: red; font-weight: bold; }
+
+
+@media screen and (max-width: 767px){
+
+    .logo-footer {
+        width: 250px;
+    }
+
+
+}

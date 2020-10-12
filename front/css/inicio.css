@@ -1,0 +1,425 @@
+@font-face {font-family: "MYRIADPRO-BOLD";
+	src: url("../css/fonts/MYRIADPRO-BOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-BOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+  @font-face {font-family: "MYRIADPRO-REGULAR";
+	src: url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+  @font-face {font-family: "MYRIADPRO-SEMIBOLD";
+	src: url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+  .carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: none;
+    background-image: none;
+   
+    background-repeat: repeat-x;
+  }
+  .carousel-control.left {
+    left: 0;
+    right: auto;
+    background-image: none;
+    background-image: none;
+   
+    background-repeat: repeat-x;
+  }
+
+
+  
+
+
+
+
+
+  #sectionPrincipal{
+    height: auto;
+    position: relative;
+    top: 193px;
+  }
+
+  .npdd{
+    padding: 0px;
+  }
+
+  .fondo-recepcion{
+    height: 550px;
+    background-image: url('../images/inicio/recepcion.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
+
+
+  .frase{
+    height: 550px;
+    background-color: #002b3c;
+   
+  }
+
+
+  .caja-title{
+    position: relative;
+    top: 150px;
+  }
+
+  .title-h3{
+    color: #ffffff;
+    text-align: center;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    font-size: 28px;
+    
+  }
+
+
+  .contactanos{
+    background-color: #e7741b;
+    color: #fff;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+    top: 15px;
+    width: 250px;
+    letter-spacing: 1px;
+  }
+
+  /* FIN SECTION MOTO RECEPCION  */
+
+  .b-w{
+    background-color: #fff;
+  }
+
+  .p-5{
+    padding: 40px;
+  }
+  .pt-5{
+    padding-top: 20px;
+  }
+
+  .pb-5{
+    padding-bottom: 20px;
+  }
+
+  .pdd{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+
+
+  .title-main{
+    color: #002b3c;
+    font-family: "MYRIADPRO-SEMIBOLD";
+
+  }
+  #title-contact{
+    position: relative;
+    top: 100px;
+  }
+  .title-main span{
+    color:#e7741b; 
+  }
+
+
+
+  .description{
+    color: #000000;
+    font-family: "MYRIADPRO-REGULAR";
+    font-size: 20px;
+  }
+
+  .contact{
+    background-color: #002b3c;
+    color: #fff;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+    top: 15px;
+    width: 220px;
+    height: 60px;
+    letter-spacing: 1px;
+  }
+
+  .send{
+    background-color: #002b3c !important;
+    color: #fff !important;
+    font-family: "MYRIADPRO-REGULAR";
+    width: 100%;
+    font-size: 17px 
+    !important;
+
+  }
+
+
+ 
+
+
+
+
+
+
+
+  .fs{
+    float: right;
+  }
+  
+  .panel-title{
+    font-size: 22px;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    text-decoration: none;
+  }
+
+  .panel-title a:active {
+    color: #002b3c;
+    text-decoration: none;
+  }
+
+  .panel-title a:hover {
+    color: #002b3c;
+    text-decoration: none;
+  }
+
+  .panel-heading:hover{
+    color: #002b3c;
+  }
+
+  .panel-heading{
+    background-color: #e2e0dd !important;
+  }
+
+  .panel-body{
+    font-family: "MYRIADPRO-REGULAR";
+    color: #002b3c;
+    font-size: 19px;
+  }
+
+  .img-b{
+    width: 100%;
+  }
+
+  .shadow{
+    -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+  }
+
+  .blog{
+    padding-bottom: 30px;
+  }
+
+
+  .blog-title h3{
+    font-family: "MYRIADPRO-SEMIBOLD";
+    color: #002b3c;
+    padding: 0px 15px;
+  }
+
+
+  .blog-description p {
+    color: #000000;
+    font-family: "MYRIADPRO-REGULAR";
+    font-size: 18px;
+    padding: 0px 15px;
+  }
+
+
+  .blog-btn{
+    padding: 0px 15px;
+  }
+
+
+  .enlace {
+    background-color: #e7741b;
+    padding: 3px 6px;
+    font-size: 13px;
+    color: #002b3c;
+    font-family: "MYRIADPRO-REGULAR";
+  }
+
+
+
+  #myCarousel{
+    height: 300px;
+  }
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+  }
+  .item p{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-family: "MYRIADPRO-REGULAR";
+    color: #fff;
+    font-size: 19px;
+  }
+
+  .item1{
+    background-color: #6EC1E4;
+    height: 100%;
+  }
+
+
+  .item2 {
+    background-color: #23A455;
+    height: 100%;
+  }
+
+  .item3{
+    background-color: #8bc34a;
+    height: 100%;
+  }
+
+
+  #form-contact input {
+    height: 43px;
+  }
+  #form-contact select {
+    height: 43px;
+  }
+
+  #form-contact input[type="checkbox"]{
+    height: auto !important;
+  }
+
+
+
+
+
+  @media screen and (max-width: 991px){
+
+    br{
+      display: none;
+    }
+
+    .frase {
+      height: 480px;
+      background-color: #002b3c;
+    }
+
+    .fondo-recepcion {
+      height: 480px;
+      background-image: url(../images/inicio/recepcion.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    /* FIN SECTION MOTO RECEPCION  */
+  
+  
+    
+  }
+
+
+  
+  @media screen and (max-width: 767px){
+    
+    body{
+      background-color: #fff;
+    }
+    .blog {
+      padding-bottom: 30px;
+      margin-top: 20px;
+    }
+
+    #myCarousel {
+      height: 360px;
+    }
+
+    .item p {
+      position: relative;
+      top: 100px;
+      text-align: center;
+      font-family: "MYRIADPRO-REGULAR";
+      color: #fff;
+      font-size: 19px;
+      padding: 0px 60px;
+    }
+
+    .caja-title {
+      position: relative;
+      top: 0px;
+      padding-bottom: 40px;
+    }
+    .fondo-recepcion {
+      height: 327px;
+      background-image: url(../images/inicio/recepcion.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #sectionPrincipal {
+      background-color: #fff;
+      height: 800px;
+      position: relative;
+      top: 144px;
+    }
+    .frase {
+      height: 540px;
+      background-color: #002b3c;
+    }
+    /* FIN SECTION MOTO RECEPCION  */
+  
+    
+  }
+
+
+  @media screen and (max-width: 600px){
+    .item p {
+      position: relative;
+      top: 40px;
+    }
+
+
+  }
+
+  @media screen and (max-width: 490px){
+    #myCarousel {
+      height: 500px;
+    }
+    .item p {
+      position: relative;
+      top: 40px;
+      padding: 0px 12px;
+  }
+
+
+  }
+
+  @media screen and (max-width: 400px){
+    .title-h3 {
+      color: #ffffff;
+      text-align: center;
+      font-family: "MYRIADPRO-SEMIBOLD";
+      font-size: 23px;
+    }
+    .contactanos {
+      background-color: #e7741b;
+      color: #fff;
+      font-family: "MYRIADPRO-SEMIBOLD";
+      padding: 8px;
+      font-size: 17px;
+      border-radius: 15px;
+      position: relative;
+      top: 15px;
+      width: 199px;
+      letter-spacing: 1px;
+    }
+    /* FIN SECTION MOTO RECEPCION  */
+    
+    
+  }
+

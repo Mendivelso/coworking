@@ -1,0 +1,431 @@
+@font-face {font-family: "MYRIADPRO-BOLD";
+	src: url("../css/fonts/MYRIADPRO-BOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-BOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+  @font-face {font-family: "MYRIADPRO-REGULAR";
+	src: url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+  @font-face {font-family: "MYRIADPRO-SEMIBOLD";
+	src: url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+  
+
+
+  .b-w{
+    background-color: #fff;
+  }
+
+  .p-5{
+    padding: 40px;
+  }
+  .pt-5{
+    padding-top: 20px;
+  }
+
+  .pb-5{
+    padding-bottom: 20px;
+  }
+
+  .pdd{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .npdd{
+    padding: 0px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+ #sectionPrincipalEspacios{
+    height: auto;
+    position: relative;
+    top: 193px;
+  }
+
+
+  .title-main{
+    color: #002b3c;
+    font-family: "MYRIADPRO-SEMIBOLD";
+
+  }
+
+  .title-main span{
+    color:#e7741b; 
+  }
+
+
+  /* ESTILOPS PAGINA ESPOACIOS  */
+
+
+
+  .espacios-Img{
+      width: 100%;
+  }
+
+  .espacio {
+      background-color: #f1f0f0;
+      margin-top: 40px;
+  }
+
+  .espacio .cont-p{
+      padding-top: 90px;
+  }
+
+  .espacio p {
+    font-family: "MYRIADPRO-REGULAR";
+    color: #000;
+    font-size: 18px;
+    text-align: left;
+    padding-right: 15px;
+
+  }
+
+  .espacio a {
+    border: 1px solid #9e9999;
+    padding: 12px;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+    color: #000;
+  }
+
+  .pl{
+    padding-left: 0px;
+  }
+
+  .pr{
+    padding-right: 0px;
+  }
+
+
+
+
+
+
+  /*   TARIFAAAAAAAAAAAAAAAAAAAAAAAA  CSS */
+
+  .tarifa {
+    background-color: #f1f0f0;
+    margin-top: 40px;
+}
+
+.tarifa .cont-p{
+    padding-top: 15px;
+}
+
+.tarifa p {
+  font-family: "MYRIADPRO-REGULAR";
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+  padding-right: 15px;
+
+}
+
+.tarifa a {
+  border: 1px solid #9e9999;
+  padding: 12px;
+  font-size: 18px;
+  position: relative;
+  top: 20px;
+  color: #000;
+}
+
+.cajaInfo h2{
+    color: #002b3c;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    text-align: center;
+}
+
+.cajaInfo p {
+    font-family: "MYRIADPRO-REGULAR";
+  color: #000;
+  font-size: 22px;
+  text-align: justify;
+  padding: 20px 50px;
+} 
+
+.cajaInfo ul {
+    padding-left: 70px;
+}
+
+.cajaInfo ul li{
+    font-family: "MYRIADPRO-SEMIBOLD";
+  color: #000;
+  font-size: 22px;
+  text-align: justify;
+  padding: 10px;
+}
+.cajaInfo ul li span{
+  
+  color: #e7741b; 
+  
+}
+
+
+.caja-form {}
+
+.caja-form h2 {
+    color: #002b3c;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    text-align: center;
+}
+
+.caja-form form{
+    padding: 30px 40px;
+}
+
+.caja-form form input {
+    height: 43px;
+    font-family: "MYRIADPRO-REGULAR";
+    color: #000;
+}
+.caja-form form select {
+    height: 43px;
+    font-family: "MYRIADPRO-REGULAR";
+    color: #000;
+}
+
+
+.caja-form form  input[type="checkbox"]{
+    height: auto !important;
+  }
+
+
+  .caja-form form  button{
+    background-color: #002b3c;
+    color: #fff;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+    top: 15px;
+    width: 220px;
+    height: 60px;
+    letter-spacing: 1px;
+  }
+
+
+  .serv p {
+    color: #002b3c;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .serv .s {
+      padding-top: 40px;
+  }
+
+
+
+  
+  .puesto {
+    background-color: #f1f0f0;
+    margin-top: 40px;
+}
+
+.puesto .cont-p{
+    padding-top: 15px;
+}
+
+.puesto p {
+  font-family: "MYRIADPRO-REGULAR";
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+  padding-right: 15px;
+
+}
+
+.puesto a {
+  border: 1px solid #9e9999;
+  padding: 12px;
+  font-size: 18px;
+  position: relative;
+  top: 20px;
+  color: #000;
+}
+
+
+
+.answer h3 {
+    color: #002b3c;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    text-align: center; 
+}
+
+
+.answer p {
+    color: #002b3c;
+    font-family: "MYRIADPRO-REGULAR";
+    text-align: center; 
+    font-size: 19px;
+}
+
+.answer h2 {
+    color: #e7741b; 
+    font-family: "MYRIADPRO-SEMIBOLD";
+    text-align: center; 
+}
+
+.answer button {
+    background-color: #002b3c;
+    color: #fff;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 15px;
+    position: relative;
+    top: 15px;
+    width: 220px;
+    height: 60px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+  @media screen and (max-width: 1199px){
+
+    .espacio .cont-p {
+        padding-top: 15px;
+    }
+    
+    .p-5 {
+        padding: 30px;
+    }
+
+    .caja-form h2 {
+        color: #002b3c;
+        font-family: "MYRIADPRO-SEMIBOLD";
+        text-align: center;
+        padding: 20px;
+    }
+    .cajaInfo h2 {
+        color: #002b3c;
+        font-family: "MYRIADPRO-SEMIBOLD";
+        text-align: center;
+        padding: 20px;
+    }
+
+    .puesto {
+        background-color: #f1f0f0;
+        margin-top: 40px;
+        padding-bottom: 45px;
+    }
+  
+  
+    
+  }
+
+
+  @media screen and (max-width: 850px){
+    .tarifa {
+        background-color: #f1f0f0;
+        margin-top: 40px;
+        height: 359px;
+    }
+    .espacios-Img {
+        width: 100%;
+        position: relative;
+        top: 30px;
+    }
+    .cajaInfo p {
+        font-family: "MYRIADPRO-REGULAR";
+        color: #000;
+        font-size: 22px;
+        text-align: justify;
+        padding: 9px 15px;
+    }
+
+    
+    br{display: none;}
+
+
+
+  }
+
+
+  @media screen and (max-width: 991px){
+
+    .espacio {
+        background-color: #f1f0f0;
+        margin-top: 40px;
+        height: 300px;
+    }
+    
+    .espacio p {
+        font-family: "MYRIADPRO-REGULAR";
+        color: #000;
+        font-size: 15px;
+        text-align: left;
+        padding-right: 15px;
+    }
+  
+  
+    
+  }
+
+  @media screen and (max-width: 767px){
+
+    .espacios-Img {
+      width: 100%;
+      position: relative;
+      top: 0px;
+    }
+
+    .espacio {
+        background-color: #f1f0f0;
+        margin-top: 40px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .espacio p {
+        font-family: "MYRIADPRO-REGULAR";
+        color: #000;
+        font-size: 15px;
+        text-align: left;
+        padding-right: 15px;
+    }
+    
+    .pb-e{
+        padding-bottom: 40px;
+    }
+    #sectionPrincipalEspacios {
+        height: auto;
+        position: relative;
+        top: 145px;
+    }
+    
+  }
+
+
+  @media screen and (max-width: 500px){
+    
+  .h1, h1 {
+    font-size: 28px;
+    }
+
+
+  }
