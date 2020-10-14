@@ -30,11 +30,11 @@
                         </div>
                         <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="act"><a href="espacios/">Espacios</a></li>
-                            <li><a href="tarifas/">Tarifas</a></li>
-                            <li><a href="ofertas/">Ofertas</a></li>
-                            <li><a href="eventos/">Eventos</a></li>
-                            <li><a href="blog/">Blog</a></li>
+                            <li class="act"><a href="espacios/" onclick="NavActive(1)">Espacios</a></li>
+                            <li><a href="tarifas/" onclick="NavActive(2)">Tarifas</a></li>
+                            <li><a href="ofertas/" onclick="NavActive(3)">Ofertas</a></li>
+                            <li><a href="eventos/" onclick="NavActive(4)">Eventos</a></li>
+                            <li><a href="blog/" onclick="NavActive(5)">Blog</a></li>
                         </ul>
                         </div>
                     </div>
@@ -66,11 +66,11 @@
                         </div>
                         <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="act"><a href="../espacios/">Espacios</a></li>
-                            <li><a href="../tarifas/">Tarifas</a></li>
-                            <li><a href="../ofertas/">Ofertas</a></li>
-                            <li><a href="../eventos/">Eventos</a></li>
-                            <li><a href="../blog/">Blog</a></li>
+                            <li class="act" id="espacio"><a href="../espacios/" onclick="NavActive(1)">Espacios</a></li>
+                            <li class="" id="tarifa"><a href="../tarifas/" onclick="NavActive(1)">Tarifas</a></li>
+                            <li class="" id="oferta"><a href="../ofertas/">Ofertas</a></li>
+                            <li class="" id="evento"><a href="../eventos/">Eventos</a></li>
+                            <li class="" id="bl"><a href="../blog/">Blog</a></li>
                         </ul>
                         </div>
                     </div>

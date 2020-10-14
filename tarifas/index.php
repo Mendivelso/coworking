@@ -258,7 +258,7 @@
 <script src="../front/js/jquery.magnific-popup.min.js"></script>
 
 <script src="../front/js/highlight.pack.js"></script>
-<!-- <script src="front/js/vegas.min.js"></script> -->
+<script src="../front/js/funciones.js"></script>
 
 
 

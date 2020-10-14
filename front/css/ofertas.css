@@ -1,0 +1,380 @@
+@font-face {font-family: "MYRIADPRO-BOLD";
+	src: url("../css/fonts/MYRIADPRO-BOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-BOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+  @font-face {font-family: "MYRIADPRO-REGULAR";
+	src: url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-REGULAR.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+  @font-face {font-family: "MYRIADPRO-SEMIBOLD";
+	src: url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("TTF"), /* chrome、firefox */
+	url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  }
+
+
+  .b-w{
+    background-color: #fff;
+  }
+
+  .p-5{
+    padding: 40px;
+  }
+  .pt-5{
+    padding-top: 20px;
+  }
+
+  .pb-5{
+    padding-bottom: 20px;
+  }
+
+  .pdd{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .npdd{
+    padding: 0px;
+  }
+
+
+ #sectionPrincipalOfertas{
+    height: auto;
+    position: relative;
+    top: 193px;
+  }
+
+
+  .title-main{
+    color: #fff;
+    font-family: "MYRIADPRO-SEMIBOLD";
+
+  }
+
+  .title-main span{
+    color:#e7741b; 
+  }
+
+
+.oferta {
+    background-color: #002b3c;
+    height: 400px;
+}
+
+
+
+.oferta h3{
+    color: #fff;
+    font-family: "MYRIADPRO-SEMIBOLD";
+    font-size: 30px;
+}
+
+
+.oferta p{
+    color: #fff;
+    font-family: "MYRIADPRO-REGULAR";
+    font-size: 19px;
+}
+
+
+.oferta a{
+    color: #fff;
+    font-family: "MYRIADPRO-REGULAR";
+    font-size: 19px;
+    background-color: #e7741b;
+    padding: 10px;
+    position: relative;
+    top: 20px;
+}
+
+#title-contact{
+    color: #002b3c;
+    font-size: 40px;
+    font-family: "MYRIADPRO-SEMIBOLD";
+}
+
+.ofertas-co{
+    width: 100%;
+}
+
+.serv1{
+    margin-top: 20px;
+}
+
+.color{
+  color: #002b3c;
+}
+
+.color2{
+  color: #fff !important;
+}
+
+.semi{
+  font-family: "MYRIADPRO-SEMIBOLD";
+}
+.regular{
+  font-family: "MYRIADPRO-REGULAR";
+}
+
+
+.serv p {
+  color: #002b3c;
+  font-family: "MYRIADPRO-SEMIBOLD";
+  text-align: center;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.serv .s {
+    padding-top: 40px;
+}
+
+
+.oferta1{
+  height: 529px;
+  background-image: url('../images/ofertas/des1.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+.oferta2{
+  height: 529px;
+  background-image: url('../images/ofertas/des2.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+.p{
+  color: #002b3c;
+  font-family: "MYRIADPRO-REGULAR";
+  font-size: 19px;
+}
+
+.title {
+  color: #002b3c;
+  font-family: "MYRIADPRO-SEMIBOLD";
+}
+
+
+
+
+.shadow{
+  -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+}
+
+.blog{
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+
+.blog2{
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+.blog-title h3{
+  font-family: "MYRIADPRO-SEMIBOLD";
+  color: #002b3c;
+  padding: 0px 15px;
+  text-align: center;
+}
+
+
+.blog-description p {
+  color: #000000;
+  font-family: "MYRIADPRO-REGULAR";
+  font-size: 18px;
+  padding: 0px 15px;
+}
+
+
+.blog-btn{
+  padding: 0px 15px;
+}
+
+
+
+.franja{
+
+  background-color: #002b3c;
+  padding: 20px 15px 60px 15px;
+}
+
+
+.franja h3{
+  color: #fff;
+  font-family: "MYRIADPRO-SEMIBOLD";
+  font-size: 30px;
+}
+
+
+.franja p{
+  color: #fff;
+  font-family: "MYRIADPRO-REGULAR";
+  font-size: 19px;
+}
+
+
+.franja a{
+  color: #fff;
+  font-family: "MYRIADPRO-REGULAR";
+  font-size: 19px;
+  background-color: #e7741b;
+  padding: 10px;
+  position: relative;
+  top: 20px;
+}
+
+.img-b{
+  width: 100%;
+}
+
+
+.evento {
+  margin-top: 45px;
+  height: 260px;
+  border: 1px solid #002b3c;
+}
+
+.jus{
+  text-align: justify;
+}
+
+
+
+
+.evento h3{
+  font-family: "MYRIADPRO-SEMIBOLD";
+  text-align: center;
+}
+
+.evento a{
+  color: #e7741b;
+  font-family: "MYRIADPRO-REGULAR";
+  font-size: 18px;
+  border: 1px solid #002b3c;
+  padding: 10px;
+  position: relative; top: 15px;
+
+}
+
+
+.evento .info{
+  background-color: #eee;
+  height: 100%;
+} 
+
+
+.evento .date{
+  background-color: #e2e2e2;
+  height: 100%;
+} 
+
+
+
+.evento .date h3{
+  padding-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px){
+  .evento {
+    margin-top: 45px;
+    height: 300px;
+    border: 1px solid #002b3c;
+  }
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 767px){
+
+
+  #sectionPrincipalOfertas {
+    height: auto;
+    position: relative;
+    top: 144px;
+}
+
+.oferta p {
+  color: #fff;
+  font-family: "MYRIADPRO-REGULAR";
+  font-size: 19px;
+  padding: 10px 20px;
+}
+
+.oferta {
+  background-color: #002b3c;
+  height: auto;
+  padding-bottom: 60px;
+}
+
+  
+
+  #title-contact {
+    color: #002b3c;
+    font-size: 28px;
+    font-family: "MYRIADPRO-SEMIBOLD";
+  }
+
+  .evento img{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .evento {
+    margin-top: 45px;
+    height: auto;
+    border: 1px solid #002b3c;
+  }
+  
+  .evento .info {
+    background-color: #eee;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.evento .date {
+  background-color: #e2e2e2;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+
+}
+
+@media screen and (max-width: 500px){
+  #title-contact {
+    color: #002b3c;
+    font-size: 28px;
+    font-family: "MYRIADPRO-SEMIBOLD";
+  }
+
+  .h1, h1 {
+    font-size: 30px;
+  }
+  
+
+
+}

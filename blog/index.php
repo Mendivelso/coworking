@@ -1,0 +1,264 @@
+<?php
+
+  include_once('../includes/nav.php');
+  include_once('../includes/footer.php');
+
+
+  ?>
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>El Taller CoWorking - Blog </title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../front/css/bootstrap.min.css">
+
+
+  <!-- Recursos Propios -->
+  <link rel="stylesheet" type="text/css" href="../front/css/menu.css">
+  <link rel="stylesheet" type="text/css" href="../front/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="../front/css/ofertas.css">
+  <link rel="stylesheet" type="text/css" href="../front/css/responsive_bootstrap_carousel_mega_min.css">
+  <link rel="stylesheet" type="text/css" href="../front/css/tinycarousel.css">
+  <link rel="stylesheet" type="text/css" href="../front/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="../front/css/magnific-popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../front/css/vegas.css">
+  <link rel="stylesheet" type="text/css" href="../front/css/monokai-sublime.css">
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!-- Agregamos menu de navegacion  -->
+    <?php menu(2)?> 
+
+
+
+
+ 
+
+
+  <section class="container-fluid b-w" id="sectionPrincipalOfertas">
+
+    
+
+
+    <div class="row oferta">
+        <div class="container">
+
+            <div class="row text-center">
+                <h1 class="title-main p-5">Blog Coworking Bogotá</h1>
+                <hr>
+            </div>
+            <div class="row text-center">               
+                <p class="jus">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ab dolorum, officia voluptatem aut laudantium, amet vel quos cum dolore repellendus nisi mollitia? Eos quae amet explicabo temporibus, doloribus sunt?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum eveniet perferendis assumenda sequi, voluptate minus voluptatibus, animi natus autem, fugit libero fugiat cupiditate praesentium vero ipsa expedita laudantium repellat temporibus!
+                </p>
+                <a href="#" class="">Solicitar Visita</a>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <h1 class="title-main text-center p-5" id="title-contact">Eventos de coworking</h1>       
+        </div>
+    </div>
+
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="blog shadow blog2">
+            <div class="blog-img">
+              <img src="../front/images/blog/3.jpeg" alt="imagen blog" class="img-b">
+            </div>
+            <div class="blog-title">
+              <h3>Como elegir tu espacio Coworking </h3>
+            </div>
+            <div class="blog-description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+              </p>
+              <p><strong>Fecha Evento : 10-10-2020</strong></p>
+            </div>
+            <div class="blog-btn">
+              <a href="#" class="btn enlace ">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="blog  blog2 shadow">
+            <div class="blog-img">
+              <img src="../front/images/blog/3.jpeg" alt="imagen blog" class="img-b">
+            </div>
+            <div class="blog-title">
+              <h3>Como elegir tu espacio Coworking </h3>
+            </div>
+            <div class="blog-description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+              </p>
+              <p><strong>Fecha Evento : 10-10-2020</strong></p>
+            </div>
+            <div class="blog-btn">
+              <a href="#" class="btn enlace ">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="blog blog2 shadow">
+            <div class="blog-img">
+              <img src="../front/images/blog/3.jpeg" alt="imagen blog" class="img-b">
+            </div>
+            <div class="blog-title">
+              <h3>Como elegir tu espacio Coworking </h3>
+            </div>
+            <div class="blog-description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+              </p>
+              <p><strong>Fecha Evento : 10-10-2020</strong></p>
+            </div>
+            <div class="blog-btn">
+              <a href="#" class="btn enlace ">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="blog blog2 shadow">
+            <div class="blog-img">
+              <img src="../front/images/blog/3.jpeg" alt="imagen blog" class="img-b">
+            </div>
+            <div class="blog-title">
+              <h3>Como elegir tu espacio Coworking </h3>
+            </div>
+            <div class="blog-description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+              </p>
+              <p><strong>Fecha Evento : 10-10-2020</strong></p>
+            </div>
+            <div class="blog-btn">
+              <a href="#" class="btn enlace ">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="blog blog2 shadow">
+            <div class="blog-img">
+              <img src="../front/images/blog/3.jpeg" alt="imagen blog" class="img-b">
+            </div>
+            <div class="blog-title">
+              <h3>Como elegir tu espacio Coworking </h3>
+            </div>
+            <div class="blog-description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+              </p>
+              <p><strong>Fecha Evento : 10-10-2020</strong></p>
+            </div>
+            <div class="blog-btn">
+              <a href="#" class="btn enlace ">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="blog blog2 shadow">
+            <div class="blog-img">
+              <img src="../front/images/blog/3.jpeg" alt="imagen blog" class="img-b">
+            </div>
+            <div class="blog-title">
+              <h3>Como elegir tu espacio Coworking </h3>
+            </div>
+            <div class="blog-description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+              </p>
+              <p><strong>Fecha Evento : 10-10-2020</strong></p>
+            </div>
+            <div class="blog-btn">
+              <a href="#" class="btn enlace ">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        
+
+
+
+      </div>      
+    </div>
+
+
+
+
+
+    
+    <div class="row franja text-center">
+        <h3>Si quieres formar parte de un nuevo espacio
+            en Bogotá solicita información
+            sin compromiso. <br>
+
+            <i class="fa fa-phone" aria-hidden="true"></i>   +34 91 021 49 11 </h3>
+       
+    </div>
+      
+
+    
+
+  <!-- Inlcuimos footer -->
+      <?php footer(2); ?>
+
+
+  </section>
+
+
+
+
+<!-- jQuery 3 -->
+<script src="../front/js/jquery.min2.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../front/js/bootstrap.min.js"></script>
+<script src="../front/js/jquery.tinycarousel.js"></script>
+<script src="../front/js/jquery.magnific-popup.min.js"></script>
+<script src="../front/js/highlight.pack.js"></script>
+<script src="../front/js/funciones.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+          $('#slider1').tinycarousel({ interval: true });
+          interval = 10000;
+        });
+    </script>
+</body>
+</body>
+</html>
