@@ -10,7 +10,19 @@
             <footer class="container b-w ">
                 <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <img src="front/images/logo-menu.png" alt="Logo principal " class="logo-footer">
+                    <img src="front/images/logo-menu.png" alt="Logo principal " class="logo-footer"> <br><br>
+                    <p>
+                         Ponte en contacto con nosotros.
+                    </p>
+                    <p>
+                    Nombre: Alejandro Osorio Bernal 
+                    Correo Electrónico: eltallercoworking1@gmail.com
+                    
+                    <strong>Detalles de contacto </strong>   <br>
+                    Carrera 18 No. 118 -04 <br>
+                    Santa Bárbara- Bogotá
+
+                    </p>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                     <h3>Espacios</h3>
@@ -66,7 +78,19 @@
             <footer class="container b-w ">
                 <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <img src="../front/images/logo-menu.png" alt="Logo principal " class="logo-footer">
+                    <img src="../front/images/logo-menu.png" alt="Logo principal " class="logo-footer"><br><br>
+                    <p>
+                         Ponte en contacto con nosotros.
+                    </p>
+                    <p>
+                    Nombre: Alejandro Osorio Bernal 
+                    Correo Electrónico: eltallercoworking1@gmail.com
+                    
+                    <strong>Detalles de contacto </strong>   <br>
+                    Carrera 18 No. 118 -04 <br>
+                    Santa Bárbara- Bogotá
+
+                    </p>    
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                     <h3>Espacios</h3>
@@ -80,7 +104,7 @@
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
                     <h3>Otros</h3>
                     <ul class="footer-li">
-                    <li><a href="">Espaciosx</a></li>
+                    <li><a href="">Espacios</a></li>
                     <li><a href="">Tarifas</a> </li>
                     <li><a href="">Ofertas</a></li>
                     <li><a href="">Eventos</a></li>

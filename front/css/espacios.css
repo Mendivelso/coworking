@@ -15,7 +15,13 @@
   }
 
   
-
+  .color2{
+    color: #fff !important;
+  }
+  
+  .semi{
+    font-family: "MYRIADPRO-SEMIBOLD";
+  }
 
   .b-w{
     background-color: #fff;
@@ -42,7 +48,18 @@
   }
 
 
+  .tari {
+    padding: 0px;
+    margin: 0px;
+  }
 
+  .tari li{
+    display: block;
+    list-style: none;
+    color: #002b3c;
+    font-family: "MYRIADPRO-REGULAR";
+    font-size: 19px;
+  }
 
 
 

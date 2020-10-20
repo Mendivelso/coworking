@@ -107,26 +107,27 @@
             </div>
             <div class="row">
                 <p>
-                    Nuestra tarifa de puestos flexibles te ofrece la oportunidad de disfrutar de un espacio
-                    compartido. Podrás desarrollar tu idea de negocio y trabajar en un ambiente único que te
-                    permitirá realizar tus tareas con la máxima efectividad y flexibilidad posible, pudiendo
-                    elegir jornada completa, media jornada… Todo según tus necesidades con flexibilidad
-                    100%. Con este plan disfrutarás de la experiencia al más puro estilo de un espacio
-                    coworking, con total libertad para sentarte donde desees.
+
+                    PUESTOS FLEXIBLES:  
+                        -Mes: $300.000
+                        -15 días: $200.000
+                        -7 días: $130.000
+
                 </p>
                 <p>
-                    Tendrás a tu disposición un lugar en el que encontrarás tanto zonas para el trabajo como
-                    para tener tiempo para la relajación y el ocio, en el que poder establecer contactos e iniciar
-                    relaciones con otros coworkers. Además, podrás realizar múltiples actividades con las que
-                    conseguir un buen desarrollo profesional. Todo ello, a un precio irresistible y con unas de
-                    las mejores vistas del centro de Madrid que puedes encontrar.
+                    En el Taller Coworking vive una vida a toda máquina, moderna y veloz con un puesto flexible especialmente para ti. Te ofrecemos espacios según tu necesidad con el fin de ampliar las posibilidades de tu negocio. <br>
+                    -30% de descuento en reserva de salas de reuniones  <br>
+                    -Café, vino de verano y palomitas ilimitados. 
+
                 </p>
             </div>
             <div class="row">
                 <ul>
                     <li>Participa en <span>eventos y actividades.</span></li>
                     <li>Disfruta de las <span>zonas comunes con otros coworkers.</span></li>
-                    <li>Horario de L-V de <span>00:00-00:00.</span></li>
+                    <li>Lunes a Viernes de 7:00am a 10:00pm
+                      Sábados de 8:00am a 4:00pm
+                    </span></li>
                 </ul>
             </div>
         </div>
@@ -182,15 +183,76 @@
     <div class="row puesto ">
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
             <div class="row text-center">
-                <h1 class="title-main p-5">Actividades y eventos en el Taller Coworking</h1>
+                <h1 class="title-main p-5">ESPACIOS PARA CONFERENCIAS O MINI CINE: $80.000</h1>
             </div>
             <div class="row text-center">
                 <p>
-                Descubre nuestra agenda de actividades y <br>
-                eventos con los que poder seguir formándote y <br>
-                estableciendo relaciones en nuestro espacio <br>
-                coworking.
+                El taller coworking te da la posibilidad de realizar pequeños eventos, charlas o conferencias que promueven compartir tu conocimiento y el crecimiento de tu negocio. Tendrás a tu entera disposición los espacios de conferencias modernas.
                 </p>
+
+                <ul class="tari">
+                    <li>Café y agua ilimitada </li>
+                    <li>Televisor </li>
+                    <li>Tablero</li>
+                    <li>Sonido</li>
+                </ul>
+
+                <a href="#" class="">Más Información</a>
+            </div>
+            
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+            <img src="../front/images/espacios/sala.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+    </div>
+
+
+    <div class="row puesto ">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <div class="row text-center">
+                <h1 class="title-main p-5">OFICINAS</h1>
+            </div>
+            <div class="row text-center">
+                <p>
+                En el Taller Coworking te brindamos la posibilidad de utilizar oficinas compartidas donde no solo estarás rodeado de un grupo de personas conocidas explotando al máximo la creatividad y el potencial de tu negocio, sino que también podrán repartirse los gastos.
+                </p>
+
+
+                <ul class="tari">
+                    <li>Oficina Tesla (5 Puestos) $1.500.000</li>
+                    <li>Oficina Ferrari con baño $1.300.000 </li>
+                    <li>Oficina Lamborgini (5 Puestos) $1.100.000</li>
+                    <li>Oficina Porshe (1 Puesto) $1.250.000</li>
+                    <li>Oficina Min (3 Puestos) $950.000</li>
+                </ul>
+
+                <a href="#" class="">Más Información</a>
+            </div>
+            
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+            <img src="../front/images/espacios/sala-carro.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+    </div>
+
+
+
+    <div class="row puesto ">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <div class="row text-center">
+                <h1 class="title-main p-5">SALAS DE REUNIONES: HORA: $60.000</h1>
+            </div>
+            <div class="row text-center">
+                <p>
+                El Taller Coworking piensa en ti y en como brindarte nuevas maneras de trabajar, sabemos que te encanta volar por esta razón te brindamos el alquiler de salas de reuniones, porque sabemos lo importante que es para ti tener la posibilidad de ampliar tu negocio.
+                </p>
+                <ul class="tari">
+                    <li>Puesto fijo con control de acceso</li>
+                    <li>Internet de alta velocidad. </li>
+                </ul>
+
                 <a href="#" class="">Más Información</a>
             </div>
             
@@ -200,6 +262,8 @@
             <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
     </div>
+
+
 
     <div class="container text-center answer pb-5 ">
         <div class="row">

@@ -52,12 +52,12 @@
     <div class="container-fluid ">
       <div class="row espacio">
         <div class="col-xs-12 col-sm-6 col-md-6 pl">
-          <img src="../front/images/espacios/sala.jpeg" alt="salas coworking" class="espacios-Img">
+          <img src="../front/images/espacios/recepcion.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">RECEPCIÓN</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
+            En el Taller Coworking sabemos lo importante que es contar con un buen servicio de recepción de calidad, por lo que contamos con el mejor personal formados para atender a nuestros y tus clientes logrando causar la mejor impresión. Ellos se encargarán de hacerlos sentir bienvenidos y que disfruten su estadía.
             </p>
             <a href="#" class="">Más Información</a>
         </div>
@@ -65,9 +65,9 @@
 
       <div class="row espacio">
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">SALA DE JUNTAS</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
+            En el Taller Coworking sabemos que la participación y la colaboración son esenciales para el flujo de trabajo de cada compañía, de esto depende que todas las ideas sean veloces y efectivas para tu negocio. Por esto te ofrecemos espacios de reunión donde podrás disponer de espacios modernos y útiles para aumentar de forma increíble los resultados de cualquier reunión con equipo de punta. 
             </p>
             <a href="#" class="">Más Información</a>
           
@@ -79,12 +79,12 @@
 
       <div class="row espacio">
         <div class="col-xs-12 col-sm-6 col-md-6 pl">
-          <img src="../front/images/espacios/sala-carro.jpeg" alt="salas coworking" class="espacios-Img">
+          <img src="../front/images/espacios/individual.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">PUESTOS INDIVIDUALES</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
+            En el Taller Coworking queremos que en cada viaje la adrenalina sea máxima. Por esto contamos con puestos individuales en cuatro zonas compartidas que te darán la oportunidad de cumplir con tus actividades, crear nuevas relaciones y compartir experiencias con otras personas. 
             </p>
             <a href="#" class="">Más Información</a>
         </div>
@@ -92,15 +92,15 @@
 
       <div class="row espacio">
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">CAFÉ</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
+            El Taller Coworking sabe la velocidad con la que vives, así que pensamos en ti al crear la zona de café para que inicies tu día o te des la pausa que necesitas, una parada en el camino. Nuestra idea es brindarte un espacio de total comodidad para ti.
             </p>
             <a href="#" class="">Más Información</a>
           
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 pr">
-          <img src="../front/images/espacios/sala-personas.jpeg" alt="salas coworking" class="espacios-Img">
+          <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
       </div>
 
@@ -109,9 +109,23 @@
           <img src="../front/images/espacios/sala-invitados.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">MINI CINE</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aliquam cum eos tenetur, magnam minima tempora maiores odit esse commodi consequatur velit nulla. Ea rerum reiciendis nulla eaque laudantium pariatur.
+            En el Taller Coworking podrás encontrar un mini cine para poder relajarte a cualquier hora del día. Encontrarás siempre algo increíble que ver. Además de despejarte de un día agitado estamos seguros que este espacio te dará herramientas para sacar ideas y ser más creativo. 
+            </p>
+            <a href="#" class="">Más Información</a>
+        </div>
+      </div>
+
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">SALÓN DE JUEGOS</h2>
+            <p>
+            El Taller Coworking sabe que tu día va a toda velocidad contamos con un espacio especial creado para brindar el máximo confort. Su amueblamiento en combinación con la luz hace que este lugar sea perfecto para gozar de un momento de esparcimiento en medio de tanto trabajo.
             </p>
             <a href="#" class="">Más Información</a>
         </div>

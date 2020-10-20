@@ -47,8 +47,8 @@
     <div class="row frase">
       <div class="col-xs-12 col-sm-6 col-md-6 frase2">
         <div class="row caja-title text-center">
-          <h3 class="title-h3">Lorem ipsum dolor sit amet, <br>
-            consectetuer adipiscing elit.
+          <h3 class="title-h3">
+          Bienvenidos a El Taller Coworking, un lugar innovador <br> donde vivirás experiencias inolvidables.
           </h3>
           <button class="btn contactanos">CONTÁCTANOS</button>
         </div>        
@@ -66,8 +66,14 @@
       </div>
       <div class="row text-justify">
         <p class=" description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam inventore corrupti aut, impedit quas hic voluptatum consectetur tempora non error officia itaque quae voluptatibus molestias pariatur quaerat in neque minima.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi ex accusantium eum vitae perferendis temporibus nam, beatae, aut esse eaque repudiandae. Cupiditate nisi maiores alias nemo ratione, molestias amet assumenda?
+          Es una nueva propuesta que te brinda la posibilidad de trabajar en un lugar diferente. Estamos seguros de que nuestros espacios temáticos te sorprenderán. 
+          Queremos que tu lugar de trabajo sea todo un viaje de aventura y velocidad. <br>
+
+          Tenemos claro que el ambiente es vital para el trabajo, por esto llevamos nuestra propuesta más allá. Sabemos que buscas algo más que un espacio rígido, estamos seguros de que aquí podrás explotar tu potencial máximo. <br>
+
+          En nuestras instalaciones lograrás encontrar diferentes salas y podrás escoger la que mejor se adapte en función a la actividad que desarrollas, podrás encontrar puestos flexibles, oficinas compartidas, salas de reuniones, espacios para conferencias, mini cinema, café y salón de juegos. <br>
+
+          Estamos ubicados en Bogotá en el barrio Santa Bárbara, el sector que te brinda esparcimiento, gastronomía del más alto nivel, con facilidades de movilidad, restaurantes, clínicas, centros comerciales y vías principales.
         </p>
       </div>
       <div class="row text-center pb-5">
@@ -86,10 +92,12 @@
             </h4>
           </div>
           <div id="collapse1" class="panel-collapse collapse in">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
+            <div class="panel-body">
+              TARIFAS QUE SE ADAPTAN PARA TI.
+                En el Taller Coworking sabemos que no todos tienen las mismas necesidades en cuanto a tiempo y espacio por esto te ofrecemos variedad de tarifas para todas las personas.  <br>
+                Con nuestros diferentes planes podrás tener la libertad total a la hora de trabajar y la posibilidad de asistir todos los días del año, en jornada laboral e incluso solo durante algunas horas. 
+
+            </div>
           </div>
         </div>
         <div class="panel panel-default">
@@ -100,10 +108,13 @@
             </h4>
           </div>
           <div id="collapse2" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
+            <div class="panel-body">
+                
+              RECEPCIÓN: En el Taller Coworking sabemos lo importante que es contar con un buen servicio de recepción de calidad, por lo que contamos con el mejor personal formados para atender a nuestros y tus clientes logrando causar la mejor impresión. Ellos se encargarán de hacerlos sentir bienvenidos y que disfruten su estadía. <br>
+
+              SALA DE JUNTAS: En el Taller Coworking sabemos que la participación y la colaboración son esenciales para el flujo de trabajo de cada compañía, de esto depende que todas las ideas sean veloces y efectivas para tu negocio. Por esto te ofrecemos espacios de reunión donde podrás disponer de espacios modernos y útiles para aumentar de forma increíble los resultados de cualquier reunión con equipo de punta. 
+
+            </div>
           </div>
         </div>
         <div class="panel panel-default">
@@ -114,10 +125,14 @@
             </h4>
           </div>
           <div id="collapse3" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
+            <div class="panel-body">
+                CAFÉ: El Taller Coworking sabe la velocidad con la que vives, así que pensamos en ti al crear la zona de café para que inicies tu día o te des la pausa que necesitas, una parada en el camino. Nuestra idea es brindarte un espacio de total comodidad para ti. <br>
+
+                MINI CINE: En el Taller Coworking podrás encontrar un mini cine para poder relajarte a cualquier hora del día. Encontrarás siempre algo increíble que ver. Además de despejarte de un día agitado estamos seguros que este espacio te dará herramientas para sacar ideas y ser más creativo.  <br>
+
+                SALÓN DE JUEGOS: El Taller Coworking sabe que tu día va a toda velocidad contamos con un espacio especial creado para brindar el máximo confort. Su amueblamiento en combinación con la luz hace que este lugar sea perfecto para gozar de un momento de esparcimiento en medio de tanto trabajo.
+
+            </div>
           </div>
         </div>
       </div>
