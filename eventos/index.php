@@ -239,8 +239,7 @@
         <h3>Si quieres formar parte de un nuevo espacio
             en Bogotá solicita información
             sin compromiso. <br>
-
-            <i class="fa fa-phone" aria-hidden="true"></i>   +34 91 021 49 11 </h3>
+        </h3>
        
     </div>
       

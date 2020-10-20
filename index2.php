@@ -156,7 +156,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                  Saja de Juntas
                 </p>
                 </a>
               </li>
@@ -165,7 +165,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                  Recepción 
                 </p>
                 </a>
               </li>
@@ -173,7 +173,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                    Puestos Individuales
                 </p>
                 </a>
               </li>
@@ -181,7 +181,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                  Café
                 </p>
                 </a>
               </li>
@@ -189,7 +189,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                  Mini Cine
                 </p>
                 </a>
               </li>
@@ -197,7 +197,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                  Salón de Juegos
                 </p>
                 </a>
               </li>
@@ -205,7 +205,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                  Café
                 </p>
                 </a>
               </li>
@@ -213,7 +213,7 @@
                 <a href="#" title="">
                 <img src="front/images/working/oficina.jpeg" class="img-responsive" title=""/>
                 <p>
-                  lorem ipsum tra 
+                  Mini Cine
                 </p>
                 </a>
               </li>
