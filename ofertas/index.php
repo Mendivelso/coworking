@@ -128,27 +128,48 @@
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-            <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+            <i class="fa fa-users fa-5x" aria-hidden="true"></i>
                 <p>
-                    Servicio de correo y paquetería
+                Sala de juntas
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
                 <i class="fa fa-street-view fa-5x" aria-hidden="true"></i>
                 <p>
-                    Ubicación Prime
+                Control de acceso
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-address-card fa-5x" aria-hidden="true"></i>
+                <i class="fa fa-video-camera fa-5x" aria-hidden="true"></i>
                 <p>
-                    Salas con Proyector
+                Mini cine 
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
                 <i class="fa fa-coffee fa-5x" aria-hidden="true"></i>
                 <p>
-                    Zonas comunes cocinas con terraza
+                Cafetería
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-scissors fa-5x" aria-hidden="true"></i>
+                <p>
+                Peluquería 
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
+                <p>
+                Salón de juegos 
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-bicycle fa-5x" aria-hidden="true"></i>
+                <p>
+                Parqueadero para motos, patinetas, bicicletas
                 </p>
             </div>
         </div>
@@ -272,19 +293,11 @@
               
         </div>
 
-        <div class="row">
-            <h1 class="title-main color p-5">
-               EL TALLER COWORKING EN BOGOTÁ 
-            </h1>    
-        </div>
+        
 
     </div>
 
 
-    <!-- map -->
-    <div class="row">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.409350983703!2d-74.04966338474935!3d4.69872984298177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ab12b74a291%3A0x83716c8a1058576e!2sOptima%20TM!5e0!3m2!1ses!2sco!4v1602691322871!5m2!1ses!2sco" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>              
-    </div>
     
     <div class="row franja text-center">
         <h3>Si quieres formar parte de un nuevo espacio

@@ -59,7 +59,7 @@
                     Los Espacios flexibles para aquellos que <br>
                     buscan libertad para trabajar.
                 </p>
-                <a href="#" class="">Más Información</a>
+                <a href="#" class="">CONTÁCTANOS</a>
             </div>
             
             
@@ -153,27 +153,48 @@
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-            <i class="fa fa-envelope-o fa-5x" aria-hidden="true"></i>
+            <i class="fa fa-users fa-5x" aria-hidden="true"></i>
                 <p>
-                    Servicio de correo y paquetería
+                Sala de juntas
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
                 <i class="fa fa-street-view fa-5x" aria-hidden="true"></i>
                 <p>
-                    Ubicación Prime
+                Control de acceso
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-address-card fa-5x" aria-hidden="true"></i>
+                <i class="fa fa-video-camera fa-5x" aria-hidden="true"></i>
                 <p>
-                    Salas con Proyector
+                Mini cine 
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
                 <i class="fa fa-coffee fa-5x" aria-hidden="true"></i>
                 <p>
-                    Zonas comunes cocinas con terraza
+                Cafetería
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-scissors fa-5x" aria-hidden="true"></i>
+                <p>
+                Peluquería 
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
+                <p>
+                Salón de juegos 
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-bicycle fa-5x" aria-hidden="true"></i>
+                <p>
+                Parqueadero para motos, patinetas, bicicletas
                 </p>
             </div>
         </div>
@@ -197,7 +218,7 @@
                     <li>Sonido</li>
                 </ul>
 
-                <a href="#" class="">Más Información</a>
+                
             </div>
             
             
@@ -227,13 +248,55 @@
                     <li>Oficina Min (3 Puestos) $950.000</li>
                 </ul>
 
-                <a href="#" class="">Más Información</a>
+                
             </div>
             
             
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 pr">
-            <img src="../front/images/espacios/sala-carro.jpeg" alt="salas coworking" class="espacios-Img">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="../front/images/espacios/sala-carro.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
+
+                    <div class="item">
+                        <img src="../front/images/espacios/sala-ferrari.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
+
+                    <div class="item">
+                        <img src="../front/images/espacios/sala-porche.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
+
+                    <div class="item">
+                        <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
+                    <div class="item">
+                        <img src="../front/images/espacios/individual.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">                    
+                    <i class="fa fa-arrow-left glyphicon-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <i class="fa fa-arrow-right glyphicon-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            
         </div>
     </div>
 
@@ -253,7 +316,7 @@
                     <li>Internet de alta velocidad. </li>
                 </ul>
 
-                <a href="#" class="">Más Información</a>
+                
             </div>
             
             
@@ -262,6 +325,96 @@
             <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
     </div>
+
+
+    <div class="row">
+      <h1 class="title-main text-center p-5" id="title-contact">Centro de <span>Coworking</span> en Bogotá</h1>
+    </div>
+
+    <div class="container-fluid ">
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/recepcion.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">RECEPCIÓN</h2>
+            <p>
+            En el Taller Coworking sabemos lo importante que es contar con un buen servicio de recepción de calidad, por lo que contamos con el mejor personal formados para atender a nuestros y tus clientes logrando causar la mejor impresión. Ellos se encargarán de hacerlos sentir bienvenidos y que disfruten su estadía.
+            </p>
+            
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">SALA DE JUNTAS</h2>
+            <p>
+            En el Taller Coworking sabemos que la participación y la colaboración son esenciales para el flujo de trabajo de cada compañía, de esto depende que todas las ideas sean veloces y efectivas para tu negocio. Por esto te ofrecemos espacios de reunión donde podrás disponer de espacios modernos y útiles para aumentar de forma increíble los resultados de cualquier reunión con equipo de punta. 
+            </p>
+            
+          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+          <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/individual.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">PUESTOS INDIVIDUALES</h2>
+            <p>
+            En el Taller Coworking queremos que en cada viaje la adrenalina sea máxima. Por esto contamos con puestos individuales en cuatro zonas compartidas que te darán la oportunidad de cumplir con tus actividades, crear nuevas relaciones y compartir experiencias con otras personas. 
+            </p>
+            
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">CAFÉ</h2>
+            <p>
+            El Taller Coworking sabe la velocidad con la que vives, así que pensamos en ti al crear la zona de café para que inicies tu día o te des la pausa que necesitas, una parada en el camino. Nuestra idea es brindarte un espacio de total comodidad para ti.
+            </p>
+            
+          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+          <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/sala-invitados.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">MINI CINE</h2>
+            <p>
+            En el Taller Coworking podrás encontrar un mini cine para poder relajarte a cualquier hora del día. Encontrarás siempre algo increíble que ver. Además de despejarte de un día agitado estamos seguros que este espacio te dará herramientas para sacar ideas y ser más creativo. 
+            </p>
+            
+        </div>
+      </div>
+
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">SALÓN DE JUEGOS</h2>
+            <p>
+            El Taller Coworking sabe que tu día va a toda velocidad contamos con un espacio especial creado para brindar el máximo confort. Su amueblamiento en combinación con la luz hace que este lugar sea perfecto para gozar de un momento de esparcimiento en medio de tanto trabajo.
+            </p>
+            
+        </div>
+      </div>
+
+    </div>
+
 
 
 

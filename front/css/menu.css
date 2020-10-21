@@ -30,6 +30,26 @@ body{
 	background-color: #eee;
 }
 
+.icons{
+	display: inline-block !important;
+	width: 48%;
+	height: 100%;
+}
+
+.icons .fa {
+    display: inline-block;
+    font-size: 20px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+#bl{
+	margin-left: 3px;
+}
+
+
 
 #noPadd{
 	padding-right: 0px;
@@ -183,6 +203,12 @@ body{
 		top: -3px;
 	}
 
+	.icons {
+		display: inline-block !important;
+		width: 46%;
+		height: 100%;
+	}
+
 
 }
 
@@ -192,6 +218,12 @@ body{
 
 
 @media screen and (max-width: 767px){
+
+	.icons {
+		display: inline-block !important;
+		width: 49%;
+		height: 32px;
+	}
 
 	.navbar-default .navbar-toggle .icon-bar {
 		background-color: #002b3c;

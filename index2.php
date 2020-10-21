@@ -22,6 +22,7 @@
   <link rel="stylesheet" type="text/css" href="front/css/menu.css">
   <link rel="stylesheet" type="text/css" href="front/css/footer.css">
   <link rel="stylesheet" type="text/css" href="front/css/inicio.css">
+  <link rel="stylesheet" type="text/css" href="front/css/espacios.css">
   <link rel="stylesheet" type="text/css" href="front/css/responsive_bootstrap_carousel_mega_min.css">
   <link rel="stylesheet" type="text/css" href="front/css/tinycarousel.css">
   <link rel="stylesheet" type="text/css" href="front/css/animate.css">
@@ -121,7 +122,7 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-              Unicación del Coworking en Bogotá <i class="fa fa-plus fa-1x fs" aria-hidden="true"></i>&nbsp; </a>
+              Ubicación del Coworking en Bogotá <i class="fa fa-plus fa-1x fs" aria-hidden="true"></i>&nbsp; </a>
             </h4>
           </div>
           <div id="collapse3" class="panel-collapse collapse">
@@ -137,6 +138,140 @@
         </div>
       </div>
     </div>
+
+
+    <div class="row ">
+        <div class="col-xs-12 col-sm-6 col-md-5 caja-form">
+            <div class="row">
+                <h2>Usa este formulario para contactar con nosotros</h2>
+            </div>
+            <div class="row">
+                <form id="form-contact">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="pwd" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="pwd" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                        <select name="" id="" class="form-control">
+                        <option value="Salas Coworking">Salas Coworking</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="" id="" cols="" rows="4" class="form-control" placeholder="Comentarios"></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox">Acepto la Política de Privacidad</label>
+                    </div>
+                    <button type="submit" class="btn btn-default send">Enviar</button>
+                </form> 
+            </div>                                   
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-7 cajaInfo">
+            <div class="row">
+                <h2>Espacios flexibles a tu medida en nuestro coworking</h2>                
+            </div>
+            <div class="row">
+                <p>
+
+                    PUESTOS FLEXIBLES:  
+                        -Mes: $300.000
+                        -15 días: $200.000
+                        -7 días: $130.000
+
+                </p>
+                <p>
+                    En el Taller Coworking vive una vida a toda máquina, moderna y veloz con un puesto flexible especialmente para ti. Te ofrecemos espacios según tu necesidad con el fin de ampliar las posibilidades de tu negocio. <br>
+                    -30% de descuento en reserva de salas de reuniones  <br>
+                    -Café, vino de verano y palomitas ilimitados. 
+
+                </p>
+            </div>
+            <div class="row">
+                <ul>
+                    <li>Participa en <span>eventos y actividades.</span></li>
+                    <li>Disfruta de las <span>zonas comunes con otros coworkers.</span></li>
+                    <li>Lunes a Viernes de 7:00am a 10:00pm
+                      Sábados de 8:00am a 4:00pm
+                    </span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <h1 class="title-main text-center p-5" id="">Servicios incluidos en nuestro <br><span>espacio coworking</span></h1>       
+        </div>
+        <div class="row serv">
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-window-maximize fa-5x" aria-hidden="true"></i>
+                
+                <p>
+                    Servicio de Recepcion
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-wifi fa-5x" aria-hidden="true"></i>
+                <p>
+                    Acceso a la red wifi
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+            <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+                <p>
+                Sala de juntas
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-street-view fa-5x" aria-hidden="true"></i>
+                <p>
+                Control de acceso
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-video-camera fa-5x" aria-hidden="true"></i>
+                <p>
+                Mini cine 
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-coffee fa-5x" aria-hidden="true"></i>
+                <p>
+                Cafetería
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-scissors fa-5x" aria-hidden="true"></i>
+                <p>
+                Peluquería 
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
+                <p>
+                Salón de juegos 
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-bicycle fa-5x" aria-hidden="true"></i>
+                <p>
+                Parqueadero para motos, patinetas, bicicletas
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <div class="container">
       <div class="row">
@@ -226,37 +361,43 @@
     </div>
 
 
-    <div class="container">
-      <div class="col-md-5">
-        <div class="row text-left">
-          <h1 class="title-main p-5" id="title-contact">Contacta con <span>nosotros</span></h1>
+    <div class="container text-center answer pb-5 ">
+        <div class="row">
+            <h1 class="title-main color p-5" id="ubicacion">
+                Oficina coworking El Taller <br>
+                se adapta a tus necesidades
+            </h1>    
         </div>
-      </div>
-      <div class="col-md-7">
-        <form id="form-contact">
-          <div class="form-group">
-              <input type="text" class="form-control" id="email" placeholder="Nombre">
-          </div>
-          <div class="form-group">
-              <input type="text" class="form-control" id="pwd" placeholder="Email">
-          </div>
-          <div class="form-group">
-              <input type="text" class="form-control" id="pwd" placeholder="Teléfono">
-          </div>
-          <div class="form-group">
-              <select name="" id="" class="form-control">
-              <option value="Salas Coworking">Salas Coworking</option>
-              </select>
-          </div>
-          <div class="form-group">
-              <textarea name="" id="" cols="" rows="4" class="form-control" placeholder="Comentarios"></textarea>
-          </div>
-          <div class="checkbox">
-              <label><input type="checkbox">Acepto la Política de Privacidad</label>
-          </div>
-          <button type="submit" class="btn btn-default send">Enviar</button>
-        </form>
-      </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="color semi">ECONÓMICO</h2>
+                <p class="regular p">
+                    No pagues toda la oficina, ni todas las salas, <br> solo lo que uses, pero con la posibilidad de tenerlo todo.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2 class="color semi">FLEXIBLE</h2>
+                <p class="regular p">
+                     El espacio deja de ser un problema, <br> disfruta de una oficina moderna sin la carga de gestión.
+                </p>
+            </div>
+              
+        </div>
+
+        <div class="row" >
+            <h1 class="title-main color p-5">
+               EL TALLER COWORKING EN BOGOTÁ 
+            </h1>    
+        </div>
+
+    </div>
+
+
+    <!-- map -->
+    <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.409350983703!2d-74.04966338474935!3d4.69872984298177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ab12b74a291%3A0x83716c8a1058576e!2sOptima%20TM!5e0!3m2!1ses!2sco!4v1602691322871!5m2!1ses!2sco" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>              
     </div>
 
 
