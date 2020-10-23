@@ -15,8 +15,8 @@
                          Ponte en contacto con nosotros.
                     </p>
                     <p>
-                    Nombre: Alejandro Osorio Bernal 
-                    Correo Electrónico: eltallercoworking1@gmail.com
+                    Alejandro Osorio Bernal 
+                    eltallercoworking1@gmail.com
                     
                     <strong>Detalles de contacto </strong>   <br>
                     Carrera 18 No. 118 -04 <br>
@@ -83,8 +83,8 @@
                          Ponte en contacto con nosotros.
                     </p>
                     <p>
-                    Nombre: Alejandro Osorio Bernal 
-                    Correo Electrónico: eltallercoworking1@gmail.com
+                    Alejandro Osorio Bernal 
+                    eltallercoworking1@gmail.com
                     
                     <strong>Detalles de contacto </strong>   <br>
                     Carrera 18 No. 118 -04 <br>

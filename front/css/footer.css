@@ -17,7 +17,7 @@
 
 
   .logo-footer{
-      width: 100%;
+      width: 240px;
   }
 
   footer{
@@ -88,6 +88,16 @@ textarea::placeholder { color: red; font-weight: bold; }
 select::placeholder { color: red; font-weight: bold; }
 
 
+
+@media screen and (max-width: 991px){
+
+    .logo-footer {
+        width: 100%;
+    }
+
+}
+
+
 @media screen and (max-width: 767px){
 
     .logo-footer {
@@ -96,3 +106,6 @@ select::placeholder { color: red; font-weight: bold; }
 
 
 }
+
+
+

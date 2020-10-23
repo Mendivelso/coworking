@@ -189,10 +189,10 @@
     <div class="container text-center answer pb-5 ">
         <div class="row">
             <h1 class="title p-5">
-                Ven a nuestro Coworking de Goya
+                Ven a nuestro Coworking
             </h1>
-            <p class="p">
-                En nuestro espacio de coworking disfruta de uno de nuestros 60 puestos, amplios y cómodos, ya sea en la sala de coworking, alquiler de salas o alquiler de un despacho individual o compartido, en un espacio de 400 m2 sobre la calle Goya.
+            <p class="p jus">
+                En nuestro espacio de coworking disfruta de uno de nuestros 60 puestos, amplios y cómodos, ya sea en la sala de coworking, alquiler de salas o alquiler de un despacho individual o compartido, en un espacio de 400 m2.
                 Alquiler de salas para formación, cursos, coach y mucho más.
                 Aprovecha la buena energía del verano y fortalece tus relaciones sociales y profesionales en un espacio:
             </p>
@@ -271,7 +271,7 @@
     <div class="container text-center answer pb-5 ">
         <div class="row">
             <h1 class="title-main color p-5">
-                Oficina coworking sobre Goya: <br>
+                Oficina coworking: <br>
                 se adapta a tus necesidades
             </h1>    
         </div>

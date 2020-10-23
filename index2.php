@@ -16,6 +16,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="front/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="front/images/logo-menu2.png" type="image/x-icon">
 
 
   <!-- Recursos Propios -->
@@ -402,7 +403,7 @@
 
 
 
-    <div class="row text-center">
+    <!-- <div class="row text-center">
       <h1 class="title-main p-5">Blog Coworking <span>Bogotá</span></h1>
     </div>
 
@@ -463,7 +464,7 @@
           </div>
         </div>
       </div>      
-    </div>
+    </div> -->
 
 
     <div class="row pt-5">

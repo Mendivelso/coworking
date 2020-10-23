@@ -55,11 +55,14 @@
                 <h1 class="title-main p-5">Actividades y Eventos Coworking Bogotá</h1>
                 <hr>
             </div>
-            <div class="row text-center">               
+            <div class="row jus">               
                 <p>
                 Ser tu propio jefe es mucho trabajo y, a veces, puede ser duro encontrar un momento para desconectar y tomar distancia para tener una visión global de tu proyecto. Por eso en Smart Coworking planeamos semanalmente eventos para  ayudarte a encontrar ese tiempo necesario que te permite tener perspectiva, relacionarte y mantenerte enfocado. Siéntete libre para unirte a nosotros y a otros Smart Coworkers.
                 </p>
-                <a href="#" class="">Solicitar Visita</a>
+                
+            </div>
+            <div class="row text-center">
+              <a href="#" class="">Solicitar Visita</a>
             </div>
             
             
@@ -85,7 +88,7 @@
               <h3>Como elegir tu espacio Coworking </h3>
             </div>
             <div class="blog-description">
-              <p>
+              <p class=""> 
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
               </p>
@@ -147,7 +150,7 @@
             <h1 class="title p-5">
             EVENTOS PERSONALIZADOS
             </h1>
-            <p class="p">
+            <p class="p jus">
             Como emprendedor/a, es difícil superar ciertos retos, a veces solo necesitamos pensar “out of the box”, salir de la zona de confort y escuchar nuevas ideas. Ser un Smart Coworker es ser parte de una comunidad dinámica que te puede ayudar a relanzar tu creatividad y hacer crecer tu negocio!!! Siéntete libre y apoyado para organizar un evento que estimule las mentes de todos, proponer una reunión para pensar o compartir el último libro inspirador que te has leído (o escrito) mientras hacemos un “Lunch and Learns”!
             </p>
         </div>

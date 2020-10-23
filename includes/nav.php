@@ -33,7 +33,7 @@
                             <li class="act active"><a href="#" onclick="NavActive(1)">Inicio</a></li>
                             <li><a href="tarifas/" onclick="NavActive(2)">Tarifas</a></li>
                             <li><a href="ofertas/" onclick="NavActive(3)">Ofertas</a></li>
-                            <li><a href="eventos/" onclick="NavActive(4)">Noticias</a></li>
+                            <li><a href="eventos/" onclick="NavActive(4)">Eventos</a></li>
                             <li class="active">
                                 <a href="#" class="icons"><i class="fa fa-instagram fa-1x" aria-hidden="true"></i></a>
                                 <a href="index2.php#ubicacion" class="icons"><i class="fa fa-map-marker fa-1x" aria-hidden="true"></i></a> 
@@ -72,7 +72,7 @@
                             <li class="act" id="espacio"><a href="../" onclick="NavActive(1)">Inicio</a></li>
                             <li class="" id="tarifa"><a href="../tarifas/" onclick="NavActive(1)">Tarifas</a></li>
                             <li class="" id="oferta"><a href="../ofertas/">Ofertas</a></li>
-                            <li class="" id="evento"><a href="../eventos/">Noticias</a></li>
+                            <li class="" id="evento"><a href="../eventos/">Eventos</a></li>
                             <li class="active" id="bl">
                             <a href="#" class="icons"><i class="fa fa-instagram fa-1x" aria-hidden="true"></i></a>
                             <a href="../index2.php#ubicacion" class="icons"><i class="fa fa-map-marker fa-1x" aria-hidden="true"></i></a>                            
