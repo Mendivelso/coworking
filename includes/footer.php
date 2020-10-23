@@ -10,7 +10,7 @@
             <footer class="container b-w ">
                 <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <img src="front/images/logo-menu.png" alt="Logo principal " class="logo-footer"> <br><br>
+                    <img src="front/images/logo-menu2.png" alt="Logo principal " class="logo-footer"> <br><br>
                     <p>
                          Ponte en contacto con nosotros.
                     </p>
@@ -78,7 +78,7 @@
             <footer class="container b-w ">
                 <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <img src="../front/images/logo-menu.png" alt="Logo principal " class="logo-footer"><br><br>
+                    <img src="../front/images/logo-menu2.png" alt="Logo principal " class="logo-footer"><br><br>
                     <p>
                          Ponte en contacto con nosotros.
                     </p>

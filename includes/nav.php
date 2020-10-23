@@ -26,7 +26,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"><img src="front/images/logo-menu.png" class="logo"></a>
+                        <a class="navbar-brand" href="#"><img src="front/images/logo-menu2.png" class="logo"></a>
                         </div>
                         <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
@@ -65,7 +65,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="../"><img src="../front/images/logo-menu.png" class="logo"></a>
+                        <a class="navbar-brand" href="../"><img src="../front/images/logo-menu2.png" class="logo"></a>
                         </div>
                         <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
