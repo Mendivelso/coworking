@@ -51,17 +51,25 @@
     <div class="row tarifa">
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e cajaEspacio">
             <div class="row text-center">
-                <h1 class="title-main p-5">Espacios
+                <h1 class="title-main p-5">Puestos
                     <br> <span>FLEXIBLES</span></h1>
             </div>
             <div class="row text-center">
                 <p>
                 En el Taller Coworking vive una vida a toda máquina, moderna y veloz con un puesto flexible especialmente para ti. Te ofrecemos espacios según tu necesidad con el fin de ampliar las  posibilidades de tu negocio. <br>
-                • 30% de descuento en reserva de salas de reuniones <br>
-                • Café, vino de verano y palomitas ilimitados.
                 </p>
-                
-                <a href="#" class="">CONTÁCTANOS</a>
+                <ul class="generalT">
+                        <li>30% de descuento en reserva de salas de reuniones</li>
+                        <li>Café, vino de verano y palomitas ilimitados.</li>
+
+                    </ul>        
+                    <h3 class="color semi">Tarifas</h3>
+
+                    <ul class="generalT">
+                        <li> Mes: $300.000</li>
+                        <li>15 días: $200.000 </li>
+                        <li>7 días: $130.000</li>
+                    </ul>
             </div>
             
             
@@ -85,12 +93,13 @@
                 El taller coworking te da la posibilidad de realizar pequeños eventos, charlas o conferencias que promueven compartir tu conocimiento y el crecimiento de tu negocio. Tendrás a tu entera disposición los espacios de conferencias modernas.
                 </p>
 
-                <ul class="tari">
+                
+                <ul class="generalT">
                     <li>Café y agua ilimitada </li>
                     <li>Televisor </li>
                     <li>Tablero</li>
                     <li>Sonido</li>
-                </ul>
+                    </ul>
 
                 
             </div>
@@ -114,13 +123,15 @@
                 </p>
 
 
-                <ul class="tari">
+                <ul class="generalT">
                     <li>Oficina Tesla (5 Puestos) $1.500.000</li>
                     <li>Oficina Ferrari con baño $1.300.000 </li>
                     <li>Oficina Lamborgini (5 Puestos) $1.100.000</li>
                     <li>Oficina Porshe (1 Puesto) $1.250.000</li>
                     <li>Oficina Min (3 Puestos) $950.000</li>
                 </ul>
+
+               
 
                 
             </div>
@@ -185,7 +196,7 @@
                 <p>
                 El Taller Coworking piensa en ti y en como brindarte nuevas maneras de trabajar, sabemos que te encanta volar por esta razón te brindamos el alquiler de salas de reuniones, porque sabemos lo importante que es para ti tener la posibilidad de ampliar tu negocio.
                 </p>
-                <ul class="tari">
+                <ul class="generalT">
                     <li>Puesto fijo con control de acceso</li>
                     <li>Internet de alta velocidad. </li>
                 </ul>
@@ -219,7 +230,12 @@
                     </div>
                     <div class="form-group">
                         <select name="" id="" class="form-control">
-                        <option value="Salas Coworking">Salas Coworking</option>
+                        <option>Salas Coworking</option>
+                        <option>Puestos flexibles </option>
+                        <option>Puestos flexibles </option>
+                        <option>Oficinas de 3, 4 y 5 puestos </option>
+                        <option>Espacios para conferencias</option>
+                        <option>Sala de cine</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -232,16 +248,14 @@
                 </form> 
             </div>                                   
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-7 cajaInfo">
+        <div class="col-xs-12 col-sm-6 col-md-7 cajaInfo pt-4"> <br><br>
             <div class="row">
                 <h2>Puestos flexibles a tu medida en nuestro coworking</h2>                
             </div>
             
             <div class="row">
                 <ul>
-                    <li>Mes: $300.000</li>
-                    <li>15 días: $200.000</li>
-                    <li>7 días: $130.000</li>
+                    
                     <li>Participa en <span>eventos y actividades.</span></li>
                     <li>Disfruta de las <span>zonas comunes con otros coworkers.</span></li>
                     <li>Lunes a Viernes de 7:00am a 10:00pm

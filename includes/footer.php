@@ -58,7 +58,12 @@
                     </div>
                     <div class="form-group">
                         <select name="" id="" class="form-control">
-                        <option value="Salas Coworking">Salas Coworking</option>
+                        <option>Salas Coworking</option>
+                        <option>Puestos flexibles </option>
+                        <option>Puestos flexibles </option>
+                        <option>Oficinas de 3, 4 y 5 puestos </option>
+                        <option>Espacios para conferencias</option>
+                        <option>Sala de cine</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -126,7 +131,12 @@
                     </div>
                     <div class="form-group">
                         <select name="" id="" class="form-control">
-                        <option value="Salas Coworking">Salas Coworking</option>
+                        <option>Salas Coworking</option>
+                        <option>Puestos flexibles </option>
+                        <option>Puestos flexibles </option>
+                        <option>Oficinas de 3, 4 y 5 puestos </option>
+                        <option>Espacios para conferencias</option>
+                        <option>Sala de cine</option>
                         </select>
                     </div>
                     <div class="form-group">

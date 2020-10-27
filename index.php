@@ -91,12 +91,12 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                Coworking: Tarifas y flexibilidad  <i class="fa fa-plus fa-1x fs" aria-hidden="true"></i>&nbsp;   </a>
+                Tarifas que se adaptan para ti  <i class="fa fa-plus fa-1x fs" aria-hidden="true"></i>&nbsp;   </a>
             </h4>
           </div>
           <div id="collapse1" class="panel-collapse collapse in">
             <div class="panel-body">
-              TARIFAS QUE SE ADAPTAN PARA TI.
+            
                 En el Taller Coworking sabemos que no todos tienen las mismas necesidades en cuanto a tiempo y espacio por esto te ofrecemos variedad de tarifas para todas las personas.  <br>
                 Con nuestros diferentes planes podrás tener la libertad total a la hora de trabajar y la posibilidad de asistir todos los días del año, en jornada laboral e incluso solo durante algunas horas. 
 
@@ -154,7 +154,13 @@
                     </div>
                     <div class="form-group">
                         <select name="" id="" class="form-control">
-                        <option value="Salas Coworking">Salas Coworking</option>
+                        <option>Salas Coworking</option>
+                        <option>Puestos flexibles </option>
+                        <option>Puestos flexibles </option>
+                        <option>Oficinas de 3, 4 y 5 puestos </option>
+                        <option>Espacios para conferencias</option>
+                        <option>Sala de cine</option>
+                        
                         </select>
                     </div>
                     <div class="form-group">

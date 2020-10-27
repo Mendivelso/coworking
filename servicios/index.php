@@ -286,7 +286,7 @@
             <p class="p jus">
                 En nuestro espacio de coworking disfruta de uno de nuestros puestos, amplios y cómodos, ya sea en la sala de coworking, alquiler de salas o alquiler de un despacho individual o compartido, en un espacio de 600 m2.
                 Alquiler de salas para formación, cursos, coach y mucho más.
-                Aprovecha la buena energía del verano y fortalece tus relaciones sociales y profesionales.
+              
             </p>
         </div>
 

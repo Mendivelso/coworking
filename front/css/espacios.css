@@ -55,6 +55,24 @@
   }
 
 
+  
+  .ul-tarifas {
+    position: relative; top: 30px;
+  }
+
+
+.ul-tarifas li{
+    text-align: center;
+  }
+  
+
+
+
+
+
+
+
+
   .tari {
     padding: 0px;
     margin: 0px;
@@ -156,8 +174,8 @@
   font-family: "MYRIADPRO-REGULAR";
   color: #000;
   font-size: 22px;
-  text-align: center;
-  padding-right: 15px;
+  text-align: justify;
+  padding: 0px 30px;
 
 }
 
@@ -169,6 +187,20 @@
   top: 20px;
   color: #000;
 }
+
+.generalT{
+  position: relative;
+  left: 15px;
+}
+
+.generalT li {
+  text-align: justify;
+  font-family: "MYRIADPRO-REGULAR";
+  color: #000;
+  font-size: 22px;
+}
+
+
 
 .cajaInfo h2{
     color: #002b3c;
@@ -273,15 +305,15 @@
 }
 
 .puesto .cont-p{
-    padding-top: 15px;
+    padding: 30px;
 }
 
 .puesto p {
   font-family: "MYRIADPRO-REGULAR";
   color: #000;
   font-size: 22px;
-  text-align: center;
-  padding-right: 15px;
+  text-align: justify;
+  padding-right: 0px 15px;
 
 }
 
@@ -341,7 +373,7 @@
         padding-top: 15px;
     }
     .cajaEspacio{
-      height:460px;
+      height:550px;
     }
     .p-5 {
         padding: 5px;
@@ -378,7 +410,7 @@
     .tarifa {
         background-color: #f1f0f0;
         margin-top: 40px;
-        height: 445px;
+        height: auto;
     }
     .espacios-Img {
         width: 100%;
@@ -395,13 +427,21 @@
 
     
     br{display: none;}
-
+    .generalT {
+      position: relative;
+      padding-right: 27px;
+      left: 0px;
+    }
 
 
   }
 
 
   @media screen and (max-width: 991px){
+
+    .cajaEspacio {
+      height: 610px;
+    }
 
     .espacio {
         background-color: #f1f0f0;
@@ -458,7 +498,7 @@
   @media screen and (max-width: 400px){
     
     .cajaEspacio {
-      height: 510px;
+      height: 680px;
   }
   
   
