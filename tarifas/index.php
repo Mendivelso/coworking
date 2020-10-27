@@ -49,16 +49,18 @@
 
 
     <div class="row tarifa">
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e cajaEspacio">
             <div class="row text-center">
                 <h1 class="title-main p-5">Espacios
                     <br> <span>FLEXIBLES</span></h1>
             </div>
             <div class="row text-center">
                 <p>
-                    Los Espacios flexibles para aquellos que <br>
-                    buscan libertad para trabajar.
+                En el Taller Coworking vive una vida a toda máquina, moderna y veloz con un puesto flexible especialmente para ti. Te ofrecemos espacios según tu necesidad con el fin de ampliar las  posibilidades de tu negocio. <br>
+                • 30% de descuento en reserva de salas de reuniones <br>
+                • Café, vino de verano y palomitas ilimitados.
                 </p>
+                
                 <a href="#" class="">CONTÁCTANOS</a>
             </div>
             
@@ -70,135 +72,7 @@
     </div>
 
 
-    <div class="row ">
-        <div class="col-xs-12 col-sm-6 col-md-5 caja-form">
-            <div class="row">
-                <h2>Usa este formulario para contactar con nosotros</h2>
-            </div>
-            <div class="row">
-                <form id="form-contact">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="email" placeholder="Nombre">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="pwd" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="pwd" placeholder="Teléfono">
-                    </div>
-                    <div class="form-group">
-                        <select name="" id="" class="form-control">
-                        <option value="Salas Coworking">Salas Coworking</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="" id="" cols="" rows="4" class="form-control" placeholder="Comentarios"></textarea>
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox">Acepto la Política de Privacidad</label>
-                    </div>
-                    <button type="submit" class="btn btn-default send">Enviar</button>
-                </form> 
-            </div>                                   
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-7 cajaInfo">
-            <div class="row">
-                <h2>Espacios flexibles a tu medida en nuestro coworking</h2>                
-            </div>
-            <div class="row">
-                <p>
-
-                    PUESTOS FLEXIBLES:  
-                        -Mes: $300.000
-                        -15 días: $200.000
-                        -7 días: $130.000
-
-                </p>
-                <p>
-                    En el Taller Coworking vive una vida a toda máquina, moderna y veloz con un puesto flexible especialmente para ti. Te ofrecemos espacios según tu necesidad con el fin de ampliar las posibilidades de tu negocio. <br>
-                    -30% de descuento en reserva de salas de reuniones  <br>
-                    -Café, vino de verano y palomitas ilimitados. 
-
-                </p>
-            </div>
-            <div class="row">
-                <ul>
-                    <li>Participa en <span>eventos y actividades.</span></li>
-                    <li>Disfruta de las <span>zonas comunes con otros coworkers.</span></li>
-                    <li>Lunes a Viernes de 7:00am a 10:00pm
-                      Sábados de 8:00am a 4:00pm
-                    </span></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <h1 class="title-main text-center p-5" id="title-contact">Servicios incluidos en nuestro <br><span>espacio coworking</span></h1>       
-        </div>
-        <div class="row serv">
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-window-maximize fa-5x" aria-hidden="true"></i>
-                
-                <p>
-                    Servicio de Recepcion
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-wifi fa-5x" aria-hidden="true"></i>
-                <p>
-                    Acceso a la red wifi
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-            <i class="fa fa-users fa-5x" aria-hidden="true"></i>
-                <p>
-                Sala de juntas
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-street-view fa-5x" aria-hidden="true"></i>
-                <p>
-                Control de acceso
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-video-camera fa-5x" aria-hidden="true"></i>
-                <p>
-                Mini cine 
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-coffee fa-5x" aria-hidden="true"></i>
-                <p>
-                Cafetería
-                </p>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-scissors fa-5x" aria-hidden="true"></i>
-                <p>
-                Peluquería 
-                </p>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
-                <p>
-                Salón de juegos 
-                </p>
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
-                <i class="fa fa-bicycle fa-5x" aria-hidden="true"></i>
-                <p>
-                Parqueadero para motos, patinetas, bicicletas
-                </p>
-            </div>
-        </div>
-    </div>
+    
 
 
     <div class="row puesto ">
@@ -327,93 +201,125 @@
     </div>
 
 
-    <div class="row">
-      <h1 class="title-main text-center p-5" id="title-contact">Centro de <span>Coworking</span> en Bogotá</h1>
+    <div class="row pt-4">
+        <div class="col-xs-12 col-sm-6 col-md-5 caja-form">
+            <div class="row">
+                <h2>Usa este formulario para contactar con nosotros</h2>
+            </div>
+            <div class="row">
+                <form id="form-contact">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="pwd" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="pwd" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                        <select name="" id="" class="form-control">
+                        <option value="Salas Coworking">Salas Coworking</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="" id="" cols="" rows="4" class="form-control" placeholder="Comentarios"></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox">Acepto la Política de Privacidad</label>
+                    </div>
+                    <button type="submit" class="btn btn-default send">Enviar</button>
+                </form> 
+            </div>                                   
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-7 cajaInfo">
+            <div class="row">
+                <h2>Puestos flexibles a tu medida en nuestro coworking</h2>                
+            </div>
+            
+            <div class="row">
+                <ul>
+                    <li>Mes: $300.000</li>
+                    <li>15 días: $200.000</li>
+                    <li>7 días: $130.000</li>
+                    <li>Participa en <span>eventos y actividades.</span></li>
+                    <li>Disfruta de las <span>zonas comunes con otros coworkers.</span></li>
+                    <li>Lunes a Viernes de 7:00am a 10:00pm
+                      Sábados de 8:00am a 4:00pm
+                    </span></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div class="container-fluid ">
-      <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
-          <img src="../front/images/espacios/recepcion.jpeg" alt="salas coworking" class="espacios-Img">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
-            <h2 class="color semi">RECEPCIÓN</h2>
-            <p>
-            En el Taller Coworking sabemos lo importante que es contar con un buen servicio de recepción de calidad, por lo que contamos con el mejor personal formados para atender a nuestros y tus clientes logrando causar la mejor impresión. Ellos se encargarán de hacerlos sentir bienvenidos y que disfruten su estadía.
-            </p>
-            
-        </div>
-      </div>
 
-      <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
-            <h2 class="color semi">SALA DE JUNTAS</h2>
-            <p>
-            En el Taller Coworking sabemos que la participación y la colaboración son esenciales para el flujo de trabajo de cada compañía, de esto depende que todas las ideas sean veloces y efectivas para tu negocio. Por esto te ofrecemos espacios de reunión donde podrás disponer de espacios modernos y útiles para aumentar de forma increíble los resultados de cualquier reunión con equipo de punta. 
-            </p>
-            
-          
+    <div class="container">
+        <div class="row">
+            <h1 class="title-main text-center p-5" id="title-contact">Servicios incluidos en nuestro <br><span>espacio coworking</span></h1>       
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 pr">
-          <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
-        </div>
-      </div>
+        <div class="row serv">
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-window-maximize fa-5x" aria-hidden="true"></i>
+                
+                <p>
+                    Servicio de Recepcion
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-wifi fa-5x" aria-hidden="true"></i>
+                <p>
+                    Acceso a la red wifi
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+            <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+                <p>
+                Sala de juntas
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-street-view fa-5x" aria-hidden="true"></i>
+                <p>
+                Control de acceso
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-video-camera fa-5x" aria-hidden="true"></i>
+                <p>
+                Mini cine 
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-coffee fa-5x" aria-hidden="true"></i>
+                <p>
+                Cafetería
+                </p>
+            </div>
 
-      <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
-          <img src="../front/images/espacios/individual.jpeg" alt="salas coworking" class="espacios-Img">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
-            <h2 class="color semi">PUESTOS INDIVIDUALES</h2>
-            <p>
-            En el Taller Coworking queremos que en cada viaje la adrenalina sea máxima. Por esto contamos con puestos individuales en cuatro zonas compartidas que te darán la oportunidad de cumplir con tus actividades, crear nuevas relaciones y compartir experiencias con otras personas. 
-            </p>
-            
-        </div>
-      </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-scissors fa-5x" aria-hidden="true"></i>
+                <p>
+                Peluquería 
+                </p>
+            </div>
 
-      <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
-            <h2 class="color semi">CAFÉ</h2>
-            <p>
-            El Taller Coworking sabe la velocidad con la que vives, así que pensamos en ti al crear la zona de café para que inicies tu día o te des la pausa que necesitas, una parada en el camino. Nuestra idea es brindarte un espacio de total comodidad para ti.
-            </p>
-            
-          
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 pr">
-          <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
-        </div>
-      </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
+                <p>
+                Salón de juegos 
+                </p>
+            </div>
 
-      <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
-          <img src="../front/images/espacios/sala-invitados.jpeg" alt="salas coworking" class="espacios-Img">
+            <div class="col-xs-12 col-sm-4 col-md-4 text-center s">
+                <i class="fa fa-bicycle fa-5x" aria-hidden="true"></i>
+                <p>
+                Parqueadero para motos, patinetas, bicicletas
+                </p>
+            </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
-            <h2 class="color semi">MINI CINE</h2>
-            <p>
-            En el Taller Coworking podrás encontrar un mini cine para poder relajarte a cualquier hora del día. Encontrarás siempre algo increíble que ver. Además de despejarte de un día agitado estamos seguros que este espacio te dará herramientas para sacar ideas y ser más creativo. 
-            </p>
-            
-        </div>
-      </div>
-
-
-      <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
-          <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
-            <h2 class="color semi">SALÓN DE JUEGOS</h2>
-            <p>
-            El Taller Coworking sabe que tu día va a toda velocidad contamos con un espacio especial creado para brindar el máximo confort. Su amueblamiento en combinación con la luz hace que este lugar sea perfecto para gozar de un momento de esparcimiento en medio de tanto trabajo.
-            </p>
-            
-        </div>
-      </div>
-
     </div>
+
+    
 
 
 

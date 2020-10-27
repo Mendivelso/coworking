@@ -28,7 +28,7 @@
   }
 
   .p-5{
-    padding: 40px;
+    padding: 20px;
   }
   .pt-5{
     padding-top: 20px;
@@ -36,6 +36,13 @@
 
   .pb-5{
     padding-bottom: 20px;
+  }
+  .pt-4{
+    padding-top:40px;
+  }
+
+  .pb-4{
+    padding-bottom: 40px;
   }
 
   .pdd{
@@ -168,6 +175,11 @@
     font-family: "MYRIADPRO-SEMIBOLD";
     text-align: center;
 }
+.cajaInfo h3{
+  color: #002b3c;
+  font-family: "MYRIADPRO-SEMIBOLD";
+  text-align: center;
+}
 
 .cajaInfo p {
     font-family: "MYRIADPRO-REGULAR";
@@ -178,14 +190,15 @@
 } 
 
 .cajaInfo ul {
-    padding-left: 70px;
+    padding-left: 20px;
+    list-style: none;
 }
 
 .cajaInfo ul li{
     font-family: "MYRIADPRO-SEMIBOLD";
   color: #000;
   font-size: 22px;
-  text-align: justify;
+  text-align: center;
   padding: 10px;
 }
 .cajaInfo ul li span{
@@ -327,9 +340,11 @@
     .espacio .cont-p {
         padding-top: 15px;
     }
-    
+    .cajaEspacio{
+      height:460px;
+    }
     .p-5 {
-        padding: 30px;
+        padding: 5px;
     }
 
     .caja-form h2 {
@@ -357,10 +372,13 @@
 
 
   @media screen and (max-width: 850px){
+    .cajaEspacio {
+      height: 460px;
+  }
     .tarifa {
         background-color: #f1f0f0;
         margin-top: 40px;
-        height: 359px;
+        height: 445px;
     }
     .espacios-Img {
         width: 100%;
@@ -437,6 +455,14 @@
     
   }
 
+  @media screen and (max-width: 400px){
+    
+    .cajaEspacio {
+      height: 510px;
+  }
+  
+  
+    }
 
   @media screen and (max-width: 500px){
     

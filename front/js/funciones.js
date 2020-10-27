@@ -10,7 +10,7 @@ function NavActive($Id= ""){
         $('#espacio').addClass('active');
     }else if (URLactual == 'http://localhost/2020/work/tarifas/'){
         $('#tarifa').addClass('active');
-    }else if (URLactual == 'http://localhost/2020/work/ofertas/'){
+    }else if (URLactual == 'http://localhost/2020/work/servicios/'){
         $('#oferta').addClass('active');
     }else if (URLactual == 'http://localhost/2020/work/eventos/'){
         $('#evento').addClass('active');

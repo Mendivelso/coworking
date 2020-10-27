@@ -26,6 +26,14 @@
     padding-top: 20px;
   }
 
+  
+  .pt-4{
+    padding-top: 40px;
+  }
+  .pb-4{
+    padding-bottom: 40px;
+  }
+
   .pb-5{
     padding-bottom: 20px;
   }
@@ -62,6 +70,47 @@
     background-color: #002b3c;
     height: 400px;
 }
+
+
+
+
+.espacios-Img{
+  width: 100%;
+}
+
+.espacio {
+  background-color: #f1f0f0;
+  margin-top: 40px;
+}
+
+.espacio .cont-p{
+  padding-top: 90px;
+}
+
+.espacio p {
+font-family: "MYRIADPRO-REGULAR";
+color: #000;
+font-size: 18px;
+text-align: left;
+padding-right: 15px;
+
+}
+
+.espacio a {
+border: 1px solid #9e9999;
+padding: 12px;
+font-size: 18px;
+position: relative;
+top: 20px;
+color: #000;
+}
+
+
+
+
+
+
+
 
 
 

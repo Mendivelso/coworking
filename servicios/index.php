@@ -11,7 +11,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>El Taller CoWorking - Ofertas </title>
+  <title>El Taller CoWorking - Servicios </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -52,7 +52,7 @@
         <div class="container">
 
             <div class="row text-center">
-                <h1 class="title-main p-5">COWORKING PARA EMPRENDEDORES</h1>
+                <h1 class="title-main p-5">Conoce nuestros espacios de coworking</h1>
                 <hr>
             </div>
             <div class="row text-center">
@@ -69,7 +69,92 @@
     </div>
 
 
-    <div class="container">
+    <div class="container-fluid ">
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/recepcion.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">RECEPCIÓN</h2>
+            <p>
+            En el Taller Coworking sabemos lo importante que es contar con un buen servicio de recepción de calidad, por lo que contamos con el mejor personal formados para atender a nuestros y tus clientes logrando causar la mejor impresión. Ellos se encargarán de hacerlos sentir bienvenidos y que disfruten su estadía.
+            </p>
+            
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">SALA DE JUNTAS</h2>
+            <p>
+            En el Taller Coworking sabemos que la participación y la colaboración son esenciales para el flujo de trabajo de cada compañía, de esto depende que todas las ideas sean veloces y efectivas para tu negocio. Por esto te ofrecemos espacios de reunión donde podrás disponer de espacios modernos y útiles para aumentar de forma increíble los resultados de cualquier reunión con equipo de punta. 
+            </p>
+            
+          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+          <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/individual.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">PUESTOS INDIVIDUALES</h2>
+            <p>
+            En el Taller Coworking queremos que en cada viaje la adrenalina sea máxima. Por esto contamos con puestos individuales en cuatro zonas compartidas que te darán la oportunidad de cumplir con tus actividades, crear nuevas relaciones y compartir experiencias con otras personas. 
+            </p>
+            
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">CAFÉ</h2>
+            <p>
+            El Taller Coworking sabe la velocidad con la que vives, así que pensamos en ti al crear la zona de café para que inicies tu día o te des la pausa que necesitas, una parada en el camino. Nuestra idea es brindarte un espacio de total comodidad para ti.
+            </p>
+            
+          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+          <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/sala-invitados.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">MINI CINE</h2>
+            <p>
+            En el Taller Coworking podrás encontrar un mini cine para poder relajarte a cualquier hora del día. Encontrarás siempre algo increíble que ver. Además de despejarte de un día agitado estamos seguros que este espacio te dará herramientas para sacar ideas y ser más creativo. 
+            </p>
+            
+        </div>
+      </div>
+
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+          <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
+            <h2 class="color semi">SALÓN DE JUEGOS</h2>
+            <p>
+            El Taller Coworking sabe que tu día va a toda velocidad contamos con un espacio especial creado para brindar el máximo confort. Su amueblamiento en combinación con la luz hace que este lugar sea perfecto para gozar de un momento de esparcimiento en medio de tanto trabajo.
+            </p>
+            
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- <div class="container">
         <div class="row">
             <h1 class="title-main text-center p-5" id="title-contact">Conoce nuestros espacios de coworking</h1>       
         </div>
@@ -173,8 +258,15 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
 
+    <div class="row franja text-center">
+        <h3>OFERTA ESPECIAL POST COVID </h3>
+        <p>
+            15% de descuento los 3 primeros meses 
+        </p>
+        <a href="#" class="">Solicitar Visita</a>
+    </div>
 
     <div class="row puesto pt-5">
         <div class="col-xs-12 col-sm-6 col-md-6 oferta1">
@@ -192,9 +284,9 @@
                 Ven a nuestro Coworking
             </h1>
             <p class="p jus">
-                En nuestro espacio de coworking disfruta de uno de nuestros 60 puestos, amplios y cómodos, ya sea en la sala de coworking, alquiler de salas o alquiler de un despacho individual o compartido, en un espacio de 400 m2.
+                En nuestro espacio de coworking disfruta de uno de nuestros puestos, amplios y cómodos, ya sea en la sala de coworking, alquiler de salas o alquiler de un despacho individual o compartido, en un espacio de 600 m2.
                 Alquiler de salas para formación, cursos, coach y mucho más.
-                Aprovecha la buena energía del verano y fortalece tus relaciones sociales y profesionales en un espacio:
+                Aprovecha la buena energía del verano y fortalece tus relaciones sociales y profesionales.
             </p>
         </div>
 
@@ -209,11 +301,11 @@
               <img src="../front/images/ofertas/icon1.png" alt="imagen blog" class="">
             </div>
             <div class="blog-title">
-              <h3>Como elegir tu espacio Coworking </h3>
+              <h3>vivirás experiencias inolvidables</h3>
             </div>
             <div class="blog-description">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+               
               </p>
             </div>
            
@@ -225,12 +317,10 @@
               <img src="../front/images/ofertas/icon2.png" alt="imagen blog" class="">
             </div>
             <div class="blog-title">
-              <h3>Como elegir tu espacio Coworking </h3>
+              <h3>Fortalece tus relaciones sociales y profesionales.</h3>
             </div>
             <div class="blog-description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
-              </p>
+              
             </div>
          
           </div>
@@ -241,11 +331,11 @@
               <img src="../front/images/ofertas/icon3.png" alt="imagen blog" class="">
             </div>
             <div class="blog-title">
-              <h3>Como elegir tu espacio Coworking </h3>
+              <h3>Nuestros espacios temáticos te sorprenderán</h3>
             </div>
             <div class="blog-description">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, vero. Voluptatem amet nostrum rem beatae vitae quisquam.
+              
               </p>
             </div>
             
@@ -257,13 +347,7 @@
 
          
 
-    <div class="row franja text-center">
-        <h3>OFERTA ESPECIAL POST COVID </h3>
-        <p>
-            15% de descuento los 3 primeros meses 
-        </p>
-        <a href="#" class="">Solicitar Visita</a>
-    </div>         
+         
     
 
 
