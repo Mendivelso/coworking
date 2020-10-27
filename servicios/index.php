@@ -69,9 +69,10 @@
     </div>
 
 
+
     <div class="container-fluid ">
       <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-dest">
           <img src="../front/images/espacios/recepcion.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
@@ -80,6 +81,9 @@
             En el Taller Coworking sabemos lo importante que es contar con un buen servicio de recepción de calidad, por lo que contamos con el mejor personal formados para atender a nuestros y tus clientes logrando causar la mejor impresión. Ellos se encargarán de hacerlos sentir bienvenidos y que disfruten su estadía.
             </p>
             
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-mobil">
+          <img src="../front/images/espacios/recepcion.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
       </div>
 
@@ -98,7 +102,7 @@
       </div>
 
       <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-dest2">
           <img src="../front/images/espacios/individual.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
@@ -107,6 +111,9 @@
             En el Taller Coworking queremos que en cada viaje la adrenalina sea máxima. Por esto contamos con puestos individuales en cuatro zonas compartidas que te darán la oportunidad de cumplir con tus actividades, crear nuevas relaciones y compartir experiencias con otras personas. 
             </p>
             
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-mobil2">
+          <img src="../front/images/espacios/individual.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
       </div>
 
@@ -125,7 +132,7 @@
       </div>
 
       <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-dest3">
           <img src="../front/images/espacios/sala-invitados.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
@@ -135,11 +142,14 @@
             </p>
             
         </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-mobil3">
+          <img src="../front/images/espacios/sala-invitados.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
       </div>
 
 
       <div class="row espacio">
-        <div class="col-xs-12 col-sm-6 col-md-6 pl">
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-dest4">
           <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p">
@@ -148,6 +158,9 @@
             El Taller Coworking sabe que tu día va a toda velocidad contamos con un espacio especial creado para brindar el máximo confort. Su amueblamiento en combinación con la luz hace que este lugar sea perfecto para gozar de un momento de esparcimiento en medio de tanto trabajo.
             </p>
             
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-mobil4">
+          <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
       </div>
 

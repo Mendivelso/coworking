@@ -362,6 +362,16 @@ color: #000;
 @media screen and (max-width: 767px){
 
 
+  #img-dest, #img-dest2, #img-dest3, #img-dest4{
+    display: none;
+  }
+
+  #img-mobil, #img-mobil2, #img-mobil3, #img-mobil4{
+    display: block;
+  }
+
+
+
   #sectionPrincipalOfertas {
     height: auto;
     position: relative;
