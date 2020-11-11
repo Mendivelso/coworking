@@ -1,0 +1,60 @@
+
+/*CALVE MASTER*/
+
+$P$BJWjHAE8p2pHMCFSJ/7B4A6/L6M/Ik1
+
+
+/* USUARIO PARA CHAT SOPORTE */
+
+menesesparra@hotmail.com
+bW4.MZ*B5so!TmOnSJpuAdCc
+
+
+/*USUARIO DE CPANEL*/
+
+electrosas
+6p!T.HJU*gBK93t8QimzhYNG
+
+/* USUARIO WORDPRESS */
+
+diana.delgado
+0aKDiH&Scv14K09n)X1%i4KA
+
+
+/* BASE DE DATOS PLANTILLA WORDPRESS */
+
+electros_newpage
+electros_newroot
+PCcW@01I&B[g
+
+/* CALVES ADMINISTRACION WORPDRESS NUEVA PAGINA */
+
+AdminElectrofisiatria
+AdminFisiatria2019@**
+
+
+
+
+
+
+
+
+    #alchem-home-sections .alchem-home-section-0 a.magee-btn-normal{
+    	color: #000;
+    	border-color: #000;
+    }
+
+
+
+
+
+@media screen and (max-width: 767px){
+
+	#alchem-home-sections .alchem-home-section-0 a.magee-btn-normal{
+		color: #000;
+	    border-color: #000;
+	    position: relative;
+	    top: 110px;
+	}
+
+}

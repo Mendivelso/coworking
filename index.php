@@ -16,7 +16,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="front/css/bootstrap.min.css">
-  <link rel="shortcut icon" href="front/images/logo-menu2.png" type="image/x-icon">
+  <?php faIcon(1); ?>
 
 
   <!-- Recursos Propios -->
@@ -52,11 +52,43 @@
           <h3 class="title-h3">
           Bienvenidos a El Taller Coworking, un lugar innovador <br> donde vivirás experiencias inolvidables.
           </h3>
-          <button class="btn contactanos">CONTÁCTANOS</button>
+          <button class="btn contactanos" id="bntContact">CONTÁCTANOS</button>
         </div>        
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6 npdd fondo-recepcion" id="fd1">
-        
+              <div id="puestosEsp" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#puestosEsp" data-slide-to="0" class="active"></li>
+                        <li data-target="#puestosEsp" data-slide-to="1"></li>
+                        <li data-target="#puestosEsp" data-slide-to="2"></li>
+                    
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                        <img src="front/images/inicio/img0.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                        <div class="item">
+                        <img src="front/images/inicio/img1.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+                        <div class="item">
+                        <img src="front/images/inicio/img2.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#puestosEsp" data-slide="prev">                    
+                        <i class="fa fa-arrow-left glyphicon-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="right carousel-control" href="#puestosEsp" data-slide="next">
+                    <i class="fa fa-arrow-right glyphicon-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
       </div>
     </div>
     
@@ -142,18 +174,20 @@
                 <h2>Usa este formulario para contactar con nosotros</h2>
             </div>
             <div class="row">
-                <form id="form-contact">
+               
+                <form id="contact-form"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="email" placeholder="Nombre">
+                        <input type="text" class="form-control input" id="txtName" name="txtName" aria-describedby="emailHelp" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese su nombre">                        
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="pwd" placeholder="Email">
+                        <input type="text" class="form-control input" id="txtTel" name="txtTel" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese su celular">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="pwd" placeholder="Teléfono">
+                        <input type="email" class="form-control input" id="txtEmail" name="txtEmail" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese su Email">
                     </div>
+
                     <div class="form-group">
-                        <select name="" id="" class="form-control">
+                        <select name="txtSer" id="txtSer" class="form-control" data-parsley-required-message="Seleccione " required="">
                         <option>Salas Coworking</option>
                         <option>Puestos flexibles </option>
                         <option>Puestos flexibles </option>
@@ -163,14 +197,23 @@
                         
                         </select>
                     </div>
+
                     <div class="form-group">
-                        <textarea name="" id="" cols="" rows="4" class="form-control" placeholder="Comentarios"></textarea>
+                        <textarea name="txtMsj" id="txtMsj" cols="" rows="4" class="form-control" placeholder="Dejanos un comentario" data-parsley-required-message="Campo requerido" required=""></textarea>
                     </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox">Acepto la Política de Privacidad</label>
+
+
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" data-parsley-required-message="Campo requerido" required="">
+                        <label class="form-check-label lb" for="exampleCheck1">Acepto Terminos y Condiciones </label>
+                        <input type="hidden" name="txtId" id="txtId" value="0">
+                        <input type="hidden" name="txtTab" id="txtTab" value="0">
+                        <input type="hidden" name="accion" id="accion1" value="ins">
                     </div>
-                    <button type="submit" class="btn btn-default send">Enviar</button>
-                </form> 
+                    <button type="submit" class="btn btn-primary send">Enviar</button>
+                  </form> 
+
             </div>                                   
         </div>
         <div class="col-xs-12 col-sm-6 col-md-7 cajaInfo">
@@ -536,8 +579,11 @@
 
 <script src="front/js/highlight.pack.js"></script>
 <script src="front/js/funciones.js"></script>
-<!-- <script src="front/js/vegas.min.js"></script> -->
 
+<script src="bower_components/parsleyjs/parsley.min.js"></script>
+<script src="bower_components/bootbox/bootbox.min.js"></script>
+<script src="bower_components/bootbox/bootbox.locales.min.js"></script>
+<script src="backend/js/contactos.js"></script>
 
 
     <script type="text/javascript">
@@ -548,12 +594,9 @@
           $('#slider1').tinycarousel({ interval: true });
           interval = 10000;
 
-          
-			function RotarImagen() {
-        var aleatorio = Math.round(Math.random()*3);
-					$('.fondo-recepcion').css("background-image", "url(front/images/inicio/img"+aleatorio+".jpeg)");         
-			}
-			setInterval(RotarImagen, 5000);  
+
+		
+			// setInterval(RotarImagen, 5000);  
         });
     </script>
 </body>

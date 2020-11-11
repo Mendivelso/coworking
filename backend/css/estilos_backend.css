@@ -1,0 +1,8 @@
+/*PERFIL DE USUARIO*/
+#DatosPerfil{
+	display: block !important;
+}
+
+.parsley-required{
+	color: red;
+}

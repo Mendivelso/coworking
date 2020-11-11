@@ -26,7 +26,16 @@ function NavActive($Id= ""){
 }
 
 
+$( "#bntContact" ).click(function() {
+    $( "#txtName" ).focus();       
+  });
 
+
+  
+  $( "#bntContact2" ).click(function() {
+    
+    $( "#txtName" ).focus();       
+  });
 
 
 $(document).ready(function(){

@@ -14,6 +14,7 @@
 	url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   }
 
+#img-mobil{display: none;}
   
   .color2{
     color: #fff !important;

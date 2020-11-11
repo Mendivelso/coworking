@@ -16,7 +16,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../front/css/bootstrap.min.css">
-
+  <?php faIcon(2); ?>
 
   <!-- Recursos Propios -->
   <link rel="stylesheet" type="text/css" href="../front/css/menu.css">
@@ -60,7 +60,7 @@
                 <p>
                     15% de descuento los 3 primeros meses 
                 </p>
-                <a href="#" class="">Solicitar Visita</a>
+                <a href="#visita" class="" id="bntContact2">Solicitar Visita</a>
             </div>
             
             
@@ -161,6 +161,21 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 pl" id="img-mobil4">
           <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
+        </div>
+      </div>
+
+      <div class="row espacio">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">PELUQIERÍA Y BARBERÍA</h2>
+            <p>
+            Sin salir de tu lugar de trabajo puedes pasar a latonería pintura y embellecimiento, sin desplazarte tendrás un momento de relajación y confort. <br>
+            <strong>Cita previa con Álvaro pachón – Teléfono 310 819 7951     </strong>
+            </p>
+            
+          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+          <img src="../front/images/espacios/puestos.jpeg" alt="salas coworking" class="espacios-Img">
         </div>
       </div>
 

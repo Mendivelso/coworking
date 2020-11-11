@@ -16,7 +16,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../front/css/bootstrap.min.css">
-
+  <?php faIcon(2); ?>
 
   <!-- Recursos Propios -->
   <link rel="stylesheet" type="text/css" href="../front/css/menu.css">
@@ -48,7 +48,7 @@
     
 
 
-    <div class="row tarifa">
+    <div class="row puesto">
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e cajaEspacio">
             <div class="row text-center">
                 <h1 class="title-main p-5">Puestos
@@ -70,44 +70,44 @@
                         <li>15 días: $200.000 </li>
                         <li>7 días: $130.000</li>
                     </ul>
+                <p><strong>*Valido hasta 30 de marzo del 2021 </strong></p>
             </div>
             
             
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 pr">
-            <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
-        </div>
-    </div>
+            <div id="puestosflex" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#puestosflex" data-slide-to="0" class="active"></li>
+                    <li data-target="#puestosflex" data-slide-to="1"></li>
+                   
+                </ol>
 
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                    <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
 
-    
+                    <div class="item">
+                    <img src="../front/images/espacios/sala-moto.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
 
+                </div>
 
-    <div class="row puesto ">
-        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
-            <div class="row text-center">
-                <h1 class="title-main p-5">ESPACIOS PARA CONFERENCIAS O MINI CINE: $80.000</h1>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#puestosflex" data-slide="prev">                    
+                    <i class="fa fa-arrow-left glyphicon-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="right carousel-control" href="#puestosflex" data-slide="next">
+                <i class="fa fa-arrow-right glyphicon-chevron-right" aria-hidden="true"></i>
+                </a>
             </div>
-            <div class="row text-center">
-                <p>
-                El taller coworking te da la posibilidad de realizar pequeños eventos, charlas o conferencias que promueven compartir tu conocimiento y el crecimiento de tu negocio. Tendrás a tu entera disposición los espacios de conferencias modernas.
-                </p>
 
-                
-                <ul class="generalT">
-                    <li>Café y agua ilimitada </li>
-                    <li>Televisor </li>
-                    <li>Tablero</li>
-                    <li>Sonido</li>
-                    </ul>
 
-                
-            </div>
-            
-            
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 pr">
-            <img src="../front/images/espacios/sala.jpeg" alt="salas coworking" class="espacios-Img">
+
+
         </div>
     </div>
 
@@ -131,7 +131,7 @@
                     <li>Oficina Min (3 Puestos) $950.000</li>
                 </ul>
 
-               
+                <p><strong>*Valido hasta 30 de marzo del 2021 </strong></p>
 
                 
             </div>
@@ -185,12 +185,10 @@
         </div>
     </div>
 
-
-
     <div class="row puesto ">
         <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
             <div class="row text-center">
-                <h1 class="title-main p-5">SALAS DE REUNIONES: HORA: $60.000</h1>
+                <h1 class="title-main p-5">SALAS DE JUNTAS y RECEPCIÓN (Capacidad 8 personas) $60.000</h1>
             </div>
             <div class="row text-center">
                 <p>
@@ -200,16 +198,208 @@
                     <li>Puesto fijo con control de acceso</li>
                     <li>Internet de alta velocidad. </li>
                 </ul>
-
+                <p><strong>*Valido hasta 30 de marzo del 2021 </strong></p>
                 
             </div>
             
             
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 pr">
-            <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
+            
+            <div id="puestosJunta" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#puestosJunta" data-slide-to="0" class="active"></li>
+                    <li data-target="#puestosJunta" data-slide-to="1"></li>
+                   
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                    <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
+
+                    <div class="item">
+                    <img src="../front/images/espacios/sala-puestos.jpeg" alt="salas coworking" class="espacios-Img">
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#puestosJunta" data-slide="prev">                    
+                    <i class="fa fa-arrow-left glyphicon-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="right carousel-control" href="#puestosJunta" data-slide="next">
+                <i class="fa fa-arrow-right glyphicon-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </div>
+
+   
+    
+
+
+    <div class="row puesto ">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <div class="row text-center">
+                <h1 class="title-main p-5"> MINI CINE (capacidad 8 personas ) $80.000</h1>
+
+            </div>
+            <div class="row text-center">
+                <p>
+                El taller coworking te da la posibilidad de realizar pequeños eventos, charlas o conferencias que promueven compartir tu conocimiento y el crecimiento de tu negocio. Tendrás a tu entera disposición los espacios de conferencias modernas.
+                </p>
+
+                
+                <ul class="generalT">
+                    <li>Café y agua ilimitada </li>
+                    <li>Televisor </li>
+                    <li>Tablero</li>
+                    <li>Sonido</li>
+                    </ul>
+                <p><strong>*Valido hasta 30 de marzo del 2021 </strong></p>
+                
+            </div>
+            
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+            <div id="puestosCine" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#puestosCine" data-slide-to="0" class="active"></li>
+                        <li data-target="#puestosCine" data-slide-to="1"></li>
+                    
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                        <img src="../front/images/espacios/sala.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                        <div class="item">
+                        <img src="../front/images/espacios/sala-invitados.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#puestosCine" data-slide="prev">                    
+                        <i class="fa fa-arrow-left glyphicon-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="right carousel-control" href="#puestosCine" data-slide="next">
+                    <i class="fa fa-arrow-right glyphicon-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="row puesto">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+        <h2 class="color semi">EVENTOS (Capacidad 15 personas )</h2>
+            <p>
+            En el Taller Coworking sabemos lo importante que es contar con un buen servicio de recepción de calidad, por lo que contamos con el mejor personal formados para atender a nuestros y tus clientes logrando causar la mejor impresión. Ellos se encargarán de hacerlos sentir bienvenidos y que disfruten su estadía.
+            </p>
+            <p><strong>*Valido hasta 30 de marzo del 2021 </strong></p>
+          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 ">
+        
+        <div id="puestosEvento" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#puestosEvento" data-slide-to="0" class="active"></li>
+                        <li data-target="#puestosEvento" data-slide-to="1"></li>
+                    
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                        <img src="../front/images/espacios/recepcion.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                        <div class="item">
+                        <img src="../front/images/espacios/sala.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#puestosEvento" data-slide="prev">                    
+                        <i class="fa fa-arrow-left glyphicon-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="right carousel-control" href="#puestosEvento" data-slide="next">
+                    <i class="fa fa-arrow-right glyphicon-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+
+
+    <div class="row puesto">
+        <div class="col-xs-12 col-sm-6 col-md-6 cont-p pb-e">
+            <h2 class="color semi">PELUQIERÍA Y BARBERÍA - (Cita Previa) </h2>
+            <p>
+            Sin salir de tu lugar de trabajo puedes pasar a latonería pintura y embellecimiento, sin desplazarte tendrás un momento de relajación y confort. <br>
+            <strong>Cita previa con Álvaro pachón – Teléfono 310 819 7951     </strong>
+            </p>
+            <p><strong>*Valido hasta 30 de marzo del 2021 </strong></p>
+          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 pr">
+          
+
+            <div id="puestosPelu" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#puestosPelu" data-slide-to="0" class="active"></li>
+                        <li data-target="#puestosPelu" data-slide-to="1"></li>
+                        <li data-target="#puestosPelu" data-slide-to="2"></li>
+                    
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                        <img src="../front/images/espacios/puestos.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                        <div class="item">
+                            <img src="../front/images/espacios/pelu1.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+                        <div class="item">
+                            <img src="../front/images/espacios/pelu2.jpeg" alt="salas coworking" class="espacios-Img">
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#puestosPelu" data-slide="prev">                    
+                        <i class="fa fa-arrow-left glyphicon-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="right carousel-control" href="#puestosPelu" data-slide="next">
+                    <i class="fa fa-arrow-right glyphicon-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+
+  
+
+
+
+
 
 
     <div class="row pt-4">
@@ -218,39 +408,49 @@
                 <h2>Usa este formulario para contactar con nosotros</h2>
             </div>
             <div class="row">
-                <form id="form-contact">
+            <form id="contact-form"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="email" placeholder="Nombre">
+                        <input type="text" class="form-control input" id="txtName" name="txtName" aria-describedby="emailHelp" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese su nombre">                        
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="pwd" placeholder="Email">
+                        <input type="text" class="form-control input" id="txtTel" name="txtTel" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese su celular">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="pwd" placeholder="Teléfono">
+                        <input type="email" class="form-control input" id="txtEmail" name="txtEmail" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese su Email">
                     </div>
+
                     <div class="form-group">
-                        <select name="" id="" class="form-control">
+                        <select name="txtSer" id="txtSer" class="form-control" data-parsley-required-message="Seleccione " required="">
                         <option>Salas Coworking</option>
                         <option>Puestos flexibles </option>
                         <option>Puestos flexibles </option>
                         <option>Oficinas de 3, 4 y 5 puestos </option>
                         <option>Espacios para conferencias</option>
                         <option>Sala de cine</option>
+                        
                         </select>
                     </div>
+
                     <div class="form-group">
-                        <textarea name="" id="" cols="" rows="4" class="form-control" placeholder="Comentarios"></textarea>
+                        <textarea name="txtMsj" id="txtMsj" cols="" rows="4" class="form-control" placeholder="Dejanos un comentario" data-parsley-required-message="Campo requerido" required=""></textarea>
                     </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox">Acepto la Política de Privacidad</label>
+
+
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" data-parsley-required-message="Campo requerido" required="">
+                        <label class="form-check-label lb" for="exampleCheck1">Acepto Terminos y Condiciones </label>
+                        <input type="hidden" name="txtId" id="txtId" value="0">
+                        <input type="hidden" name="txtTab" id="txtTab" value="1">
+                        <input type="hidden" name="accion" id="accion1" value="ins">
                     </div>
-                    <button type="submit" class="btn btn-default send">Enviar</button>
-                </form> 
+                    <button type="submit" class="btn btn-primary send">Enviar</button>
+                  </form> 
             </div>                                   
         </div>
         <div class="col-xs-12 col-sm-6 col-md-7 cajaInfo pt-4"> <br><br>
             <div class="row">
-                <h2>Puestos flexibles a tu medida en nuestro coworking</h2>                
+                <h2>Horarios de atención en nuestro coworking</h2>                
             </div>
             
             <div class="row">
@@ -368,7 +568,7 @@
             <h2>¿Te ha quedado alguna duda?</h2>
         </div>
         <div class="row">
-            <button class="btn send">Contáctanos</button>
+            <button class="btn send" id="bntContact">Contáctanos</button>
         </div>
     </div>
     
@@ -397,6 +597,10 @@
 <script src="../front/js/highlight.pack.js"></script>
 <script src="../front/js/funciones.js"></script>
 
+<script src="../bower_components/parsleyjs/parsley.min.js"></script>
+<script src="../bower_components/bootbox/bootbox.min.js"></script>
+<script src="../bower_components/bootbox/bootbox.locales.min.js"></script>
+<script src="../backend/js/contactos.js"></script>
 
 
     <script type="text/javascript">

@@ -31,7 +31,7 @@
 
   <link rel="stylesheet" type="text/css" href="../front/css/vegas.css">
   <link rel="stylesheet" type="text/css" href="../front/css/monokai-sublime.css">
-
+  <?php faIcon(2); ?>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <!-- Agregamos menu de navegacion  -->

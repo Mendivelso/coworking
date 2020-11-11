@@ -1,5 +1,17 @@
 <?php 
+    // FA-ICON
+    function faIcon($Id=""){
+        $logo = "";
+        if($Id == 1){
+            $logo = '<link rel="shortcut icon" href="front/images/logo-menu2.png" type="image/x-icon">';
+        }else{
+            $logo = '<link rel="shortcut icon" href="../front/images/logo-menu2.png" type="image/x-icon">';
+        }
+        echo $logo;
+    }
 
+
+    // MENU DE NAVEGACION 
 
     function menu($Id="",$db=""){
 
@@ -31,8 +43,8 @@
                         <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="act active"><a href="#" onclick="NavActive(1)">Inicio</a></li>
-                            <li><a href="tarifas/" onclick="NavActive(2)">Tarifas</a></li>
                             <li><a href="servicios/" onclick="NavActive(3)">Servicios</a></li>
+                            <li><a href="tarifas/" onclick="NavActive(2)">Tarifas</a></li>                            
                             <li><a href="eventos/" onclick="NavActive(4)">Eventos</a></li>
                             <li class="active">
                                 <a href="https://www.instagram.com/eltaller.coworking/?hl=es-la" target="black" class="icons"><i class="fa fa-instagram fa-1x" aria-hidden="true"></i></a>
@@ -70,8 +82,8 @@
                         <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="act" id="espacio"><a href="../" onclick="NavActive(1)">Inicio</a></li>
-                            <li class="" id="tarifa"><a href="../tarifas/" onclick="NavActive(1)">Tarifas</a></li>
                             <li class="" id="oferta"><a href="../servicios/">Servicios</a></li>
+                            <li class="" id="tarifa"><a href="../tarifas/" onclick="NavActive(1)">Tarifas</a></li>                            
                             <li class="" id="evento"><a href="../eventos/">Eventos</a></li>
                             <li class="active" id="bl">
                             <a href="https://www.instagram.com/eltaller.coworking/?hl=es-la" target="black" class="icons"><i class="fa fa-instagram fa-1x" aria-hidden="true"></i></a>

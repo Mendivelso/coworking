@@ -33,7 +33,9 @@
   }
 
 
-  
+  .parsley-required{
+    color: red;
+  }
 
 
 
