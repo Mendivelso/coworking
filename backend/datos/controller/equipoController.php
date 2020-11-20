@@ -22,9 +22,7 @@
 
         $jsondata['Id'] = $r["Id"];
         $jsondata['Nombre'] = $r["Nombre"];
-        $jsondata['Cargo'] = $r["Cargo"];
         $jsondata['Detalle'] = $r["Detalle"];
-        $jsondata['Email'] = $r["Email"];
         $jsondata['Foto'] = $r["Foto"];        
         $jsondata['Created_date'] = $r["Created_date"];
         $jsondata['Updated_date'] = $r["Updated_date"];
@@ -50,8 +48,8 @@
       
 
       // Datos necesarios para el registro
-      $data = array("Nombre"=>$_REQUEST['txtName'], "Cargo"=>$_REQUEST['txtCargo'],
-      "Status"=>$_REQUEST['txtStatus'], "Detalle"=>$_REQUEST['txtDetalle'], "Email"=>$_REQUEST['txtEmail'],  "Created_date"=>date('Y-m-d H:i:s'), "Created_by"=>$user);
+      $data = array("Nombre"=>$_REQUEST['txtName'], "Cargo"=>"N/A",
+      "Status"=>$_REQUEST['txtStatus'], "Detalle"=>$_REQUEST['txtDetalle'], "Email"=>"N/A",  "Created_date"=>date('Y-m-d H:i:s'), "Created_by"=>$user);
       // Tomamos el formato de la imagen adjuntada
 
 
@@ -95,7 +93,7 @@
                     // actualizamos el ultimo regsitro
                     if($resultadoObj->updateData($data, $where)){
                       $jsondata['success'] = true;
-                      $jsondata['message'] = ' Integrante Registrado correctamente';
+                      $jsondata['message'] = ' Servicio Registrado correctamente';
                     }else {
                       $jsondata['success'] = false;
                       $jsondata['message'] = "No fue posible Registrar sus datos";
@@ -142,7 +140,7 @@
 
           /*si tipo file esta vacio*/
         $data = array("Nombre"=>$_REQUEST['txtNameup'],
-        "Cargo"=>$_REQUEST['txtCargoup'], "Email"=>$_REQUEST['txtEmailup'],
+        "Cargo"=>"N/A", "Email"=>"N/A",
         "Detalle"=>$_REQUEST['txtDetalleup'], "Status"=>$_REQUEST['txtStatusup'],
         "Updated_by"=>$user,  "Updated_date"=>date('Y-m-d H:i:s')
         );
@@ -184,7 +182,7 @@
                   // actualizamos el ultimo regsitro
                   if($resultadoObj->updateData($data, $where)){
                     $jsondata['success'] = true;
-                    $jsondata['message'] = ' Integrante Actualizado  correctamente';
+                    $jsondata['message'] = ' Servicio Actualizado  correctamente';
                   }else {
                     $jsondata['success'] = false;
                     $jsondata['message'] = "No fue posible Registrar sus datos";
@@ -216,7 +214,7 @@
           
         /*si tipo file esta vacio*/
         $data = array("Nombre"=>$_REQUEST['txtNameup'],
-        "Cargo"=>$_REQUEST['txtCargoup'], "Email"=>$_REQUEST['txtEmailup'],
+        "Cargo"=>"N/A", "Email"=>"N/A",
         "Detalle"=>$_REQUEST['txtDetalleup'], "Status"=>$_REQUEST['txtStatusup'],
         "Updated_by"=>$user,  "Updated_date"=>date('Y-m-d H:i:s')
         );
@@ -224,7 +222,7 @@
         if($resultadoObj->updateData($data, $where))
         {
           $jsondata['success'] = true;
-          $jsondata['message'] = "Integrante Actualizado correctamente";
+          $jsondata['message'] = "Servicio Actualizado correctamente";
         }else {
           $jsondata['success'] = false;
           $jsondata['message'] = "No fue posible Actualizar sus Datos";

@@ -5,46 +5,59 @@
 
         $footer = '';
 
+        /* CONSULTAMOS EL LOGO  */
+        $ObjImagen = new Imagen($db);
+        $whereLogo2 = " WHERE Id > 0 AND Tipo = 'Logo ' AND Status = 1 ORDER BY Id ASC ";
+        $rLog2 = $ObjImagen->selectOne($whereLogo2);
+        if($db->numRows($rLog2) > 0){
+            if($l2 = $db->datos($rLog2)) {
+            $LogoColor2 = $l2['Imagen'];
+            $LogoColor3 = $l2['Imagen'];
+            $TituloColor2 = $l2['Titulo'];
+            $LogoColor = '<img src="backend/datos/'.$LogoColor2.'" alt="Logo El Taller" class="logo-footer">';
+            $LogoColor2 = '<img src="../backend/datos/'.$LogoColor2.'" alt="Macare" class="logo-footer">';
+    
+            }
+        } 
+
+
+
+        /* Objeto Textos  */
+    $ObjTexto = new texto($db);
+    $whereTexto = " WHERE Id > 0 AND Pagina = 'Footer' AND Status = 1 ORDER BY Id ASC ";
+    $resultTexto = $ObjTexto->selectOne($whereTexto);
+    $arrayTexto = array();
+    $arraySub = array();
+    if($db->numRows($resultTexto) > 0){
+        while ($t = $db->datos($resultTexto)) {      
+        $texto = $t['Texto'];
+        $sub = $t['Sub'];
+        $arrayTexto[] = $texto;
+        $arraySub[] = $sub;
+        }
+    }    
+    $menu = explode(",",  $arrayTexto[1]);
+
+
+
+
         if ($Id == 1) {
             $footer = '
             <footer class="container b-w ">
                 <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <img src="front/images/logo-menu2.png" alt="Logo principal " class="logo-footer"> <br><br>
-                    <p>
-                         Ponte en contacto con nosotros.
-                    </p>
-                    <p>
-                    Alejandro Osorio Bernal 
-                    eltallercoworking1@gmail.com
-                    
-                    <strong>Detalles de contacto </strong>   <br>
-                    Carrera 18 No. 118 -04 <br>
-                    Santa Bárbara- Bogotá
-
-                    </p>
+                    '.$LogoColor.' <br><br>
+                   '.$arrayTexto[0].'
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <h3>Espacios</h3>
-                    <ul class="footer-li">
-                    <li><a href="#">Salas Coworking</a></li>
-                    <li><a href="">Salas puestos fijos</a> </li>
-                    <li><a href="">Despachos</a></li>
-                    <li><a href="">Zonas compartidas</a></li>
-                    </ul>
+                '.$arrayTexto[1].'
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <h3>Otros</h3>
-                    <ul class="footer-li">
-                    <li><a href="">Espacios</a></li>
-                    <li><a href="">Tarifas</a> </li>
-                    <li><a href="">Ofertas</a></li>
-                    <li><a href="">Eventos</a></li>
-                    </ul>
+                '.$arrayTexto[2].'
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <p>
-                    Usa este formulario para contactar con nosotros
+                    '.$arrayTexto[3].'
                     </p>
                     <form id="contact-form-footer"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
                     <div class="form-group">
@@ -77,12 +90,12 @@
 
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" data-parsley-required-message="Campo requerido" required="">
-                        <label class="form-check-label lb" for="exampleCheck1">Acepto Terminos y Condiciones </label>
+                        <label class="form-check-label lb" for="exampleCheck1">'.$arrayTexto[4].'</label>
                         <input type="hidden" name="txtId" id="txtId" value="0">
                         <input type="hidden" name="txtTab" id="txtTab" value="0">
                         <input type="hidden" name="accion" id="accion1" value="ins">
                     </div>
-                    <button type="submit" class="btn btn-primary send">Enviar</button>
+                    <button type="submit" class="btn btn-primary send">'.$arraySub[4].'</button>
                   </form> 
                 </div>
                 </div>
@@ -93,41 +106,18 @@
             <footer class="container b-w " id="visita">
                 <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <img src="../front/images/logo-menu2.png" alt="Logo principal " class="logo-footer"><br><br>
-                    <p>
-                         Ponte en contacto con nosotros.
-                    </p>
-                    <p>
-                    Alejandro Osorio Bernal 
-                    eltallercoworking1@gmail.com
-                    
-                    <strong>Detalles de contacto </strong>   <br>
-                    Carrera 18 No. 118 -04 <br>
-                    Santa Bárbara- Bogotá
-
-                    </p>    
+                '.$LogoColor2.' <br><br>
+                '.$arrayTexto[0].'   
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <h3>Espacios</h3>
-                    <ul class="footer-li">
-                    <li><a href="#">Salas Coworking</a></li>
-                    <li><a href="">Salas puestos fijos</a> </li>
-                    <li><a href="">Despachos</a></li>
-                    <li><a href="">Zonas compartidas</a></li>
-                    </ul>
+                '.$arrayTexto[1].'
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                    <h3>Otros</h3>
-                    <ul class="footer-li">
-                    <li><a href="">Espacios</a></li>
-                    <li><a href="">Tarifas</a> </li>
-                    <li><a href="">Ofertas</a></li>
-                    <li><a href="">Eventos</a></li>
-                    </ul>
+                '.$arrayTexto[2].'
                 </div>
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <p>
-                    Usa este formulario para contactar con nosotros
+                    '.$arrayTexto[3].'
                     </p>
                     <form id="contact-form-footer"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
                     <div class="form-group">
@@ -160,12 +150,12 @@
 
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" data-parsley-required-message="Campo requerido" required="">
-                        <label class="form-check-label lb" for="exampleCheck1">Acepto Terminos y Condiciones </label>
+                        <label class="form-check-label lb" for="exampleCheck1"> '.$arrayTexto[4].'</label>
                         <input type="hidden" name="txtId" id="txtId" value="0">
                         <input type="hidden" name="txtTab" id="txtTab" value="1">
                         <input type="hidden" name="accion" id="accion1" value="ins">
                     </div>
-                    <button type="submit" class="btn btn-primary send">Enviar</button>
+                    <button type="submit" class="btn btn-primary send"> '.$arraySub[4].'</button>
                   </form> 
                 </div>
                 </div>

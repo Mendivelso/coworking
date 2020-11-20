@@ -14,6 +14,12 @@
 	url("../css/fonts/MYRIADPRO-SEMIBOLD.OTF") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   }
 
+
+  .parsley-required {
+    color: red;
+}
+
+
   #img-mobil, #img-mobil2, #img-mobil3, #img-mobil4{
     display: none;
   }
@@ -73,6 +79,67 @@
     background-color: #002b3c;
     height: 400px;
 }
+
+.caja-form h2 {
+  color: #002b3c;
+  font-family: "MYRIADPRO-SEMIBOLD";
+  text-align: center;
+  padding: 20px;
+}
+.caja-form form {
+  padding: 30px 40px;
+}
+.caja-form form input {
+  height: 43px;
+  font-family: "MYRIADPRO-REGULAR";
+  color: #000;
+}
+.caja-form form input[type=checkbox] {
+  height: auto;
+  font-family: "MYRIADPRO-REGULAR";
+  color: #000;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.caja-form form button {
+  background-color: #002b3c;
+  color: #fff;
+  font-family: "MYRIADPRO-SEMIBOLD";
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 15px;
+  position: relative;
+  top: 15px;
+  width: 220px;
+  height: 60px;
+  letter-spacing: 1px;
+}
+.cajaInfo h2 {
+  color: #002b3c;
+  font-family: "MYRIADPRO-SEMIBOLD";
+  text-align: center;
+  padding: 20px;
+}
+.cajaInfo ul {
+  padding-left: 20px;
+  list-style: none;
+}
+.cajaInfo ul li {
+  font-family: "MYRIADPRO-SEMIBOLD";
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+  padding: 10px;
+}
+.cajaInfo ul li span {
+  color: #e7741b;
+}
+
+
 
 
 

@@ -3,132 +3,119 @@
   include_once("../resource/header.php");
   include_once("../resource/nav.php");
   include_once("../resource/librerias.php");
-  include_once("../../datos/model/imagenes.class.php");
+  include_once("../../datos/model/lugares.class.php");
 
-  /*Validamos la existencia de la session*/
   if(Session::get('Perfil') != 1)
-    header('Location: logout.php');
+  header('Location: logout.php');
 
-  /* Objeto Registros */
-  $ObjRegistros = new imagen($db);
-  $whereRegistros = " WHERE Id > 0 ORDER BY Id DESC";
-  $result = $ObjRegistros->selectAll($whereRegistros);
+  $user = new lugar($db);
+  $where = " Where Id > 0 ORDER BY Id DESC";
 
-
-  /* CUENTA REGISTROS*/
-  $rows = $ObjRegistros->Count();
-  if($db->numRows($rows) > 0){
-   $r = $db->datos($rows);
-    $NumerodeRegistros = $r['num'];
-  }else{
-  echo "NO HAY REGISTROS PARA MOSTRAR";
-  }
-
-
-
-
-
+  $result = $user->selectAll($where);
 
  ?>
+ 
 <!DOCTYPE>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gestionar Imagenes</title>
+  <title>Tarifas</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <?php LibreriasCss(); ?>
   <link rel="stylesheet" type="text/css" href="../../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
-  <link rel="stylesheet" type="text/css" href="../../css/cargar.css">
-  <link rel="stylesheet" type="text/css" href="../../../bower_components/sweetalert/sweetalert.css">
+  <style type="text/css">
+
+  </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-
-  <!-- /.Cargas Regsitros -->
-  <div class="modal fade" id="modal-CargarRegistros">
+  <!-- MODAL REGISTRO LUGARES-->
+  <div class="modal fade" id="modal-User">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Subir registros</h4>
+          <h4 class="modal-title">Nueva Tarifa </h4>
         </div>
         <div class="modal-body">
-            <div class="principal">
-              <h3>subir archivos</h3>
-                <form  id="uploadForm" name="frmupload" method="post" enctype="multipart/form-data">
-                    <input type="file" id="uploadImage" name="uploadImage" class="form-control" />
-                    <button id="submitButton" type="submit" name='btnSubmit' class="btn btn-success">Comenzar la carga</button>
-                    <input type="hidden" name="accion" value="car">
-                </form>
-                <div class='progress' id="progressDivId">
-                    <div class='progress-bar' id='progressBar'></div>
-                    <div class='percent' id='percent'>0%</div>
-                </div>
-                <div style="height: 10px;"></div>
-                <div id='outputImage'></div>
-            </div>
 
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
 
+          <form id="Lugares"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
 
-  <!-- MODAL REGISTRO USUARIOS-->
-  <div class="modal fade" id="modal-Registros">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Nueva Imagen</h4>
-        </div>
-        <div class="modal-body">
-          <form id="Imagen"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
-            <div class="form-group has-feedback">
-              <select name="txtStatus" id="txtStatus" class="form-control" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido">
+          <div class="form-group has-feedback">
+              <span class="glyphicon glyphicon-th-large form-control-feedback"></span>
+              <select class="form-control" placeholder="Posición" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido" name="txtStatus" id="txtStatus">
                 <option value="1">Activo</option>
-                <option value="0">Inactivo</option>
-
+                <option value="2">Inactivo</option>
               </select>
-              
             </div>
+
+
             <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="Titulo"  data-parsley-required-message="Campo requerido" required="" name="txtTitle" id="txtTitle">
+              <label for="txtTipo">Tipo de Tarifa</label>
+              <select name="txtTipoG" id="txtTipoG" class="form-control" data-parsley-required-message="Campo requerido" required="">               
+                <option value="Tarifa">Tarifa</option>
+                
+              </select>
+            </div>
+
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" placeholder="Titulo"  data-parsley-required-message="Campo requerido" required="" name="txtName" id="txtName">
               <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
+
             <div class="form-group has-feedback">
-              <select name="txtTipo" id="txtTipo" class="form-control" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido">
-                  <option value="">Seleccione la Ubicacion</option>
-                  <option value="Home Galeria Principal">Home Galeria Principal</option>
-                  <option value="Home Slide">Home Slide</option>
-                  <option value="Servicios">Servicios</option>
-                  <option value="Logo">Logo</option>
-                  
-              </select>
-              
+              <input type="text" class="form-control" placeholder="Ubicación"  data-parsley-required-message="Campo requerido" required="" name="txtUbi" id="txtUbi" value="Bogota">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
+
             <div class="form-group has-feedback">
-              <label for="">*Imagen</label>
-              <input type="file" class="form-control" placeholder="Email" required="" data-parsley-trigger="keyup"  data-parsley-required-message="Campo requerido" name="txtImg" id="txtImg">
-              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+              <textarea name="txtDescrip" id="txtDescrip" cols="30" rows="20" class="form-control" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese una descripcion"></textarea>
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
+
+
             
 
+
+            <div class="form-group has-feedback">
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  data-parsley-required-message="Adjunte archivo 1" required="false" name="txtImg1" id="txtImg1">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  data-parsley-required-message="Adjunte archivo 1" required="false" name="txtImg2" id="txtImg2">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  data-parsley-required-message="Adjunte archivo 1" required="false" name="txtImg3" id="txtImg3">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  data-parsley-required-message="Adjunte archivo 1"  name="txtImg4" id="txtImg4">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  data-parsley-required-message="Adjunte archivo 1" name="txtImg5" id="txtImg5">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+            
+            <div class="form-group has-feedback" id="cont-iframe">
+
+            </div>
+            
             <div class="row">
               <!-- /.col -->
               <div class="col-xs-4">
-                <input type="hidden" name="txtId" id="txtId" value="0">
                 <input type="hidden" name="txtTab" id="txtTab" value="1">
                 <input type="hidden" name="accion" id="accion" value="ins">
                 <button type="submit" class="btn btn-primary btn-block btn-flat" id="submit">Registrar</button>
@@ -136,6 +123,10 @@
               <!-- /.col -->
             </div>
           </form>
+
+
+
+
 
 
 
@@ -159,49 +150,91 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Actualizar Imagen</h4>
+          <h4 class="modal-title">Actualizar Registro</h4>
         </div>
         <div class="modal-body">
-          <form id="usuariosup"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
-              <div class="form-group has-feedback">
-                <select class="form-control" name="txtStatusup" id="txtStatusup" required="" data-parsley-required-message="Campo requerido">
-                  <option value="">Seleccione.</option>
-                  <option value="1">Activo</option>
-                  <option value="0">Inactivo</option>
-                </select>
-              </div>
+
+
+          <form id="Lugaresup"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
+
             
+
             <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="Nombre Completo"  data-parsley-required-message="Campo requerido" required="" name="txtTitleup" id="txtTitleup">
-              <span class="glyphicon glyphicon-user form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-              <select name="txtTipoup" id="txtTipoup" class="form-control" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido">
-                  <option value="">Seleccione la Ubicacion</option>
-                  <option value="Home Galeria Principal">Home Galeria Principal</option>
-                  <option value="Home Slide">Home Slide</option>
-                  <option value="Servicios">Servicios</option>
-                  <option value="Logo">Logo</option>
+              <span class="glyphicon glyphicon-th-large form-control-feedback"></span>
+              <select class="form-control" placeholder="Estado" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido" name="txtStatusup" id="txtStatusup">
+                <option value="1">Activo</option>
+                <option value="2">Inactivo</option>
               </select>
-              
+            </div>
+
+
+            <div class="form-group has-feedback">
+              <label for="txtTipo">Tipo de Destino</label>
+              <select name="txtTipoup" id="txtTipoup" class="form-control" data-parsley-required-message="Campo requerido" required="">                
+                <option value="Tarifas">Tarifas</option>                
+              </select>
             </div>
 
             <div class="form-group has-feedback">
-              <div id="Ima"></div>
-              <label for="">*Imagen</label>
-              <input type="file" class="form-control" placeholder="Email" name="txtImgup" id="txtImgup">
-              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+              <input type="text" class="form-control" placeholder="Nombre"  data-parsley-required-message="Campo requerido" required="" name="txtNameup" id="txtNameup">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
+
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" placeholder="Ubicación"  data-parsley-required-message="Campo requerido" required="" name="txtUbiup" id="txtUbiup">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+              <textarea name="txtDescripup" id="txtDescripup" cols="30" rows="20" class="form-control" data-parsley-required-message="Campo requerido" required="" placeholder="Ingrese una descripcion"></textarea>
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+
+
             
-            
+
+
+            <div class="form-group has-feedback">
+            <div id="contGal1"></div>
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  name="txtImgup1" id="txtImgup1">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <div id="contGal2"></div>
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  name="txtImgup2" id="txtImgup2">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              <div id="contGal3"></div>
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  name="txtImgup3" id="txtImgup3">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+              <div id="contGal4"></div>
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  name="txtImgup4" id="txtImgup4">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+              <div id="contGal5"></div>
+              <label for="txtTipo">Imagenes Lugar () PNG - JPG - JPEG </label>
+              <input type="file" class="form-control" placeholder="Adjunte archivo "  name="txtImgup5" id="txtImg5up">
+              <span class="glyphicon glyphicon-file form-control-feedback"></span>
+            </div>
 
             <div class="row">
               <!-- /.col -->
               <div class="col-xs-4">
                 <input type="hidden" name="txtIdup" id="txtIdup" value="0">
                 <input type="hidden" name="txtTabup" id="txtTabup" value="1">
-                <input type="hidden" name="accion" id="accion" value="upd">
-                <button type="submit" class="btn btn-primary btn-block btn-flat" id="submit">Actualizar</button>
+                <input type="hidden" name="txtPerfilup" id="txtPerfilup" value="2">
+                <input type="hidden" name="accion" id="accionup" value="upd">
+                <button type="submit" class="btn btn-primary btn-block btn-flat" id="submitup">Actualizar</button>
               </div>
               <!-- /.col -->
             </div>
@@ -224,42 +257,37 @@
 
 
 
-
-
-
-
   <!-- MODAL REGISTRO USUARIOS-->
   <div class="modal fade" id="verUsuario">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Informacion del Registro</h4>
+          <h4 class="modal-title">Informacion del usuario</h4>
         </div>
         <div class="modal-body">
             <table class="table table-bordered text-center">
               <tr>
                 <td>
-                  <p>Estado</p>
+                  <p>ESTADO</p>
                 </td>
                 <td>
                   <div id="st"></div>
                 </td>
               </tr>
-
+              
               <tr>
                 <td>
-                  <p>Id</p>
+                  <p>Tipo</p>
                 </td>
                 <td>
-                  <div id="st2"></div>
+                  <p id="tip"></p>
                 </td>
               </tr>
-
               <tr>
                 <td>
-                  <p>Nombre</p>
+                  <p>Título</p>
                 </td>
                 <td>
                   <p id="nombre"></p>
@@ -268,41 +296,70 @@
 
               <tr>
                 <td>
-                  <p>Tipo</p>
+                  <p>Ubicación</p>
                 </td>
                 <td>
-                  <p id="Email"></p>
+                  <p id="tel"></p>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <p>Imagen 1</p>
+                  <p>Descripción</p>
                 </td>
                 <td>
-                  <div id="I1"></div>
+                  <p id="des"></p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>Foto1</p>
+                </td>
+                <td>
+                  <p id="fot1"></p>
                 </td>
               </tr>
 
 
               <tr>
                 <td>
-                  <p>Imagen 2</p>
+                  <p>Foto2</p>
                 </td>
                 <td>
-                  <div id="I2"></div>
+                  <p id="fot2"></p>
                 </td>
               </tr>
 
-              
 
+              <tr>
                 <td>
-                  <p>Ultima Actualizacion</p>
+                  <p>Foto3</p>
                 </td>
                 <td>
-                  <p id="CatG"></p>
+                  <p id="fot3"></p>
                 </td>
               </tr>
+
+
+              <tr>
+                <td>
+                  <p>Foto4</p>
+                </td>
+                <td>
+                  <p id="fot4"></p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>Foto5</p>
+                </td>
+                <td>
+                  <p id="fot5"></p>
+                </td>
+              </tr>
+
 
               <tr>
                 <td>
@@ -340,12 +397,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Iamgenes Registrados
+        Tarifas  Registradas
         <small>AdminLTE</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Contactos</a></li>
+        <li><a href="#">Tarifas </a></li>
         <li class="active">Todos</li>
       </ol>
     </section>
@@ -363,11 +420,10 @@
                 </div>
                 <div class="box-body">
                   <div class="col-xs-12">
-                    <button type="button" class="btn btn-success" id="NuevoRegistro">
+                    <button type="button" class="btn btn-success" id="NuevoUsuario">
                     <span class="glyphicon glyphicon-plus"></span>
                    Agregar
                   </button>
-                  <button type="button" class="btn btn-danger" onclick="DelRegistroVarios();">Eliminar</button>
                   </div>
                 </div>
               </div>
@@ -381,10 +437,7 @@
                  <div class="info-box-content">
                    <span class="info-box-text">Total Registros</span>
                    <span class="info-box-number">
-                     <?php
-                     /*Cuenta Regsitros*/
-                     echo $NumerodeRegistros;
-                      ?>
+                     <?php $rows = $user->Count(); if($db->numRows($rows) > 0){ $r = $db->datos($rows);echo "<strong>". $r['num']. "</strong>";}else{echo "NO HAY REGISTROS PARA MOSTRAR";}?>
                    </span>
                  </div>
                  <!-- /.info-box-content -->
@@ -395,7 +448,7 @@
             <div class="col-xs-5">
               <div class="box box-default">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Descarga de Registros</h3>
+                  <h3 class="box-title">Descarga</h3>
                 </div>
                 <div class="box-body">
                     <form class="form-inline" action="descarga_usuarios.php" method="post">
@@ -426,19 +479,20 @@
             <div class="col-xs-3">
               <div class="box box-default">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Subida de regsitros</h3>
+                  <h3 class="box-title">Gestion</h3>
                 </div>
                 <div class="box-body">
                   <table class="table table-bordered text-center">
                     <tr>
                       <td>
-                        <a class="btn btn-block btn-success" title="Descargar Formato" download="#" href="#"><span class="glyphicon glyphicon-save-file" style="font-size: 22px;"></span></a>
+                        <button type="button" class="btn btn-block btn-info">Default</button>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-block btn-warning" title="Subir Formato" data-toggle="modal" data-target="#modal-CargarRegistros"><span class="glyphicon glyphicon-open-file" style="font-size: 22px;"></span></button>
+                        <button type="button" class="btn btn-block btn-danger">Default</button>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-block bg-maroon" title="Recargar Pagina" id="refresh"><span class="glyphicon glyphicon-refresh" style="font-size: 22px;"></span></button>
+                        <button type="button" class="btn btn-block btn-default" id="refresh"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Recargar</button>
+
                       </td>
                     </tr>
                   </table>
@@ -460,51 +514,71 @@
           <!-- /.box -->
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Listado de Registros</h3>
+              <h3 class="box-title">Listado de Usuarios</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <table id="example1" class="table table-bordered table-striped">
+              <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Estado</th>
-                  <th>Titulo</th>
+                  <th>Nombres</th>
+                  <th>Imagén</th>
                   <th>Tipo</th>
-                  <th>Foto</th>
                   <th>Acciones</th>
                 </tr>
                 </thead>
+
 
                 <tbody>
                   <!-- DATOS DE LA TABLA USUARIOS -->
                   <?php
                       if($db->numRows($result) > 0){
                           while ($r = $db->datos($result)) {
+                            $st= "";
+
                             if ($r['Status'] == 1) {
                               $st = '<img src="../../../front/images/edo_ok.png" class="avatar" width="16px">';
                             }elseif($r['Status'] == 0){
                               $st = '<img src="../../../front/images/edo_nok.png" class="avatar" width="16px">';
                             }
 
+                            $delete = "";
+                            $position = "";
+
+                            if($r['Posicion'] == 1){
+                                $position = "Principal";
+                            }else{
+                                $position = "General";
+                            }
+
+
+                            if ($r['Id'] == 0 ) {
+                              $delete = '';
+                            }else{
+                              $delete = '<button type="button" onclick="javascript:DelRegistro('.$r['Id'].')" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></button>';
+                            }
+
+
+                            $foo = $r['Url'];
                             $tabImg = "";
 
                            
-                            $tabImg = '<img src="../../../backend/datos/'.$r['Imagen'].'" class="avatar" width="100px">';
-                          
+                            $tabImg = '<img src="../../../backend/datos/'.$r['Foto1'].'" class="avatar" width="150px">';
+                            
+
                               echo '
                                   <tr>
                                     <td>'.$st.'</td>
                                     <td>'.$r['Titulo'].'</td>
-                                    <td>'.$r['Tipo'].'</td>
                                     <td>'.$tabImg.'</td>
-
+                                    <td>'.$r['Tipo'].'</td>
                                     <td>
                                      <button type="button" onclick="javascript:VerUsuario('.$r['Id'].')" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"></span></button>
                                      <button type="button" onclick="javascript:UpdatedUsuario('.$r['Id'].')" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
-                                     <button type="button" onclick="javascript:DelRegistro('.$r['Id'].')" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                                      '.$delete.'
                                     </td>
                                   </tr>
-
                                ';
                           }
 
@@ -515,6 +589,7 @@
                    ?>
 
                 </tbody>
+
               </table>
             </div>
             <!-- /.box-body -->
@@ -731,13 +806,11 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- Recursos Js-->
+<script src="../../../bower_components/jquery/jquery.min.js"></script>
 <?php LibreriasJs(); ?>
-<script src="../../../backend/js/imagenes.js"></script>
+<script src="../../../backend/js/lugares.js"></script>
 <script src="../../../bower_components/moment/moment.js"></script>
 <script src="../../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script src="../../js/cargar.js"></script>
-<script src="../../../bower_components/sweetalert/sweetalert.min.js"></script>
-<script src="../../../bower_components/sweetalert/jquery.form.min.js"></script>
 
 
 <!-- page script -->

@@ -196,7 +196,7 @@
       .done(function(data){
         if (data.success) {
           $('#verUsuario').modal({keyboard: false});
-          $("#ft").append('<img src="../../datos/'+data.Portada+'" width="90px">');
+          
 
             if (data.Posicion == 1) {
                 text = "PRINCIPAL";
@@ -216,6 +216,13 @@
           $('#tip').html(data.Tipo);
           $('#tel').html(data.Ubicacion);
           $('#des').html(data.Descripcion);
+
+          $('#fot1').empty();
+          $('#fot2').empty();
+          $('#fot3').empty();
+          $('#fot4').empty();
+          $('#fot5').empty();
+
           $('#fot1').append('<img src="../../datos/'+data.Foto1+'" width="90px">');
           $('#fot2').append('<img src="../../datos/'+data.Foto2+'" width="90px">');
           $('#fot3').append('<img src="../../datos/'+data.Foto3+'" width="90px">');
@@ -261,7 +268,7 @@
           
           $("#txtStatusup option[value="+ data.Status +"]").attr("selected",true);
 
-          $("#txtTipoup option[value="+ Tipo +"]").attr("selected",true); 
+         // $("#txtTipoup option[value="+ Tipo +"]").attr("selected",true); 
            
           
           $('#txtNameup').val(data.Titulo);

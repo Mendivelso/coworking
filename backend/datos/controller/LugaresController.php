@@ -29,7 +29,7 @@
         $jsondata['Descripcion'] = $r["Descripcion"];
         $jsondata['Tipo'] = $r["Tipo"];
         
-        $jsondata['Portada'] = $r["Portada"];
+       
         $jsondata['Foto1'] = $r["Foto1"];
         $jsondata['Foto2'] = $r["Foto2"];
         $jsondata['Foto3'] = $r["Foto3"];
@@ -80,7 +80,7 @@
       $data = array("Titulo"=>$_REQUEST['txtName'], "Ubicacion"=>$_REQUEST['txtUbi'],
       "Status"=>$_REQUEST['txtStatus'], "Tipo"=>$_REQUEST['txtTipoG'], "Descripcion"=>$_REQUEST['txtDescrip'],  "Created_date"=>date('Y-m-d H:i:s'), "Created_by"=>$user);
       // Tomamos el formato de la imagen adjuntada
-      $FormatoPortada = substr($_FILES['txtImg']['name'], strlen($_FILES['txtImg']['name'])-3, strlen($_FILES['txtImg']['name']));
+      
       $FormatoImagen1 = substr($_FILES['txtImg1']['name'], strlen($_FILES['txtImg1']['name'])-3, strlen($_FILES['txtImg1']['name']));
       $FormatoImagen2 = substr($_FILES['txtImg2']['name'], strlen($_FILES['txtImg2']['name'])-3, strlen($_FILES['txtImg2']['name']));
       $FormatoImagen3 = substr($_FILES['txtImg3']['name'], strlen($_FILES['txtImg3']['name'])-3, strlen($_FILES['txtImg3']['name']));
@@ -88,24 +88,14 @@
       $FormatoImagen5 = substr($_FILES['txtImg5']['name'], strlen($_FILES['txtImg5']['name'])-3, strlen($_FILES['txtImg5']['name']));
 
 
+          //validamos las dimensiones de la imagen
+         
 
-
-
-      // validamos el formato de la imagen 'png' o 'jpg'
-      if(($FormatoPortada == "png") or ($FormatoPortada == "jpg")  or ($FormatoPortada == "JPG")  or ($FormatoPortada == "PNG") or ($FormatoPortada == "JPEG" ) ){
-        //validamos el peso de la imagen
-        if($_FILES['txtImg']['size'] > 2000000){
-          $jsondata['success'] = false;
-          $jsondata['message'] = "La imagen de portada Tiene un peso superior a 2MB";
-        }else{
-        //validamos las dimensiones de la imagen
-          $infoImagen = getimagesize($_FILES['txtImg']['tmp_name']);
-          if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
-
-
-              /* IMAGEN 1  */
+      if($_FILES['txtImg4']['name'] == ""){
+          /* VACIO 4 y 5 */
+          /* IMAGEN 1  */
               // validamos el formato de la imagen 'png' o 'jpg'
-              if(($FormatoImagen1 == "png") or ($FormatoImagen1 == "jpg")  or ($FormatoImagen1 == "JPG")  or ($FormatoImagen1 == "PNG") or ($FormatoImagen1 == "JPEG" ) ){
+              if(($FormatoImagen1 == "png") or ($FormatoImagen1 == "jpg")  or ($FormatoImagen1 == "JPG")  or ($FormatoImagen1 == "PNG") or ($FormatoImagen1 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
                 //validamos el peso de la imagen
                 if($_FILES['txtImg1']['size'] > 2000000){
                   $jsondata['success'] = false;
@@ -118,7 +108,7 @@
                       /* IMAGEN 2 */
 
                       // validamos el formato de la imagen 'png' o 'jpg'
-                      if(($FormatoImagen2 == "png") or ($FormatoImagen2 == "jpg")  or ($FormatoImagen2 == "JPG")  or ($FormatoImagen2 == "PNG") or ($FormatoImagen2 == "JPEG" ) ){
+                      if(($FormatoImagen2 == "png") or ($FormatoImagen2 == "jpg")  or ($FormatoImagen2 == "JPG")  or ($FormatoImagen2 == "PNG") or ($FormatoImagen2 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
                         //validamos el peso de la imagen
                         if($_FILES['txtImg2']['size'] > 2000000){
                           $jsondata['success'] = false;
@@ -131,7 +121,187 @@
                               /* IMAGEN 3 */
 
                               // validamos el formato de la imagen 'png' o 'jpg'
-                              if(($FormatoImagen3 == "png") or ($FormatoImagen3 == "jpg")  or ($FormatoImagen3 == "JPG")  or ($FormatoImagen3 == "PNG") or ($FormatoImagen3 == "JPEG" ) ){
+                              if(($FormatoImagen3 == "png") or ($FormatoImagen3 == "jpg")  or ($FormatoImagen3 == "JPG")  or ($FormatoImagen3 == "PNG") or ($FormatoImagen3 == "JPEG" ) or ($FormatoImagen1 == "jpeg")){
+                                //validamos el peso de la imagen
+                                if($_FILES['txtImg3']['size'] > 2000000){
+                                  $jsondata['success'] = false;
+                                  $jsondata['message'] = "La imagen #3 Tiene un peso superior a 2MB";
+                                }else{
+                                //validamos las dimensiones de la imagen
+                                  $infoImagen = getimagesize($_FILES['txtImg3']['tmp_name']);
+                                  if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
+
+                                               
+                                                      /* COPIAMOS IMAGENES */
+
+                                                      /*IAMGEN PORTADA */
+                                                      
+                                                      if($objUser->insertData($data))
+                                                      {
+                                                        /* Tomamos el Id del ultimo registro*/
+                                                        $vId = $db->lastInsert();
+                                                        // creamos la carpeta
+                                                        $carpeta = "../public/Lugares/".$vId. "/Portada";
+                                                        if (!file_exists($carpeta)) {
+                                                            mkdir($carpeta, 0777, true);
+                                                        }
+
+                                                        $carpeta = "../public/Lugares/".$vId. "/Galeria";
+                                                        if (!file_exists($carpeta)) {
+                                                            mkdir($carpeta, 0777, true);
+                                                        }
+
+                                                       
+
+                                                         // datos de la imagen 1 necesarios para el registro
+                                                         $name1 = $_FILES['txtImg1']['name'];
+                                                         $destino1 = "../public/Lugares/".$vId."/"."Galeria/".$name1;
+                                                         $dest1 = "public/Lugares/".$vId. "/". "Galeria/".$name1;
+                                                         $ruta1 = $_FILES['txtImg1']['tmp_name'];
+
+
+                                                         // datos de la imagen 2 necesarios para el registro
+                                                         $name2 = $_FILES['txtImg2']['name'];
+                                                         $destino2 = "../public/Lugares/".$vId."/"."Galeria/".$name2;
+                                                         $dest2 = "public/Lugares/".$vId. "/"."Galeria/".$name2;
+                                                         $ruta2 = $_FILES['txtImg2']['tmp_name'];
+
+
+                                                          // datos de la imagen 3 necesarios para el registro
+                                                          $name3 = $_FILES['txtImg3']['name'];
+                                                          $destino3 = "../public/Lugares/".$vId."/"."Galeria/".$name3;
+                                                          $dest3 = "public/Lugares/".$vId. "/"."Galeria/".$name3;
+                                                          $ruta3 = $_FILES['txtImg3']['tmp_name'];
+
+
+
+                                                        // se mueve el archivo en la carpeta indicada
+                                                        if(copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) ){
+                                                          $data = array("Portada"=>$dest, "Foto1"=>$dest1, "Foto2"=>$dest2, "Foto3"=>$dest3, "Foto4"=>$dest4, "Foto5"=>$dest5 );
+                                                          $where = " Id = " . $vId;
+                                                          // actualizamos el ultimo regsitro
+                                                          if($objUser->updateData($data, $where)){
+                                                            $jsondata['success'] = true;
+                                                            $jsondata['message'] = "El Sitio fue registrado correctamente.";
+                                                          }else {
+                                                            $jsondata['success'] = false;
+                                                            $jsondata['message'] = "No fue posible Registrar sus datos";
+                                                          }
+
+                                                        }else {
+                                                          $jsondata['success'] = false;
+                                                          $jsondata['message'] = "No fue posible subir su Imagen";
+                                                        }
+                                                      }
+                                                      else
+                                                      {
+                                                          $jsondata['success'] = false;
+                                                          $jsondata['message'] = "Falla al enviar el registro";
+                                                      }
+
+                                                
+                                              
+
+                                        
+                                      
+
+
+                                      
+
+
+
+
+
+
+
+                                      /* IMAGEN 4 */
+                                                                                                                      
+                                  }else{
+                                      $jsondata['success'] = false;
+                                      $jsondata['message'] = "La imagen 3 no cumple las medidas solicitadas ";
+                                  }
+                                }
+                              }else{
+                                $jsondata['success'] = false;
+                                $jsondata['message'] = "Formato de imagen 3 Incorrecto, Debe ser png o jpg";
+                              }
+
+                              
+
+
+
+
+
+
+
+                              /* IMAGEN 3 */
+                                                                                                              
+                          }else{
+                              $jsondata['success'] = false;
+                              $jsondata['message'] = "La imagen 2 no cumple las medidas solicitadas ";
+                          }
+                        }
+                      }else{
+                        $jsondata['success'] = false;
+                        $jsondata['message'] = "Formato de imagen 2 Incorrecto, Debe ser png o jpg";
+                      }
+
+
+
+
+
+
+
+
+                      /* IMAGEN 2 */
+                                                                                                      
+                  }else{
+                      $jsondata['success'] = false;
+                      $jsondata['message'] = "La imagen  1 no cumple las medidas solicitadas ";
+                  }
+                }
+              }else{
+                $jsondata['success'] = false;
+                $jsondata['message'] = "Formato de imagen 1 Incorrecto, Debe ser png o jpg";
+              }
+
+              /* FIN IMAGEN 1  */
+
+          /* VACIO 4 y 5 FIN */
+        
+
+      }elseif($_FILES['txtImg5']['name'] == ""){
+
+        /* Campo 5 vacio  */
+          /* IMAGEN 1  */
+              // validamos el formato de la imagen 'png' o 'jpg'
+              if(($FormatoImagen1 == "png") or ($FormatoImagen1 == "jpg")  or ($FormatoImagen1 == "JPG")  or ($FormatoImagen1 == "PNG") or ($FormatoImagen1 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
+                //validamos el peso de la imagen
+                if($_FILES['txtImg1']['size'] > 2000000){
+                  $jsondata['success'] = false;
+                  $jsondata['message'] = "La imagen #1 Tiene un peso superior a 2MB";
+                }else{
+                //validamos las dimensiones de la imagen
+                  $infoImagen = getimagesize($_FILES['txtImg1']['tmp_name']);
+                  if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
+
+                      /* IMAGEN 2 */
+
+                      // validamos el formato de la imagen 'png' o 'jpg'
+                      if(($FormatoImagen2 == "png") or ($FormatoImagen2 == "jpg")  or ($FormatoImagen2 == "JPG")  or ($FormatoImagen2 == "PNG") or ($FormatoImagen2 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
+                        //validamos el peso de la imagen
+                        if($_FILES['txtImg2']['size'] > 2000000){
+                          $jsondata['success'] = false;
+                          $jsondata['message'] = "La imagen #2 Tiene un peso superior a 2MB";
+                        }else{
+                        //validamos las dimensiones de la imagen
+                          $infoImagen = getimagesize($_FILES['txtImg2']['tmp_name']);
+                          if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
+
+                              /* IMAGEN 3 */
+
+                              // validamos el formato de la imagen 'png' o 'jpg'
+                              if(($FormatoImagen3 == "png") or ($FormatoImagen3 == "jpg")  or ($FormatoImagen3 == "JPG")  or ($FormatoImagen3 == "PNG") or ($FormatoImagen3 == "JPEG" ) or ($FormatoImagen1 == "jpeg")){
                                 //validamos el peso de la imagen
                                 if($_FILES['txtImg3']['size'] > 2000000){
                                   $jsondata['success'] = false;
@@ -144,7 +314,221 @@
                                       /* IMAGEN 4 */
 
                                       // validamos el formato de la imagen 'png' o 'jpg'
-                                      if(($FormatoImagen4 == "png") or ($FormatoImagen4 == "jpg")  or ($FormatoImagen4 == "JPG")  or ($FormatoImagen4 == "PNG") or ($FormatoImagen4 == "JPEG" ) ){
+                                      if(($FormatoImagen4 == "png") or ($FormatoImagen4 == "jpg")  or ($FormatoImagen4 == "JPG")  or ($FormatoImagen4 == "PNG") or ($FormatoImagen4 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
+                                        //validamos el peso de la imagen
+                                        if($_FILES['txtImg4']['size'] > 2000000){
+                                          $jsondata['success'] = false;
+                                          $jsondata['message'] = "La imagen #4 Tiene un peso superior a 2MB";
+                                        }else{
+                                        //validamos las dimensiones de la imagen
+                                          $infoImagen = getimagesize($_FILES['txtImg4']['tmp_name']);
+                                          if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
+
+                                                      /* COPIAMOS IMAGENES */
+                                                      /*IAMGEN PORTADA */
+                                                      
+                                                      if($objUser->insertData($data))
+                                                      {
+                                                        /* Tomamos el Id del ultimo registro*/
+                                                        $vId = $db->lastInsert();
+                                                        // creamos la carpeta
+                                                        $carpeta = "../public/Lugares/".$vId. "/Portada";
+                                                        if (!file_exists($carpeta)) {
+                                                            mkdir($carpeta, 0777, true);
+                                                        }
+
+                                                        $carpeta = "../public/Lugares/".$vId. "/Galeria";
+                                                        if (!file_exists($carpeta)) {
+                                                            mkdir($carpeta, 0777, true);
+                                                        }
+
+                                                       
+
+                                                         // datos de la imagen 1 necesarios para el registro
+                                                         $name1 = $_FILES['txtImg1']['name'];
+                                                         $destino1 = "../public/Lugares/".$vId."/"."Galeria/".$name1;
+                                                         $dest1 = "public/Lugares/".$vId. "/". "Galeria/".$name1;
+                                                         $ruta1 = $_FILES['txtImg1']['tmp_name'];
+
+
+                                                         // datos de la imagen 2 necesarios para el registro
+                                                         $name2 = $_FILES['txtImg2']['name'];
+                                                         $destino2 = "../public/Lugares/".$vId."/"."Galeria/".$name2;
+                                                         $dest2 = "public/Lugares/".$vId. "/"."Galeria/".$name2;
+                                                         $ruta2 = $_FILES['txtImg2']['tmp_name'];
+
+
+                                                          // datos de la imagen 3 necesarios para el registro
+                                                          $name3 = $_FILES['txtImg3']['name'];
+                                                          $destino3 = "../public/Lugares/".$vId."/"."Galeria/".$name3;
+                                                          $dest3 = "public/Lugares/".$vId. "/"."Galeria/".$name3;
+                                                          $ruta3 = $_FILES['txtImg3']['tmp_name'];
+
+
+                                                          // datos de la imagen 4 necesarios para el registro
+                                                          $name4 = $_FILES['txtImg4']['name'];
+                                                          $destino4 = "../public/Lugares/".$vId."/"."Galeria/".$name4;
+                                                          $dest4 = "public/Lugares/".$vId. "/"."Galeria/".$name4;
+                                                          $ruta4 = $_FILES['txtImg4']['tmp_name'];
+
+
+
+
+                                                        // se mueve el archivo en la carpeta indicada
+                                                        if(copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) and  copy($ruta4,$destino4)  ){
+                                                          $data = array("Portada"=>$dest, "Foto1"=>$dest1, "Foto2"=>$dest2, "Foto3"=>$dest3, "Foto4"=>$dest4, "Foto5"=>$dest5 );
+                                                          $where = " Id = " . $vId;
+                                                          // actualizamos el ultimo regsitro
+                                                          if($objUser->updateData($data, $where)){
+                                                            $jsondata['success'] = true;
+                                                            $jsondata['message'] = "El Sitio fue registrado correctamente.";
+                                                          }else {
+                                                            $jsondata['success'] = false;
+                                                            $jsondata['message'] = "No fue posible Registrar sus datos";
+                                                          }
+
+                                                        }else {
+                                                          $jsondata['success'] = false;
+                                                          $jsondata['message'] = "No fue posible subir su Imagen";
+                                                        }
+                                                      }
+                                                      else
+                                                      {
+                                                          $jsondata['success'] = false;
+                                                          $jsondata['message'] = "Falla al enviar el registro";
+                                                      }
+
+                                                  
+                                                
+                                              
+
+
+
+
+
+
+
+
+                                              /* IMAGEN 5 */
+                                                                                                                              
+                                          }else{
+                                              $jsondata['success'] = false;
+                                              $jsondata['message'] = "La imagen 4 no cumple las medidas solicitadas ";
+                                          }
+                                        }
+                                      }else{
+                                        $jsondata['success'] = false;
+                                        $jsondata['message'] = "Formato de imagen 4 Incorrecto, Debe ser png o jpg";
+                                      }
+
+
+                                      
+
+
+
+
+
+
+
+                                      /* IMAGEN 4 */
+                                                                                                                      
+                                  }else{
+                                      $jsondata['success'] = false;
+                                      $jsondata['message'] = "La imagen 3 no cumple las medidas solicitadas ";
+                                  }
+                                }
+                              }else{
+                                $jsondata['success'] = false;
+                                $jsondata['message'] = "Formato de imagen 3 Incorrecto, Debe ser png o jpg";
+                              }
+
+                              
+
+
+
+
+
+
+
+                              /* IMAGEN 3 */
+                                                                                                              
+                          }else{
+                              $jsondata['success'] = false;
+                              $jsondata['message'] = "La imagen 2 no cumple las medidas solicitadas ";
+                          }
+                        }
+                      }else{
+                        $jsondata['success'] = false;
+                        $jsondata['message'] = "Formato de imagen 2 Incorrecto, Debe ser png o jpg";
+                      }
+
+
+
+
+
+
+
+
+                      /* IMAGEN 2 */
+                                                                                                      
+                  }else{
+                      $jsondata['success'] = false;
+                      $jsondata['message'] = "La imagen  1 no cumple las medidas solicitadas ";
+                  }
+                }
+              }else{
+                $jsondata['success'] = false;
+                $jsondata['message'] = "Formato de imagen 1 Incorrecto, Debe ser png o jpg";
+              }
+
+              /* FIN IMAGEN 1  */
+
+        /* Campo 5 vacio FIN  */
+      }else{
+
+          /* TODOS LOS CAMPOS LLENOS */
+            /* IMAGEN 1  */
+              // validamos el formato de la imagen 'png' o 'jpg'
+              if(($FormatoImagen1 == "png") or ($FormatoImagen1 == "jpg")  or ($FormatoImagen1 == "JPG")  or ($FormatoImagen1 == "PNG") or ($FormatoImagen1 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
+                //validamos el peso de la imagen
+                if($_FILES['txtImg1']['size'] > 2000000){
+                  $jsondata['success'] = false;
+                  $jsondata['message'] = "La imagen #1 Tiene un peso superior a 2MB";
+                }else{
+                //validamos las dimensiones de la imagen
+                  $infoImagen = getimagesize($_FILES['txtImg1']['tmp_name']);
+                  if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
+
+                      /* IMAGEN 2 */
+
+                      // validamos el formato de la imagen 'png' o 'jpg'
+                      if(($FormatoImagen2 == "png") or ($FormatoImagen2 == "jpg")  or ($FormatoImagen2 == "JPG")  or ($FormatoImagen2 == "PNG") or ($FormatoImagen2 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
+                        //validamos el peso de la imagen
+                        if($_FILES['txtImg2']['size'] > 2000000){
+                          $jsondata['success'] = false;
+                          $jsondata['message'] = "La imagen #2 Tiene un peso superior a 2MB";
+                        }else{
+                        //validamos las dimensiones de la imagen
+                          $infoImagen = getimagesize($_FILES['txtImg2']['tmp_name']);
+                          if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
+
+                              /* IMAGEN 3 */
+
+                              // validamos el formato de la imagen 'png' o 'jpg'
+                              if(($FormatoImagen3 == "png") or ($FormatoImagen3 == "jpg")  or ($FormatoImagen3 == "JPG")  or ($FormatoImagen3 == "PNG") or ($FormatoImagen3 == "JPEG" ) or ($FormatoImagen1 == "jpeg")){
+                                //validamos el peso de la imagen
+                                if($_FILES['txtImg3']['size'] > 2000000){
+                                  $jsondata['success'] = false;
+                                  $jsondata['message'] = "La imagen #3 Tiene un peso superior a 2MB";
+                                }else{
+                                //validamos las dimensiones de la imagen
+                                  $infoImagen = getimagesize($_FILES['txtImg3']['tmp_name']);
+                                  if ($infoImagen[0] <= 2000 || $infoImagen[1] <= 2000) {
+
+                                      /* IMAGEN 4 */
+
+                                      // validamos el formato de la imagen 'png' o 'jpg'
+                                      if(($FormatoImagen4 == "png") or ($FormatoImagen4 == "jpg")  or ($FormatoImagen4 == "JPG")  or ($FormatoImagen4 == "PNG") or ($FormatoImagen4 == "JPEG" ) or ($FormatoImagen1 == "jpeg") ){
                                         //validamos el peso de la imagen
                                         if($_FILES['txtImg4']['size'] > 2000000){
                                           $jsondata['success'] = false;
@@ -157,7 +541,7 @@
                                               /* IMAGEN 5 */
 
                                               // validamos el formato de la imagen 'png' o 'jpg'
-                                              if(($FormatoImagen5 == "png") or ($FormatoImagen5 == "jpg")  or ($FormatoImagen5 == "JPG")  or ($FormatoImagen5 == "PNG") or ($FormatoImagen5 == "JPEG" ) ){
+                                              if(($FormatoImagen5 == "png") or ($FormatoImagen5 == "jpg")  or ($FormatoImagen5 == "JPG")  or ($FormatoImagen5 == "PNG") or ($FormatoImagen5 == "JPEG" ) or ($FormatoImagen1 == "jpeg")){
                                                 //validamos el peso de la imagen
                                                 if($_FILES['txtImg5']['size'] > 2000000){
                                                   $jsondata['success'] = false;
@@ -186,11 +570,7 @@
                                                             mkdir($carpeta, 0777, true);
                                                         }
 
-                                                        // datos de la imagen PORTADA  necesarios para el registro
-                                                        $name = $_FILES['txtImg']['name'];
-                                                        $destino = "../public/Lugares/".$vId."/"."Portada/".$name;
-                                                        $dest = "public/Lugares/".$vId. "/". "Portada/".$name;
-                                                        $ruta = $_FILES['txtImg']['tmp_name'];
+                                                       
 
                                                          // datos de la imagen 1 necesarios para el registro
                                                          $name1 = $_FILES['txtImg1']['name'];
@@ -228,7 +608,7 @@
 
 
                                                         // se mueve el archivo en la carpeta indicada
-                                                        if(copy($ruta,$destino)  and copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) and  copy($ruta4,$destino4) and  copy($ruta5,$destino5) ){
+                                                        if(copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) and  copy($ruta4,$destino4) and  copy($ruta5,$destino5) ){
                                                           $data = array("Portada"=>$dest, "Foto1"=>$dest1, "Foto2"=>$dest2, "Foto3"=>$dest3, "Foto4"=>$dest4, "Foto5"=>$dest5 );
                                                           $where = " Id = " . $vId;
                                                           // actualizamos el ultimo regsitro
@@ -344,16 +724,19 @@
               /* FIN IMAGEN 1  */
 
 
-                                                                                              
-          }else{
-              $jsondata['success'] = false;
-              $jsondata['message'] = "La imagen no cumple las medidas solicitadas ";
-          }
-        }
-      }else{
-        $jsondata['success'] = false;
-        $jsondata['message'] = "Formato de imagen de portada Incorrecto, Debe ser png o jpg";
+
+          /* FIN */
+
+
       }
+              
+            
+
+
+                                                                                              
+          
+        
+      
 
 
     }
@@ -366,12 +749,6 @@
       /* Crea Update de galeria */
     case "upd":
       $jsondata = array();
-      $portada = $_FILES['txtImgup']['name'];
-      $portada = str_replace(' ', '-', $portada);
-
-
-      
-      
 
       $Imagen1 = trim($_FILES['txtImgup1']['name']);
       $Imagen1 = str_replace(' ', '-', $Imagen1);
@@ -396,7 +773,7 @@
 
 
 
-      if ( ($portada != "") AND ($Imagen1 !="")   AND ($Imagen2 !="")  AND ($Imagen3 !="") AND ($Imagen4 !="") AND ($Imagen5 !="")) {
+      if ( ($Imagen1 !="")   AND ($Imagen2 !="")  AND ($Imagen3 !="") AND ($Imagen4 !="") AND ($Imagen5 !="")) { 
       	// si file viene lleno            
         $data = array("Titulo"=>$_REQUEST['txtNameup'], "Ubicacion"=>$_REQUEST['txtUbiup'],  
         "Status"=>$_REQUEST['txtStatusup'], "Tipo"=>$_REQUEST['txtTipoGup'], "Descripcion"=>$_REQUEST['txtDescripup'],  "Updated_by"=>$vname,  "Updated_date"=>date('Y-m-d H:i:s')
@@ -414,13 +791,6 @@
 
 
         /* PORTADA  */
-        
-      	if(($vType == "png") or ($vType == "jpg") or ($vType == "JPG") or ($vType == "PNG") ){
-            //validamos el peso de la imagen
-            if($_FILES['txtImgup']['size'] <= 7000000){
-              //validamos las dimensiones de la imagen
-              $infoImagen = getimagesize($_FILES['txtImgup']['tmp_name']);
-              if ($infoImagen[0] <= 20000 || $infoImagen[1] <= 20000) {
 
                 /* FOTO 1 */
 
@@ -464,11 +834,6 @@
                                                 /* INFORMACION DE LAS 5 IMAGENES */
 
 
-                                                /* PORTADA */
-                                                $carpeta = "../public/Lugares/".$_REQUEST['txtIdup'];
-                                                $destino = "../public/Lugares/".$_REQUEST['txtIdup']."/". "Portada/" .$portada;
-                                                $dest = "public/Lugares/".$_REQUEST['txtIdup']."/" . "Portada/" .$portada;
-                                                $ruta = $_FILES['txtImgup']['tmp_name'];
 
                                                 // datos de la imagen 1 necesarios para el registro
                                                 
@@ -505,7 +870,7 @@
                                                  $ruta5 = $_FILES['txtImgup5']['tmp_name'];
 
 
-                                                if(copy($ruta,$destino)  and copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) and  copy($ruta4,$destino4) and  copy($ruta5,$destino5)){                                                
+                                                if( copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) and  copy($ruta4,$destino4) and  copy($ruta5,$destino5)){                                                
 
                                                 $data = array("Portada"=>$dest, "Foto1"=>$dest1, "Foto2"=>$dest2, "Foto3"=>$dest3, "Foto4"=>$dest4, "Foto5"=>$dest5 );
 
@@ -627,12 +992,6 @@
                     $jsondata['message'] = "No se pueden subir Imagenes con pesos superiores a 2MB";
                   }
       
-      
-      
-              }else{
-                $jsondata['success'] = false;
-                $jsondata['message'] = "Formato de imagen 1 Incorrecto, Debe ser png o jpg";
-              }
 
 
 
@@ -651,21 +1010,12 @@
                 $jsondata['message'] = "La imagen no cumple las medidas solicitadas ";
               }
 
-            }else{
-              $jsondata['success'] = false;
-              $jsondata['message'] = "No se pueden subir Imagenes con pesos superiores a 1MB";
-            }
+           
 
-
-
-      	}else{
-      	  $jsondata['success'] = false;
-      	  $jsondata['message'] = "Formato de imagen Incorrecto, Debe ser png o jpg";
-        }
         
         /* FIN PORTADA */
 
-      }elseif(($portada != "") AND ($Imagen1 !="")   AND ($Imagen2 !="")  AND ($Imagen3 !="") AND ($Imagen4 !="")){
+      }elseif(($Imagen1 !="")   AND ($Imagen2 !="")  AND ($Imagen3 !="") AND ($Imagen4 !="")){
 
 
 
@@ -687,12 +1037,7 @@
 
         /* PORTADA  */
         
-      	if(($vType == "png") or ($vType == "jpg") or ($vType == "JPG") or ($vType == "PNG") ){
-            //validamos el peso de la imagen
-            if($_FILES['txtImgup']['size'] <= 7000000){
-              //validamos las dimensiones de la imagen
-              $infoImagen = getimagesize($_FILES['txtImgup']['tmp_name']);
-              if ($infoImagen[0] <= 20000 || $infoImagen[1] <= 20000) {
+        
 
                 /* FOTO 1 */
 
@@ -728,12 +1073,6 @@
                                                                                           /* INFORMACION DE LAS 5 IMAGENES */
 
 
-                                                /* PORTADA */
-                                                $carpeta = "../public/Lugares/".$_REQUEST['txtIdup'];
-                                                $destino = "../public/Lugares/".$_REQUEST['txtIdup']."/". "Portada/" .$portada;
-                                                $dest = "public/Lugares/".$_REQUEST['txtIdup']."/" . "Portada/" .$portada;
-                                                $ruta = $_FILES['txtImgup']['tmp_name'];
-
                                                 // datos de la imagen 1 necesarios para el registro
                                                 
                                                 $destino1 = "../public/Lugares/".$vId."/"."Galeria/".$Imagen1;
@@ -765,7 +1104,7 @@
                                                  
 
 
-                                                if(copy($ruta,$destino)  and copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) and  copy($ruta4,$destino4) ){                                                
+                                                if( copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3) and  copy($ruta4,$destino4) ){                                                
 
                                                 $data = array("Portada"=>$dest, "Foto1"=>$dest1, "Foto2"=>$dest2, "Foto3"=>$dest3, "Foto4"=>$dest4 );
 
@@ -886,22 +1225,9 @@
 
                 /* FIN FOTO 1 */
 
-              }else{
-                $jsondata['success'] = false;
-                $jsondata['message'] = "La imagen no cumple las medidas solicitadas ";
-              }
 
-            }else{
-              $jsondata['success'] = false;
-              $jsondata['message'] = "No se pueden subir Imagenes con pesos superiores a 1MB";
-            }
+           
 
-
-
-      	}else{
-      	  $jsondata['success'] = false;
-      	  $jsondata['message'] = "Formato de imagen Incorrecto, Debe ser png o jpg";
-        }
         
         /* FIN PORTADA */
 
@@ -911,7 +1237,7 @@
 
 
 
-      } elseif(($portada != "") AND ($Imagen1 !="")   AND ($Imagen2 !="")  AND ($Imagen3 !="")){
+      } elseif(($Imagen1 !="")   AND ($Imagen2 !="")  AND ($Imagen3 !="")){
 
           
         // si file viene lleno            
@@ -932,12 +1258,7 @@
 
         /* PORTADA  */
         
-      	if(($vType == "png") or ($vType == "jpg") or ($vType == "JPG") or ($vType == "PNG") ){
-            //validamos el peso de la imagen
-            if($_FILES['txtImgup']['size'] <= 7000000){
-              //validamos las dimensiones de la imagen
-              $infoImagen = getimagesize($_FILES['txtImgup']['tmp_name']);
-              if ($infoImagen[0] <= 20000 || $infoImagen[1] <= 20000) {
+
 
                 /* FOTO 1 */
 
@@ -966,11 +1287,6 @@
                                     /* INFORMACION DE LAS 5 IMAGENES */
 
 
-                                                /* PORTADA */
-                                                $carpeta = "../public/Lugares/".$_REQUEST['txtIdup'];
-                                                $destino = "../public/Lugares/".$_REQUEST['txtIdup']."/". "Portada/" .$portada;
-                                                $dest = "public/Lugares/".$_REQUEST['txtIdup']."/" . "Portada/" .$portada;
-                                                $ruta = $_FILES['txtImgup']['tmp_name'];
 
                                                 // datos de la imagen 1 necesarios para el registro
                                                 
@@ -998,7 +1314,7 @@
                                                  
 
 
-                                                if(copy($ruta,$destino)  and copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3)){                                                
+                                                if(copy($ruta1,$destino1) and  copy($ruta2,$destino2)  and  copy($ruta3,$destino3)){                                                
 
                                                 $data = array("Portada"=>$dest, "Foto1"=>$dest1, "Foto2"=>$dest2, "Foto3"=>$dest3);
 
@@ -1101,22 +1417,7 @@
 
                 /* FIN FOTO 1 */
 
-              }else{
-                $jsondata['success'] = false;
-                $jsondata['message'] = "La imagen no cumple las medidas solicitadas ";
-              }
-
-            }else{
-              $jsondata['success'] = false;
-              $jsondata['message'] = "No se pueden subir Imagenes con pesos superiores a 1MB";
-            }
-
-
-
-      	}else{
-      	  $jsondata['success'] = false;
-      	  $jsondata['message'] = "Formato de imagen Incorrecto, Debe ser png o jpg";
-        }
+         
         
         /* FIN PORTADA */
 
@@ -1126,7 +1427,7 @@
 
 
 
-      }elseif(($portada != "") AND ($Imagen1 !="")   AND ($Imagen2 !="")){
+      }elseif(($Imagen1 !="")   AND ($Imagen2 !="")){
 
                 // si file viene lleno            
                 $data = array("Titulo"=>$_REQUEST['txtNameup'], "Ubicacion"=>$_REQUEST['txtUbiup'],  
@@ -1145,13 +1446,7 @@
         
         
                 /* PORTADA  */
-                
-                if(($vType == "png") or ($vType == "jpg") or ($vType == "JPG") or ($vType == "PNG") ){
-                    //validamos el peso de la imagen
-                    if($_FILES['txtImgup']['size'] <= 7000000){
-                      //validamos las dimensiones de la imagen
-                      $infoImagen = getimagesize($_FILES['txtImgup']['tmp_name']);
-                      if ($infoImagen[0] <= 20000 || $infoImagen[1] <= 20000) {
+              
         
                         /* FOTO 1 */
         
@@ -1173,11 +1468,6 @@
                                                                                  /* INFORMACION DE LAS 5 IMAGENES */
         
         
-                                                        /* PORTADA */
-                                                        $carpeta = "../public/Lugares/".$_REQUEST['txtIdup'];
-                                                        $destino = "../public/Lugares/".$_REQUEST['txtIdup']."/". "Portada/" .$portada;
-                                                        $dest = "public/Lugares/".$_REQUEST['txtIdup']."/" . "Portada/" .$portada;
-                                                        $ruta = $_FILES['txtImgup']['tmp_name'];
         
                                                         // datos de la imagen 1 necesarios para el registro
                                                         
@@ -1193,7 +1483,7 @@
                                                         $ruta2 = $_FILES['txtImgup2']['tmp_name'];
         
 
-                                                        if(copy($ruta,$destino)  and copy($ruta1,$destino1) and  copy($ruta2,$destino2)){                                                
+                                                        if( copy($ruta1,$destino1) and  copy($ruta2,$destino2)){                                                
         
                                                         $data = array("Portada"=>$dest, "Foto1"=>$dest1, "Foto2"=>$dest2);
         
@@ -1275,30 +1565,13 @@
         
         
                         /* FIN FOTO 1 */
-        
-                      }else{
-                        $jsondata['success'] = false;
-                        $jsondata['message'] = "La imagen no cumple las medidas solicitadas ";
-                      }
-        
-                    }else{
-                      $jsondata['success'] = false;
-                      $jsondata['message'] = "No se pueden subir Imagenes con pesos superiores a 1MB";
-                    }
-        
-        
-        
-                }else{
-                  $jsondata['success'] = false;
-                  $jsondata['message'] = "Formato de imagen Incorrecto, Debe ser png o jpg";
-                }
-                
+
                 /* FIN PORTADA */
 
 
 
 
-      }elseif(($portada != "") AND ($Imagen1 !="")){
+      }elseif( ($Imagen1 !="")){
 
         // si file viene lleno            
         $data = array("Titulo"=>$_REQUEST['txtNameup'], "Ubicacion"=>$_REQUEST['txtUbiup'],  
@@ -1317,13 +1590,7 @@
 
 
         /* PORTADA  */
-        
-        if(($vType == "png") or ($vType == "jpg") or ($vType == "JPG") or ($vType == "PNG") ){
-            //validamos el peso de la imagen
-            if($_FILES['txtImgup']['size'] <= 7000000){
-              //validamos las dimensiones de la imagen
-              $infoImagen = getimagesize($_FILES['txtImgup']['tmp_name']);
-              if ($infoImagen[0] <= 20000 || $infoImagen[1] <= 20000) {
+
 
                 /* FOTO 1 */
 
@@ -1337,11 +1604,7 @@
                       /* INFORMACION DE LAS 5 IMAGENES */
 
 
-                      /* PORTADA */
-                      $carpeta = "../public/Lugares/".$_REQUEST['txtIdup'];
-                      $destino = "../public/Lugares/".$_REQUEST['txtIdup']."/". "Portada/" .$portada;
-                      $dest = "public/Lugares/".$_REQUEST['txtIdup']."/" . "Portada/" .$portada;
-                      $ruta = $_FILES['txtImgup']['tmp_name'];
+                    
 
                       // datos de la imagen 1 necesarios para el registro
                       
@@ -1351,7 +1614,7 @@
 
 
 
-                      if(copy($ruta,$destino)  and copy($ruta1,$destino1) ){                                                
+                      if(copy($ruta1,$destino1) ){                                                
 
                       $data = array("Portada"=>$dest, "Foto1"=>$dest1);
 
@@ -1411,123 +1674,12 @@
 
                 /* FIN FOTO 1 */
 
-              }else{
-                $jsondata['success'] = false;
-                $jsondata['message'] = "La imagen no cumple las medidas solicitadas ";
-              }
-
-            }else{
-              $jsondata['success'] = false;
-              $jsondata['message'] = "No se pueden subir Imagenes con pesos superiores a 1MB";
-            }
-
-
-
-        }else{
-          $jsondata['success'] = false;
-          $jsondata['message'] = "Formato de imagen Incorrecto, Debe ser png o jpg";
-        }
-        
         /* FIN PORTADA */
 
 
 
 
-      }elseif(($portada != "") AND ($Imagen1 =="")   AND ($Imagen2 =="")  AND ($Imagen3 =="") AND ($Imagen4 =="") AND ($Imagen5 =="")  ){
-
-
-        //echo "NOMBRE DE LA PORTADA " . $portada;
-
-        // si file viene lleno            
-        $data = array("Titulo"=>$_REQUEST['txtNameup'], "Ubicacion"=>$_REQUEST['txtUbiup'],  
-        "Status"=>$_REQUEST['txtStatusup'], "Tipo"=>$_REQUEST['txtTipoGup'], "Descripcion"=>$_REQUEST['txtDescripup'],  "Updated_by"=>$vname,  "Updated_date"=>date('Y-m-d H:i:s')
-        );
-        $where = " Id = " . $_REQUEST['txtIdup'];
-        $objUser->updateData($data, $where);
-        
-        $vType = substr($_FILES['txtImgup']['name'], strlen($_FILES['txtImgup']['name'])-3, strlen($_FILES['txtImgup']['name']));
-
-      
-
-
-        /* PORTADA  */
-        
-        if(($vType == "png") or ($vType == "jpg") or ($vType == "JPG") or ($vType == "PNG") ){
-            //validamos el peso de la imagen
-            if($_FILES['txtImgup']['size'] <= 7000000){
-              //validamos las dimensiones de la imagen
-              $infoImagen = getimagesize($_FILES['txtImgup']['tmp_name']);
-              if ($infoImagen[0] <= 20000 || $infoImagen[1] <= 20000) {
-
-                                        /* INFORMACION DE LAS 5 IMAGENES */
-
-
-                      /* PORTADA */
-                      
-                      $carpeta = "../public/Lugares/".$vId;
-                      $destino = "../public/Lugares/".$vId."/"."Portada/" .$portada;
-                      $dest = "public/Lugares/".$vId."/" . "Portada/" .$portada. "' "  ;
-                     
-                      $ruta = $_FILES['txtImgup']['tmp_name'];
-
-                     
-
-
-
-                      if(copy($ruta,$destino)){                                                
-
-                      $data = array("Portada"=>$dest);
-
-                      $where = " Id = " . $vId;
-                      if($objUser->updateData($data, $where)){
-                        $jsondata['success'] = true;
-                        $jsondata['message'] = "Se Actualizo la informacion, y la portada ";
-                        $jsondata['redirect'] = 1;
-                      }else {
-                        $jsondata['success'] = false;
-                        $jsondata['message'] = "No fue posible Actualizar sus Datos";
-                      }
-
-
-
-
-                      }else{
-                      $jsondata['success'] = false;
-                      $jsondata['message'] = "No Fue posible subir su Imagen";
-                      }
-
-
-
-
-                      
-      
-      
-      
-                      /* FIN INFORMACION  */
-
-              }else{
-                $jsondata['success'] = false;
-                $jsondata['message'] = "La imagen no cumple las medidas solicitadas ";
-              }
-
-            }else{
-              $jsondata['success'] = false;
-              $jsondata['message'] = "No se pueden subir Imagenes con pesos superiores a 1MB";
-            }
-
-
-
-        }else{
-          $jsondata['success'] = false;
-          $jsondata['message'] = "Formato de imagen Incorrecto, Debe ser png o jpg";
-        }
-        
-        /* FIN PORTADA */
-
-
-
-
-      }elseif(($portada == "") AND ($Imagen1 !="")   AND ($Imagen2 =="")  AND ($Imagen3 =="") AND ($Imagen4 =="") AND ($Imagen5 =="")  ){
+      }elseif( ($Imagen1 !="")   AND ($Imagen2 =="")  AND ($Imagen3 =="") AND ($Imagen4 =="") AND ($Imagen5 =="")  ){
 
 
         //echo "NOMBRE DE LA PORTADA " . $portada;
@@ -1554,11 +1706,7 @@
               /* INFORMACION DE LAS 5 IMAGENES */
 
 
-              /* PORTADA */
-              $carpeta = "../public/Lugares/".$_REQUEST['txtIdup'];
-              $destino = "../public/Lugares/".$_REQUEST['txtIdup']."/". "Portada/" .$Imagen1;
-              $dest = "public/Lugares/".$_REQUEST['txtIdup']."/" . "Portada/" .$Imagen1;
-              $ruta = $_FILES['txtImgup']['tmp_name'];
+              
 
               // datos de la imagen 1 necesarios para el registro
               
@@ -1637,7 +1785,7 @@
 
 
 
-      }elseif(($portada == "") AND ($Imagen1 =="")   AND ($Imagen2 !="")  AND ($Imagen3 =="") AND ($Imagen4 =="") AND ($Imagen5 =="")  ){
+      }elseif(($Imagen1 =="")   AND ($Imagen2 !="")  AND ($Imagen3 =="") AND ($Imagen4 =="") AND ($Imagen5 =="")  ){
 
 
         //echo "NOMBRE DE LA PORTADA " . $portada;
@@ -1663,12 +1811,6 @@
 
               /* INFORMACION DE LAS 5 IMAGENES */
 
-
-              /* PORTADA */
-              $carpeta = "../public/Lugares/".$_REQUEST['txtIdup'];
-              $destino = "../public/Lugares/".$_REQUEST['txtIdup']."/". "Portada/" .$Imagen2;
-              $dest = "public/Lugares/".$_REQUEST['txtIdup']."/" . "Portada/" .$Imagen2;
-              $ruta = $_FILES['txtImgup2']['tmp_name'];
 
               // datos de la imagen 1 necesarios para el registro
               
@@ -1722,7 +1864,7 @@
 
         /* FIN FOTO 1 */
 
-      }elseif(($portada == "") AND ($Imagen1 =="")   AND ($Imagen2 =="")  AND ($Imagen3 !="") AND ($Imagen4 =="") AND ($Imagen5 =="")  ){
+      }elseif(($Imagen1 =="")   AND ($Imagen2 =="")  AND ($Imagen3 !="") AND ($Imagen4 =="") AND ($Imagen5 =="")  ){
 
 
         //echo "NOMBRE DE LA PORTADA " . $portada;
@@ -1802,7 +1944,7 @@
 
         /* FIN FOTO 1 */
 
-      }elseif(($portada == "") AND ($Imagen1 =="")   AND ($Imagen2 =="")  AND ($Imagen3 =="") AND ($Imagen4 !="") AND ($Imagen5 =="")  ){
+      }elseif( ($Imagen1 =="")   AND ($Imagen2 =="")  AND ($Imagen3 =="") AND ($Imagen4 !="") AND ($Imagen5 =="")  ){
 
 
         //echo "NOMBRE DE LA PORTADA " . $portada;
@@ -1882,7 +2024,7 @@
 
         /* FIN FOTO 1 */
 
-      }elseif(($portada == "") AND ($Imagen1 =="")   AND ($Imagen2 =="")  AND ($Imagen3 =="") AND ($Imagen4 =="") AND ($Imagen5 !="")  ){
+      }elseif(($Imagen1 =="")   AND ($Imagen2 =="")  AND ($Imagen3 =="") AND ($Imagen4 =="") AND ($Imagen5 !="")  ){
 
 
         //echo "NOMBRE DE LA PORTADA " . $portada;

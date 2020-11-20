@@ -3,20 +3,20 @@
   include_once("../resource/header.php");
   include_once("../resource/nav.php");
   include_once("../resource/librerias.php");
-  include_once("../../datos/model/imagenes.class.php");
+  include_once("../../datos/model/equipo.class.php");
 
   /*Validamos la existencia de la session*/
   if(Session::get('Perfil') != 1)
     header('Location: logout.php');
 
   /* Objeto Registros */
-  $ObjRegistros = new imagen($db);
-  $whereRegistros = " WHERE Id > 0 ORDER BY Id DESC";
-  $result = $ObjRegistros->selectAll($whereRegistros);
+  $ObjResultado = new integrante($db);
+  $whereRegistros = " WHERE Id > 0 ORDER BY Id ASC";
+  $result = $ObjResultado->selectAll($whereRegistros);
 
 
   /* CUENTA REGISTROS*/
-  $rows = $ObjRegistros->Count();
+  $rows = $ObjResultado->Count();
   if($db->numRows($rows) > 0){
    $r = $db->datos($rows);
     $NumerodeRegistros = $r['num'];
@@ -28,14 +28,13 @@
 
 
 
-
  ?>
 <!DOCTYPE>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gestionar Imagenes</title>
+  <title>Servicios</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <?php LibreriasCss(); ?>
@@ -58,9 +57,29 @@
             <div class="principal">
               <h3>subir archivos</h3>
                 <form  id="uploadForm" name="frmupload" method="post" enctype="multipart/form-data">
-                    <input type="file" id="uploadImage" name="uploadImage" class="form-control" />
-                    <button id="submitButton" type="submit" name='btnSubmit' class="btn btn-success">Comenzar la carga</button>
-                    <input type="hidden" name="accion" value="car">
+                    <div class="form-group">
+                      <label for="txtCategoria">Seleccione una categoría</label>
+                      <select class="form-control" name="txtCategoria" id="txtCategoria">
+                        <option>Seleccione...</option>
+                        <option value="1">BABY ROK</option>
+                        <option value="2">MICRO ROK</option>
+                        <option value="3">MINI ROK</option>
+                        <option value="4">JUNIOR ROK</option>
+                        <option value="5">SENIOR ROK</option>
+                        <option value="6">SUPER ROK</option>
+                        <option value="7">SHIFTER MASTER ROK</option>
+                        <option value="8">SHIFTER ROK</option>
+                        <option value="9">EQUIPOS</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input type="file" id="uploadImage" name="uploadImage" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                      <button id="submitButton" type="submit" name='btnSubmit' class="btn btn-success">Comenzar la carga</button>
+                      <input type="hidden" name="accion" value="car">
+                    </div>
                 </form>
                 <div class='progress' id="progressDivId">
                     <div class='progress-bar' id='progressBar'></div>
@@ -91,47 +110,38 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Nueva Imagen</h4>
+          <h4 class="modal-title">Servicio Nuevo</h4>
         </div>
         <div class="modal-body">
-          <form id="Imagen"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
-            <div class="form-group has-feedback">
-              <select name="txtStatus" id="txtStatus" class="form-control" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido">
+          <form id="registros"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
+          <div class="form-group has-feedback">
+              <span class="glyphicon glyphicon-th-large form-control-feedback"></span>
+              <select class="form-control" placeholder="Posición" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido" name="txtStatus" id="txtStatus">
                 <option value="1">Activo</option>
-                <option value="0">Inactivo</option>
-
+                <option value="2">Inactivo</option>
               </select>
-              
             </div>
             <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="Titulo"  data-parsley-required-message="Campo requerido" required="" name="txtTitle" id="txtTitle">
+              <input type="text" class="form-control" placeholder="Título"  data-parsley-required-message="Campo requerido" required="" name="txtName" id="txtName">
               <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
+           
             <div class="form-group has-feedback">
-              <select name="txtTipo" id="txtTipo" class="form-control" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido">
-                  <option value="">Seleccione la Ubicacion</option>
-                  <option value="Home Galeria Principal">Home Galeria Principal</option>
-                  <option value="Home Slide">Home Slide</option>
-                  <option value="Servicios">Servicios</option>
-                  <option value="Logo">Logo</option>
-                  
-              </select>
-              
+              <label for="">Adjunte Foto (PNG o JPG 160px por 160px)</label>
+              <input type="file" class="form-control"  required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido" name="txtImg" id="txtImg">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
-            <div class="form-group has-feedback">
-              <label for="">*Imagen</label>
-              <input type="file" class="form-control" placeholder="Email" required="" data-parsley-trigger="keyup"  data-parsley-required-message="Campo requerido" name="txtImg" id="txtImg">
-              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            <div class="form-group has-feedback" id="pass2">
+                <textarea name="txtDetalle" id="txtDetalle" class="form-control" rows="10" placeholder="Descripcion del servicio" required="" data-parsley-required-message="Campo requerido"></textarea>
+              <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
-            
-
             <div class="row">
               <!-- /.col -->
               <div class="col-xs-4">
                 <input type="hidden" name="txtId" id="txtId" value="0">
                 <input type="hidden" name="txtTab" id="txtTab" value="1">
-                <input type="hidden" name="accion" id="accion" value="ins">
-                <button type="submit" class="btn btn-primary btn-block btn-flat" id="submit">Registrar</button>
+                <input type="hidden" name="accion" id="accion1" value="ins">
+                <button type="submit" class="btn btn-primary btn-block btn-flat" id="submit1">Registrar</button>
               </div>
               <!-- /.col -->
             </div>
@@ -159,7 +169,7 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Actualizar Imagen</h4>
+          <h4 class="modal-title">Actualizar Servicio</h4>
         </div>
         <div class="modal-body">
           <form id="usuariosup"  role="form" data-parsley-validate="" novalidate="novalidate" enctype="multipart/form-data">
@@ -170,38 +180,31 @@
                   <option value="0">Inactivo</option>
                 </select>
               </div>
+
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" placeholder="Nombre Completo"  data-parsley-required-message="Campo requerido" required="" name="txtNameup" id="txtNameup">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+           
             
             <div class="form-group has-feedback">
-              <input type="text" class="form-control" placeholder="Nombre Completo"  data-parsley-required-message="Campo requerido" required="" name="txtTitleup" id="txtTitleup">
+              <div id="FotoInt"></div>
+              <input type="file" class="form-control" placeholder="Programa"  data-parsley-trigger="keyup"   name="txtImgup" id="txtImgup">
               <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-              <select name="txtTipoup" id="txtTipoup" class="form-control" required="" data-parsley-trigger="keyup"   data-parsley-required-message="Campo requerido">
-                  <option value="">Seleccione la Ubicacion</option>
-                  <option value="Home Galeria Principal">Home Galeria Principal</option>
-                  <option value="Home Slide">Home Slide</option>
-                  <option value="Servicios">Servicios</option>
-                  <option value="Logo">Logo</option>
-              </select>
-              
+              <textarea name="txtDetalleup" id="txtDetalleup" class="form-control" rows="5" placeholder="Tus comentarias" required="" data-parsley-required-message="Campo requerido"></textarea>
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
 
-            <div class="form-group has-feedback">
-              <div id="Ima"></div>
-              <label for="">*Imagen</label>
-              <input type="file" class="form-control" placeholder="Email" name="txtImgup" id="txtImgup">
-              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            
-            
 
             <div class="row">
               <!-- /.col -->
               <div class="col-xs-4">
                 <input type="hidden" name="txtIdup" id="txtIdup" value="0">
                 <input type="hidden" name="txtTabup" id="txtTabup" value="1">
-                <input type="hidden" name="accion" id="accion" value="upd">
-                <button type="submit" class="btn btn-primary btn-block btn-flat" id="submit">Actualizar</button>
+                <input type="hidden" name="accion" id="accion2" value="upd">
+                <button type="submit" class="btn btn-primary btn-block btn-flat" id="submit2">Actualizar</button>
               </div>
               <!-- /.col -->
             </div>
@@ -248,14 +251,6 @@
                 </td>
               </tr>
 
-              <tr>
-                <td>
-                  <p>Id</p>
-                </td>
-                <td>
-                  <div id="st2"></div>
-                </td>
-              </tr>
 
               <tr>
                 <td>
@@ -268,48 +263,39 @@
 
               <tr>
                 <td>
-                  <p>Tipo</p>
+                  <p>Detalle</p>
                 </td>
                 <td>
-                  <p id="Email"></p>
+                  <p id="de"></p>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <p>Imagen 1</p>
+                  <p>Foto</p>
                 </td>
                 <td>
-                  <div id="I1"></div>
-                </td>
-              </tr>
-
-
-              <tr>
-                <td>
-                  <p>Imagen 2</p>
-                </td>
-                <td>
-                  <div id="I2"></div>
+                  <div id="FT"></div>
                 </td>
               </tr>
 
               
-
-                <td>
-                  <p>Ultima Actualizacion</p>
-                </td>
-                <td>
-                  <p id="CatG"></p>
-                </td>
-              </tr>
 
               <tr>
                 <td>
                   <p>Fecha Registro</p>
                 </td>
                 <td>
-                  <p id="reg"></p>
+                  <p id="FechaR"></p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p>Última Actualización</p>
+                </td>
+                <td>
+                  <p id="FechaU"></p>
                 </td>
               </tr>
 
@@ -340,12 +326,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Iamgenes Registrados
+        RESULTADOS
         <small>AdminLTE</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Contactos</a></li>
+        <li><a href="#">RESULTADOS</a></li>
         <li class="active">Todos</li>
       </ol>
     </section>
@@ -363,7 +349,7 @@
                 </div>
                 <div class="box-body">
                   <div class="col-xs-12">
-                    <button type="button" class="btn btn-success" id="NuevoRegistro">
+                    <button type="button" class="btn btn-success" id="NuevoRegistro22">
                     <span class="glyphicon glyphicon-plus"></span>
                    Agregar
                   </button>
@@ -432,7 +418,7 @@
                   <table class="table table-bordered text-center">
                     <tr>
                       <td>
-                        <a class="btn btn-block btn-success" title="Descargar Formato" download="#" href="#"><span class="glyphicon glyphicon-save-file" style="font-size: 22px;"></span></a>
+                        <a class="btn btn-block btn-success" title="Descargar Formato" download="Resultados.xlsx" href="Resultados.xlsx"><span class="glyphicon glyphicon-save-file" style="font-size: 22px;"></span></a>
                       </td>
                       <td>
                         <button type="button" class="btn btn-block btn-warning" title="Subir Formato" data-toggle="modal" data-target="#modal-CargarRegistros"><span class="glyphicon glyphicon-open-file" style="font-size: 22px;"></span></button>
@@ -464,12 +450,12 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <table id="example1" class="table table-bordered table-striped">
+              <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                  <th><input type="checkbox" id="select_all"/> All</th>
                   <th>Estado</th>
-                  <th>Titulo</th>
-                  <th>Tipo</th>
+                  <th>Nombre</th>
                   <th>Foto</th>
                   <th>Acciones</th>
                 </tr>
@@ -489,13 +475,15 @@
                             $tabImg = "";
 
                            
-                            $tabImg = '<img src="../../../backend/datos/'.$r['Imagen'].'" class="avatar" width="100px">';
+                            $tabImg = '<img src="../../../backend/datos/'.$r['Foto'].'" class="avatar" width="150px">';
                           
                               echo '
                                   <tr>
+                                    <td>
+                                      <input type="checkbox" name="IdsRegistros[]" value='.$r['Id'].' class ="update_registro">
+                                    </td>
                                     <td>'.$st.'</td>
-                                    <td>'.$r['Titulo'].'</td>
-                                    <td>'.$r['Tipo'].'</td>
+                                    <td>'.$r['Nombre'].'</td>                                   
                                     <td>'.$tabImg.'</td>
 
                                     <td>
@@ -732,10 +720,9 @@
 </div>
 <!-- Recursos Js-->
 <?php LibreriasJs(); ?>
-<script src="../../../backend/js/imagenes.js"></script>
+<script src="../../../backend/js/equipo.js"></script>
 <script src="../../../bower_components/moment/moment.js"></script>
 <script src="../../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script src="../../js/cargar.js"></script>
 <script src="../../../bower_components/sweetalert/sweetalert.min.js"></script>
 <script src="../../../bower_components/sweetalert/jquery.form.min.js"></script>
 

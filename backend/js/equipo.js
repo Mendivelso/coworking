@@ -252,8 +252,14 @@
 
       .done(function(data){
         if (data.success) {
+          if(data.Status == 1){
+              var st = "ACTIVO"
+          }else{
+            var st = "INACTIVO"
+          }
+
           $('#verUsuario').modal({keyboard: false});
-          $('#st').html(data.Status);
+          $('#st').html(st);
           $('#car').html(data.Cargo);
           $('#ema').html(data.Email);
           $('#nombre').html(data.Nombre);
@@ -298,8 +304,6 @@
 
 
           $('#txtNameup').val(data.Nombre);
-          $('#txtCargoup').val(data.Cargo);
-          $('#txtEmailup').val(data.Email);
           $('#txtDetalleup').val(data.Detalle);
           $('#FotoInt').empty();
           $('#FotoInt').append('<P>FOTO 4 Galeria  </p> <img src=../../datos/'+data.Foto+' width="100px" >');

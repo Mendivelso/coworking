@@ -78,16 +78,17 @@
 			        </a>
 			      </li>
 			      <li>
-			        <a href="../galeria/">
-			          <i class="fa fa-th"></i> <span>Destinos</span>
+					<a href="../tarifas
+					/">
+			          <i class="fa fa-th"></i> <span>Tarifas</span>
 			          <span class="pull-right-container">
 
 			          </span>
 			        </a>
 			      </li>
 			      <li>
-			        <a href="../equipo/">
-			          <i class="fa fa-th"></i> <span>Equipo</span>
+			        <a href="../servicios/">
+			          <i class="fa fa-th"></i> <span>Servicios</span>
 			          <span class="pull-right-container">
 
 			          </span>

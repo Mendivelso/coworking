@@ -1,23 +1,36 @@
 <?php
-
   include_once('../includes/nav.php');
-  include_once('../includes/footer.php');
-
-
+  include_once('../includes/footer.php');  
+  include_once("../backend/datos/AnsTek_libs/integracion.inc.php");
+  include_once('../backend/datos/model/textos.class.php');
+  include_once('../backend/datos/model/imagenes.class.php');
+  include_once('../backend/datos/model/lugares.class.php');
+    /* Objeto Textos  */
+    $ObjTexto = new texto($db);
+    $whereTexto = " WHERE Pagina = 'Eventos' AND Status = 1 ORDER BY Id ASC ";
+    $resultTexto = $ObjTexto->selectOne($whereTexto);
+    $arrayTexto = array();
+    if($db->numRows($resultTexto) > 0){
+    while ($t = $db->datos($resultTexto)) {      
+       $texto = $t['Texto'];
+       $Sub = $t['Sub'];
+       $arrayTexto[] = $texto;
+       $arraySub[] = $Sub;
+    }
+    }
   ?>
-
-
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>El Taller CoWorking - Eventos </title>
-  <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta name="description" content="En el Taller Coworking vive una vida a toda máquina, moderna y veloz con un puesto flexible especialmente para ti, y claro con las mejores tarifas."/>
+  <meta name="keywords" content="puestos flexibles, oficinas en bogotá, coworking bogotá, minicine, puestos individulaes, Oficinas baratas bogota, peluquería"/>
+  <meta name="copyright" content="El taller Coworking "/>
+  <meta name="robots" content="index, follow"/>
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../front/css/bootstrap.min.css">
-
-
   <!-- Recursos Propios -->
   <link rel="stylesheet" type="text/css" href="../front/css/menu.css">
   <link rel="stylesheet" type="text/css" href="../front/css/footer.css">
@@ -27,56 +40,36 @@
   <link rel="stylesheet" type="text/css" href="../front/css/animate.css">
   <link rel="stylesheet" type="text/css" href="../front/css/magnific-popup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
   <link rel="stylesheet" type="text/css" href="../front/css/vegas.css">
   <link rel="stylesheet" type="text/css" href="../front/css/monokai-sublime.css">
   <?php faIcon(2); ?>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   <!-- Agregamos menu de navegacion  -->
-    <?php menu(2)?> 
-
-
-
-
- 
-
-
+    <?php menu(2, $db)?> 
   <section class="container-fluid b-w" id="sectionPrincipalOfertas">
-
-    
-
-
     <div class="row oferta">
         <div class="container">
 
             <div class="row text-center">
-                <h1 class="title-main p-5">Actividades y Eventos Coworking Bogotá</h1>
+                <h1 class="title-main p-5"><?php echo $arrayTexto[0];?></h1>
                 <hr>
             </div>
             <div class="row jus">               
                 <p>
-                Ser tu propio jefe es mucho trabajo y, a veces, puede ser duro encontrar un momento para desconectar y tomar distancia para tener una visión global de tu proyecto. Por eso en Smart Coworking planeamos semanalmente eventos para  ayudarte a encontrar ese tiempo necesario que te permite tener perspectiva, relacionarte y mantenerte enfocado. Siéntete libre para unirte a nosotros y a otros Smart Coworkers.
-                </p>
-                
+                <?php echo $arrayTexto[1];?>
+                </p>                
             </div>
             <div class="row text-center">
-              <a href="#" class="">Solicitar Visita</a>
-            </div>
-            
-            
-        </div>
-        
+              <a href="#visita" class="" id="bntContact2"><?php echo $arrayTexto[2];?></a>
+            </div>                        
+        </div>        
     </div>
-
-
     <div class="container">
         <div class="row">
-            <h1 class="title-main text-center p-5" id="title-contact">Eventos de coworking</h1>       
+            <h1 class="title-main text-center p-5" id="title-contact"><?php echo $arrayTexto[3];?></h1>       
         </div>
     </div>
-
     <div class="container pb-5">
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4">
@@ -141,45 +134,27 @@
         </div>
       </div>      
     </div>
-
-
-
-
     <div class="container text-center answer pb-5 ">
         <div class="row">
             <h1 class="title p-5">
-            EVENTOS PERSONALIZADOS
+            <?php echo $arrayTexto[4];?>
             </h1>
             <p class="p jus">
-            Como emprendedor/a, es difícil superar ciertos retos, a veces solo necesitamos pensar “out of the box”, salir de la zona de confort y escuchar nuevas ideas. Ser un Smart Coworker es ser parte de una comunidad dinámica que te puede ayudar a relanzar tu creatividad y hacer crecer tu negocio!!! Siéntete libre y apoyado para organizar un evento que estimule las mentes de todos, proponer una reunión para pensar o compartir el último libro inspirador que te has leído (o escrito) mientras hacemos un “Lunch and Learns”!
+            <?php echo $arrayTexto[5];?>
             </p>
-        </div>
-
- 
-
-    </div>
-
-
-   
-
-         
-
+        </div> 
+    </div>            
     <div class="row franja text-center">
             <h1 class="title p-5 color2">
-                CALENDARIO DE EVENTOS
+            <?php echo $arrayTexto[6];?>
             </h1>
     </div>         
     
-
-
-
     <div class="container text-center answer pb-5 ">
 
-
-
         <div class="row evento">
             <di class="col-xs-12 col-sm-4 col-md-4 npdd">
-                <img src="../front/images/espacios/sala-carro.jpeg" alt="" width="100%">
+                <img src="../front/images/blog/sala-carro.png" alt="" width="100%">
             </di>
             <di class="col-xs-12 col-sm-5 col-md-5 info">
                 <h3 class="color">Mindfull Living lorem ipsum </h3>
@@ -197,7 +172,7 @@
 
         <div class="row evento">
             <di class="col-xs-12 col-sm-4 col-md-4 npdd">
-                <img src="../front/images/espacios/sala-carro.jpeg" alt="" width="100%">
+                <img src="../front/images/blog/sala-carro.png" alt="" width="100%">
             </di>
             <di class="col-xs-12 col-sm-5 col-md-5 info">
                 <h3 class="color">Mindfull Living lorem ipsum </h3>
@@ -215,7 +190,7 @@
 
         <div class="row evento">
             <di class="col-xs-12 col-sm-4 col-md-4 npdd">
-                <img src="../front/images/espacios/sala-carro.jpeg" alt="" width="100%">
+                <img src="../front/images/blog/sala-carro.png" alt="" width="100%">
             </di>
             <di class="col-xs-12 col-sm-5 col-md-5 info">
                 <h3 class="color">Mindfull Living lorem ipsum </h3>
@@ -229,35 +204,19 @@
                     23 - Enero - 2020
                 </h3>
             </di>   
-        </div>
-       
-
-
-
+        </div>      
     </div>
 
-
-    
     <div class="row franja text-center">
-        <h3>Si quieres formar parte de un nuevo espacio
-            en Bogotá solicita información
-            sin compromiso. <br>
+        <h3>
+        <?php echo $arrayTexto[7];?>
         </h3>
        
     </div>
       
-
-    
-
   <!-- Inlcuimos footer -->
-      <?php footer(2); ?>
-
-
+      <?php footer(2, $db); ?>
   </section>
-
-
-
-
 <!-- jQuery 3 -->
 <script src="../front/js/jquery.min2.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -266,6 +225,10 @@
 <script src="../front/js/jquery.magnific-popup.min.js"></script>
 <script src="../front/js/highlight.pack.js"></script>
 <script src="../front/js/funciones.js"></script>
+<script src="../bower_components/parsleyjs/parsley.min.js"></script>
+<script src="../bower_components/bootbox/bootbox.min.js"></script>
+<script src="../bower_components/bootbox/bootbox.locales.min.js"></script>
+<script src="../backend/js/contactos.js"></script>
     <script type="text/javascript">
         $(document).ready(function()
         {

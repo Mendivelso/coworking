@@ -15,6 +15,10 @@
   }
 
 #img-mobil{display: none;}
+
+.parsley-required {
+  color: red;
+}
   
   .color2{
     color: #fff !important;
